@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yazboz Guru · Turnuva</title>
+  
+  <style>
+    :root { color-scheme: light; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#587A68; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
+           background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width:100%; max-width:420px; background:var(--card); border-radius:24px; padding:28px 22px; text-align:center;
+           box-shadow:0 10px 30px rgba(42,41,38,.08); }
+    h1 { font-size:22px; margin:8px 0 6px; }
+    p { color:var(--muted); line-height:1.5; margin:8px 0; }
+    .code { font-size:30px; font-weight:800; letter-spacing:4px; margin:16px 0 4px; }
+    .btn { display:block; margin-top:14px; padding:14px; border-radius:16px; background:var(--accent); color:#fff; font-weight:700; text-decoration:none; }
+    .ghost { background:transparent; color:var(--accent); border:1.5px solid #E6E1D9; }
+  </style>
+</head>
+<body>
+  <main>
+    <div style="font-size:40px">🏆</div>
+    <h1 data-tr="Tavla turnuvasına davet" data-en="You're invited to a backgammon tournament">Tavla turnuvasına davet</h1>
+    <p data-tr="Uygulama yüklüyse bu link turnuvayı Yazboz Guru’da açar. Değilse önce uygulamayı indir, sonra bu kodla katıl:" data-en="If the app is installed, this link opens the tournament in Yazboz Guru. If not, get the app first, then join with this code:">Uygulama yüklüyse bu link turnuvayı Yazboz Guru’da açar. Değilse önce uygulamayı indir, sonra bu kodla katıl:</p>
+    <div class="code" id="code">—</div>
+    <a class="btn" id="store" href="#" data-tr="App Store’dan indir" data-en="Get it on the App Store">App Store’dan indir</a>
+    <p id="soon" style="display:none" data-tr="Yazboz Guru çok yakında App Store’da." data-en="Yazboz Guru is coming to the App Store soon.">Yazboz Guru çok yakında App Store’da.</p>
+    <a class="btn ghost" id="open" href="#" data-tr="Uygulamada aç" data-en="Open in the app">Uygulamada aç</a>
+  </main>
+  <script>
+    // Fill in once the app is on the App Store (App Store Connect › App Information › Apple ID).
+    var APP_STORE_ID = '';
+    if (APP_STORE_ID) document.getElementById('store').href = 'https://apps.apple.com/app/id' + APP_STORE_ID;
+    else { document.getElementById('store').style.display = 'none'; document.getElementById('soon').style.display = 'block'; }
+    // GitHub Pages serves this page for every unknown address; the tournament code is the last part: /yazboz/t/ABCD2345
+    var code = (location.pathname.split('/t/')[1] || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase().slice(0, 8);
+    if (code.length === 8) document.getElementById('code').textContent = code.slice(0, 4) + '-' + code.slice(4);
+    document.getElementById('open').href = 'scoreguru://t/' + code;
+    if (!/^tr\b/i.test(navigator.language || '')) {
+      document.documentElement.lang = 'en';
+      document.querySelectorAll('[data-en]').forEach(function (el) { el.textContent = el.getAttribute('data-en'); });
+    }
+  </script>
+</body>
+</html>
