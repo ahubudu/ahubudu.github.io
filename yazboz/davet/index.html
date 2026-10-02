@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yazboz Guru · Turnuva daveti</title>
+  <meta name="description" content="Turnuvaya katılmak ve maçları canlı takip etmek için dokun. Uygulama yüklüyse turnuva Yazboz Guru’da açılır.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yazboz Guru">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:url" content="https://ahubudu.github.io/yazboz/davet/">
+  <meta property="og:title" content="Yazboz Guru · Turnuva daveti">
+  <meta property="og:description" content="Turnuvaya katılmak ve maçları canlı takip etmek için dokun. Uygulama yüklüyse turnuva Yazboz Guru’da açılır.">
+  <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-tr.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { color-scheme: light; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#587A68; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
+           background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width:100%; max-width:420px; background:var(--card); border-radius:24px; padding:28px 22px; text-align:center;
+           box-shadow:0 10px 30px rgba(42,41,38,.08); }
+    h1 { font-size:22px; margin:8px 0 6px; }
+    p { color:var(--muted); line-height:1.5; margin:8px 0; }
+    .code { font-size:30px; font-weight:800; letter-spacing:4px; margin:16px 0 4px; }
+    .btn { display:block; margin-top:14px; padding:14px; border-radius:16px; background:var(--accent); color:#fff; font-weight:700; text-decoration:none; }
+    .ghost { background:transparent; color:var(--accent); border:1.5px solid #E6E1D9; }
+  </style>
+</head>
+<body>
+  <main>
+    <div style="font-size:40px">🏆</div>
+    <h1>Turnuvaya davetlisin</h1>
+    <p>Uygulama yüklüyse bu link turnuvayı Yazboz Guru’da açar. Değilse önce uygulamayı indir, sonra bu kodla katıl:</p>
+    <div class="code" id="code">—</div>
+    <a class="btn" id="store" href="#">App Store’dan indir</a>
+    <p id="soon" style="display:none">Yazboz Guru çok yakında App Store’da.</p>
+    <a class="btn ghost" id="open" href="#">Uygulamada aç</a>
+  </main>
+  <script>
+    // Fill in once the app is on the App Store (App Store Connect › App Information › Apple ID).
+    var APP_STORE_ID = '';
+    if (APP_STORE_ID) document.getElementById('store').href = 'https://apps.apple.com/app/id' + APP_STORE_ID;
+    else { document.getElementById('store').style.display = 'none'; document.getElementById('soon').style.display = 'block'; }
+    // The tournament code comes in the address: https://ahubudu.github.io/yazboz/davet/?c=ABCD2345
+    var code = (new URLSearchParams(location.search).get('c') || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase().slice(0, 8);
+    if (code.length === 8) document.getElementById('code').textContent = code.slice(0, 4) + '-' + code.slice(4);
+    document.getElementById('open').href = 'scoreguru://t/' + code;
+  </script>
+</body>
+</html>
