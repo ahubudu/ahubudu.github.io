@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6817929401">
+  <title>Yazboz Guru · Canlı skor</title>
+  <meta name="description" content="Bir arkadaşın oynadığı oyunun skorunu canlı paylaşıyor. Kendi telefonundan takip etmek için dokun.">
+  <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/live/">
+  <meta name="robots" content="noindex">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yazboz Guru">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:url" content="https://ahubudu.github.io/yazboz/canli/">
+  <meta property="og:title" content="Yazboz Guru · Canlı skor">
+  <meta property="og:description" content="Bir arkadaşın oynadığı oyunun skorunu canlı paylaşıyor. Kendi telefonundan takip etmek için dokun.">
+  <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-live-tr.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { color-scheme: light dark; --bg:#F6EFE6; --card:#FFFDF9; --ink:#2A2422; --muted:#6E625A; --brick:#9A3A2B; --brick-deep:#7A2B20; --cream:#FFF6EC; --line:#EADFD2; --chip:#F3E6D4; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#17110F; --card:#221A17; --ink:#F2EBE4; --muted:#B5A79C; --brick:#C0594A; --brick-deep:#9A3A2B; --line:#3A2E29; --chip:#2E2420; } }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px 16px;
+           background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width:100%; max-width:440px; background:var(--card); border-radius:28px; overflow:hidden; box-shadow:0 18px 50px rgba(74,23,21,.16); }
+    .top { position:relative; background:linear-gradient(135deg,#A8473A,#7A2B20 60%,#4A1715); color:var(--cream); padding:28px 24px 64px; text-align:center; }
+    .top .lang { position:absolute; top:16px; right:18px; color:var(--cream); opacity:.85; font-size:14px; }
+    .top img { width:84px; height:84px; border-radius:20px; border:3px solid rgba(255,246,236,.85); box-shadow:0 8px 20px rgba(0,0,0,.25); }
+    .top .brand { margin-top:10px; font-size:13px; font-weight:800; letter-spacing:3px; color:#E9C47A; }
+    h1 { font-size:26px; line-height:1.2; margin:6px 0 0; }
+    .body { padding:0 22px 24px; margin-top:-40px; position:relative; }
+    .codebox { background:var(--card); border:1.5px solid var(--line); border-radius:20px; padding:16px; text-align:center; box-shadow:0 8px 24px rgba(74,23,21,.08); }
+    .label { font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+    .code { font-size:34px; font-weight:800; letter-spacing:5px; margin:6px 0 10px; font-variant-numeric:tabular-nums; }
+    .copy { border:0; background:var(--chip); color:var(--ink); font:inherit; font-weight:600; font-size:15px; padding:9px 18px; border-radius:12px; cursor:pointer; }
+    .lead { color:var(--muted); line-height:1.55; margin:18px 2px 6px; text-align:center; }
+    ol { list-style:none; padding:0; margin:14px 0 4px; }
+    li { display:flex; gap:12px; align-items:flex-start; color:var(--ink); line-height:1.45; margin:10px 0; }
+    li span { flex:none; width:26px; height:26px; border-radius:13px; background:var(--chip); color:var(--brick); font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center; }
+    .btn { display:block; margin-top:14px; padding:15px; border-radius:16px; background:var(--brick); color:#fff; font-weight:700; text-align:center; text-decoration:none; }
+    .ghost { background:transparent; color:var(--brick); border:1.5px solid var(--line); }
+    .note { color:var(--muted); font-size:13px; line-height:1.5; text-align:center; margin:18px 4px 0; }
+    footer { margin-top:18px; font-size:13px; color:var(--muted); text-align:center; }
+    footer a { color:var(--muted); }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="top">
+      <a class="lang" href="../live/" id="other">English</a>
+      <img src="/yazboz/img/app-icon-192.png" alt="" width="84" height="84">
+      <div class="brand">YAZBOZ GURU</div>
+      <h1>Oyunu canlı takip et</h1>
+    </div>
+    <div class="body">
+      <div class="codebox">
+        <div class="label">Oyun kodu</div>
+        <div class="code" id="code">—</div>
+        <button class="copy" id="copy" type="button">Kopyala</button>
+        <p class="note hidden" id="nocode" style="margin-top:6px">Bu linkte oyun kodu yok. Linki sana gönderen arkadaşından iste.</p>
+      </div>
+      <p class="lead">Bir arkadaşın masadaki oyunun skorunu Yazboz Guru ile canlı paylaşıyor. Her el birkaç saniye içinde senin telefonunda da görünür. Uygulama yüklüyse bu link oyunu doğrudan açar.</p>
+      <ol><li><span>1</span>Yazboz Guru’yu App Store’dan ücretsiz indir.</li><li><span>2</span>Bu sayfaya dön ve “Uygulamada aç”a dokun, ya da gelen mesajdaki linke tekrar dokun.</li></ol>
+      <a class="btn" id="store" href="https://apps.apple.com/app/id6817929401">App Store’dan indir</a>
+      <a class="btn ghost" id="open" href="#">Uygulamada aç</a>
+      <p class="note">Yazboz Guru, kart oyunlarından spora skoru senin yerine tutan bir iPhone uygulaması. Hesap gerekmez; canlı oyunu izlemek ücretsiz.</p>
+    </div>
+  </main>
+  <footer><a href="/yazboz/kurallar/">Oyun kuralları</a> · <a href="/yazboz/gizlilik/">Destek ve gizlilik</a></footer>
+  <script>
+    // The game's code comes in the address: https://ahubudu.github.io/yazboz/canli/?c=ABCDEFGHJ
+    var code = (new URLSearchParams(location.search).get('c') || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase().slice(0, 9);
+    var shown = code.slice(0, 3) + '-' + code.slice(3, 6) + '-' + code.slice(6);
+    var copy = document.getElementById('copy');
+    if (code.length === 9) {
+      document.getElementById('code').textContent = shown;
+      document.getElementById('open').href = 'scoreguru://g/' + code;
+      document.getElementById('other').href = '../live/?c=' + code;
+      copy.addEventListener('click', function () {
+        (navigator.clipboard ? navigator.clipboard.writeText(shown) : Promise.reject()).then(function () {
+          copy.textContent = 'Kopyalandı';
+        }, function () {});
+      });
+    } else {
+      copy.classList.add('hidden');
+      document.getElementById('open').classList.add('hidden');
+      document.getElementById('nocode').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

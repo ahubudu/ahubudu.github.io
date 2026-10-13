@@ -72,7 +72,10 @@
   <footer><a href="/yazboz/kurallar/">Oyun kuralları</a> · <a href="/yazboz/gizlilik/">Destek ve gizlilik</a></footer>
   <script>
     // The tournament code comes in the address: https://ahubudu.github.io/yazboz/davet/?c=ABCD2345
-    var code = (new URLSearchParams(location.search).get('c') || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase().slice(0, 8);
+    // A 9-character code is a game shared live: its own page.
+    var raw = (new URLSearchParams(location.search).get('c') || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+    if (raw.length === 9) location.replace('../canli/?c=' + raw);
+    var code = raw.slice(0, 8);
     var shown = code.slice(0, 4) + '-' + code.slice(4);
     var copy = document.getElementById('copy');
     if (code.length === 8) {

@@ -7,7 +7,9 @@
         "paths": [
           "/yazboz/t/*",
           "/yazboz/davet/*",
-          "/yazboz/invite/*"
+          "/yazboz/invite/*",
+          "/yazboz/canli/*",
+          "/yazboz/live/*"
         ]
       }
     ]
