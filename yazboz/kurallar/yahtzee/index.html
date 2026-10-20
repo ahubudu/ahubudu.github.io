@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>Yahtzee nasıl oynanır? Kurallar ve puan hesaplama | Yazboz Guru</title>
-  <meta name="description" content="Beş zarla kombinasyonlar yapıp skor kartındaki 13 kutuyu doldurmak ve en yüksek toplamı yapmak. Üst bölümde o sayıyı gösteren zarlar toplanır (üç tane 4…">
+  <meta name="description" content="Beş zarla kombinasyonlar yapıp skor kartındaki 13 kutuyu doldurmak ve en yüksek toplama ulaşmak. Üst bölümde o sayıyı gösteren zarlar toplanır (üç tane 4…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/kurallar/yahtzee/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/yahtzee/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/yahtzee/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/kurallar/yahtzee/">
   <meta property="og:title" content="Yahtzee nasıl oynanır? Kurallar ve puan hesaplama">
-  <meta property="og:description" content="Beş zarla kombinasyonlar yapıp skor kartındaki 13 kutuyu doldurmak ve en yüksek toplamı yapmak. Üst bölümde o sayıyı gösteren zarlar toplanır (üç tane 4…">
+  <meta property="og:description" content="Beş zarla kombinasyonlar yapıp skor kartındaki 13 kutuyu doldurmak ve en yüksek toplama ulaşmak. Üst bölümde o sayıyı gösteren zarlar toplanır (üç tane 4…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-tr.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>Yahtzee nasıl oynanır? Kurallar ve puan hesaplama</h1>
-      <p class="lead"><strong>Amaç:</strong> Beş zarla kombinasyonlar yapıp skor kartındaki 13 kutuyu doldurmak ve en yüksek toplamı yapmak.</p>
+      <ul class="glance"><li>5 zar</li><li>13 kutu</li><li>13 tur</li></ul>
+      <p class="lead"><strong>Amaç:</strong> Beş zarla kombinasyonlar yapıp skor kartındaki 13 kutuyu doldurmak ve en yüksek toplama ulaşmak.</p>
       <h2>Hazırlık</h2>
-      <p>Beş zar ve her oyuncu için bir skor kartı yeter. Üst bölümde birlerden altılara altı kutu, alt bölümde Üçlü, Dörtlü, Full House, Küçük Kent, Büyük Kent, Yahtzee ve Şans vardır.</p>
+      <ul class="points"><li>Her oyuncu için bir skor kartı.</li><li>Üst bölüm: birlerden altılara altı kutu.</li><li>Alt bölüm: Üçlü, Dörtlü, Full House, Küçük Kent, Büyük Kent, Yahtzee ve Şans.</li></ul>
       <h2>Oynanış</h2>
-      <p>Sıran gelince beş zarı atarsın; istediğin zarları ayırıp kalanları iki kez daha atabilirsin. Sonra kartındaki boş kutulardan birini seçip puanını yazarsın. Uygun kombinasyon yoksa bir kutuyu çizip 0 yazarsın. Her kutu yalnızca bir kez kullanılır.</p>
+      <ol class="steps"><li>Sıran gelince beş zarı atarsın.</li><li>İstediğin zarları ayırıp kalanları iki kez daha atabilirsin.</li><li>Sonra kartındaki boş kutulardan birini seçip puanını yazarsın.</li><li>Uygun kombinasyon yoksa bir kutuyu çizip 0 yazarsın.</li><li>Her kutu yalnızca bir kez kullanılır.</li></ol>
       <h2>Puanlama</h2>
-      <p>Üst bölümde o sayıyı gösteren zarlar toplanır (üç tane 4 = 12). Üçlü, Dörtlü ve Şans beş zarın toplamıdır. Full House (3 + 2 aynı) 25, Küçük Kent (4 sıralı) 30, Büyük Kent (5 sıralı) 40, Yahtzee (5 aynı) 50 puandır. Üst bölüm 63’e ulaşırsa +35 bonus eklenir.</p>
+      <ul class="points"><li>Üst bölüm: O sayıyı gösteren zarlar toplanır (üç tane 4 = 12).</li><li>Üçlü, Dörtlü ve Şans: beş zarın toplamı.</li><li>Full House (3 + 2 aynı) 25, Küçük Kent (4 sıralı) 30 puan.</li><li>Büyük Kent (5 sıralı) 40, Yahtzee (5 aynı) 50 puan.</li><li>Üst bölüm toplamı 63’e ulaşırsa +35 bonus eklenir.</li></ul>
       <h2>Oyunun sonu</h2>
       <p>13 turun sonunda herkesin kartı dolar; toplamı en yüksek olan kazanır.</p>
       <h2>Not</h2>
-      <p>Uygulamada her oyuncunun turunu ayrı girersin: oyuncuyu, kutuyu ve puanı seçersin. Sıradaki oyuncu otomatik önerilir.</p>
+      <ul class="points"><li>Uygulamada her oyuncunun turunu ayrı girersin: Oyuncuyu, kutuyu ve puanı seçersin.</li><li>Sıradaki oyuncu otomatik önerilir.</li></ul>
     </article>
 
     <section class="card app" id="app">

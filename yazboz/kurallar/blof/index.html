@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,15 +69,16 @@
   <main>
     <article class="card">
       <h1>Blöf nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>52’lik deste</li><li>Eşit dağıtılır</li></ul>
       <p class="lead"><strong>Amaç:</strong> Elindeki bütün kartları ilk bitiren olmak.</p>
       <h2>Hazırlık</h2>
-      <p>52’lik deste bütün oyunculara eşit dağıtılır. Maça ası olan ya da masanın seçtiği oyuncu başlar.</p>
+      <ul class="points"><li>Maça ası olan ya da masanın seçtiği oyuncu başlar.</li></ul>
       <h2>Oynanış</h2>
-      <p>Sırası gelen bir ya da birkaç kartı kapalı atar ve ne attığını söyler (ör. “iki yedi”); sıra as, iki, üç… diye ilerler. Doğru söylemek zorunda değilsin. Biri “Blöf!” derse kartlar açılır: yalan söyleyen, doğru söylediyse de itiraz eden ortadaki bütün kartları alır.</p>
+      <ol class="steps"><li>Sırası gelen bir ya da birkaç kartı kapalı atar ve ne attığını söyler (ör. “iki yedi”).</li><li>Sıra as, iki, üç… diye ilerler.</li><li>Doğru söylemek zorunda değilsin.</li><li>Biri “Blöf!” derse kartlar açılır.</li><li>Atan yalan söylediyse kendisi, doğru söylediyse itiraz eden ortadaki bütün kartları alır.</li></ol>
       <h2>Puanlama</h2>
-      <p>Elini ilk bitiren eli kazanır ve 1 puan alır. İstersen bunun yerine diğer oyuncuların elinde kalan kart sayısını ceza olarak yazabilirsin.</p>
+      <ul class="points"><li>Elini ilk bitiren eli kazanır ve 1 puan alır.</li><li>İstersen bunun yerine diğer oyuncuların elinde kalan kart sayısını ceza olarak yazabilirsin.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Belirlenen sayıda el kazanan (ör. 5) ya da belirlenen el sayısının sonunda en az cezası olan kazanır.</p>
+      <p>Belirlenen sayıda (ör. 5) el kazanan ya da belirlenen el sayısının sonunda en az cezası olan kazanır.</p>
     </article>
 
     <section class="card app" id="app">

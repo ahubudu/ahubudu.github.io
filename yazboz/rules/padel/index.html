@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>How to play Padel: rules and scoring</h1>
+      <ul class="glance"><li>4 players in pairs</li><li>20×10 m court</li></ul>
       <p class="lead"><strong>Goal:</strong> Win points, games and sets, as in tennis, to take the match.</p>
       <h2>Setup</h2>
-      <p>Played in pairs (four players) on a 20×10 m court enclosed by walls. A toss decides the serve and the sides.</p>
+      <ul class="points"><li>The court is enclosed by walls.</li><li>A toss decides the serve and the sides.</li></ul>
       <h2>How to play</h2>
-      <p>Serve underarm, below the waist, after bouncing the ball, into the diagonal box. After bouncing once on the other side the ball may hit the walls and stay in play, and you can play balls that come back off your own walls. Hitting the ball straight into the opponents’ wall or fence loses the point.</p>
+      <ol class="steps"><li>Serve underarm into the diagonally opposite box, bouncing the ball first and hitting it below the waist.</li><li>After bouncing once on the other side, the ball may hit the walls and stay in play.</li><li>You can play balls that come back off your own walls.</li><li>Hitting the ball straight into the opponents’ wall or fence loses the point.</li></ol>
       <h2>Scoring</h2>
-      <p>Points go 15, 30, 40 as in tennis. At 40-all one of the FIP’s three options is played: golden point (one deciding point), Star Point (two advantages are played, and at the third deuce one point decides) or classic advantage. Six games and two clear win a set, with a tie-break at 6-all.</p>
+      <ul class="points"><li>Points go 15, 30, 40 as in tennis.</li><li>At 40-all one of the FIP’s three options is played: golden point, Star Point or classic advantage.</li><li>Golden point: one deciding point.</li><li>Star Point: two advantages are played, and at the third deuce one point decides.</li><li>Six games and two clear win a set, with a tie-break at 6-all.</li></ul>
       <h2>Winning</h2>
-      <p>The match goes to whoever wins two of three sets. Clubs often play a 10-point super tie-break instead of the third set.</p>
+      <ul class="points"><li>The match goes to whoever wins two of three sets.</li><li>Clubs often play a 10-point super tie-break instead of the third set.</li></ul>
       <h2>Note</h2>
-      <p>Variants: the golden point is the most common at amateur clubs; since 2026 professional tournaments use the Star Point too. In the app you just tap the winning pair after each point.</p>
+      <ul class="points"><li>The golden point is most common at amateur clubs.</li><li>Since 2026, professional tournaments have used the Star Point too.</li><li>In the app you just tap the winning pair after each point.</li></ul>
     </article>
 
     <section class="card app" id="app">

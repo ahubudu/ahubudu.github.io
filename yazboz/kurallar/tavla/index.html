@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,23 +69,24 @@
   <main>
     <article class="card">
       <h1>Tavla nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>2 oyuncu</li><li>15’er pul</li><li>24 haneli tahta</li></ul>
       <p class="lead"><strong>Amaç:</strong> Pullarını tahtanın etrafında dolaştırıp kendi evine getirmek ve hepsini rakibinden önce toplamak.</p>
       <h2>Hazırlık</h2>
-      <p>İki oyuncu, her birinin 15 pulu ve iki zarı olur. Tahta 24 haneden oluşur; pullar başlangıç dizilişine göre yerleştirilir.</p>
+      <ul class="points"><li>Her oyuncunun iki zarı olur.</li><li>Pullar başlangıç dizilişine göre yerleştirilir.</li></ul>
       <h2>Oynanış</h2>
-      <p>Sırayla iki zar atılır ve pullar zarlardaki sayılar kadar ilerletilir; çift gelirse dört hamle yapılır. İki ya da daha fazla rakip pulu olan haneye girilemez. Rakibin tek pulunun olduğu haneye gelirsen o pulu kırarsın; kırılan pul tahtaya yeniden girmeden başka hamle yapılamaz.</p>
+      <ol class="steps"><li>Sırayla iki zar atılır; pullar zarlardaki sayılar kadar ilerletilir.</li><li>Çift gelirse dört hamle yapılır.</li><li>İki ya da daha fazla rakip pulu olan haneye girilemez.</li><li>Rakibin tek pulunun olduğu haneye gelirsen o pulu kırarsın.</li><li>Kırılan pul tahtaya yeniden girmeden başka hamle yapılamaz.</li></ol>
       <h2>Puanlama</h2>
-      <p>Eli kazanan 1 puan alır. Rakip hiç pul toplayamadan bitirirsen mars olur ve 2 puan alırsın. Katlama zarı kullanılıyorsa puan zarın değeriyle çarpılır.</p>
+      <ul class="points"><li>Eli kazanan 1 puan alır.</li><li>Rakip hiç pul toplayamadan bitirirsen mars olur ve 2 puan alırsın.</li><li>Katlama zarı kullanıldıysa elin puanı ikiye katlanır.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Belirlenen puana (ör. 5) ilk ulaşan maçı kazanır.</p>
+      <ul class="points"><li>Hedef puana (ör. 5) ilk ulaşan kazanır; mars 2 puan sayılır.</li><li>İstersen oyunu kurarken el sayısını seçebilirsin: O kadar el oynanır, en çok puanı olan kazanır.</li><li>El sayısıyla oynarken berabere biterse bir el daha oynanır.</li></ul>
       <h2>Not</h2>
-      <p>Mahbusa ve Gülbahar’da pul kırılmaz: Mahbusa’da rakibin tek pulunun üstüne gelen pul onu hapseder, Gülbahar’da iki oyuncu pullarını aynı yöne yürütür.</p>
+      <ul class="points"><li>Mahbusa ve Gülbahar’da pul kırılmaz.</li><li>Mahbusa’da rakibin tek pulunun üstüne gelen pul onu hapseder.</li><li>Gülbahar’da iki oyuncu pullarını aynı yöne yürütür.</li></ul>
     </article>
 
     <section class="card app" id="app">
       <h2>Tavla skorunu Yazboz Guru tutsun</h2>
       <p>Kağıt kaleme gerek yok: oyunu seç, masandaki kuralları ayarla ve her elin sonunda olanları gir. Puanları kurallara göre uygulama hesaplar.</p>
-      <p>Eli kazanan 1 puan, mars yaparsa 2 puan alır; katlama zarı puanı katlar. Hedef puana ilk ulaşan maçı kazanır.</p>
+      <p>Eli kazanan 1 puan, mars yaparsa 2 puan alır; katlama zarı puanı katlar. Seçilen puana ilk ulaşan kazanır; istersen seçilen sayıda el de oynayabilirsiniz.</p>
       <div class="shots">
         <figure><img src="/yazboz/img/rules/tavla-tr-sheet.jpg" alt="Yazboz Guru’da Tavla skor tablosu" width="600" height="1304" loading="lazy"><figcaption>Skor tablosu</figcaption></figure>
         <figure><img src="/yazboz/img/rules/tavla-tr-entry.jpg" alt="Yazboz Guru’da bir Tavla elinin girişi" width="600" height="1213" loading="lazy"><figcaption>El girişi</figcaption></figure>

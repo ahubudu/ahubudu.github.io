@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,21 +69,22 @@
   <main>
     <article class="card">
       <h1>Batak nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>3–4 oyuncu</li><li>52’lik deste</li></ul>
       <p class="lead"><strong>Amaç:</strong> İhaleyi aldıysan söylediğin kadar el almak; almadıysan kendi ellerini toplayıp ihaleyi batırmak.</p>
       <h2>Hazırlık</h2>
-      <p>52’lik deste kullanılır. Dört kişiyle herkese 13 kart dağıtılır; üç kişiyle bir kart çıkarılıp herkese 17 kart verilir.</p>
+      <ul class="points"><li>Dört kişiyle herkese 13 kart dağıtılır.</li><li>Üç kişiyle bir kart çıkarılıp herkese 17 kart dağıtılır.</li></ul>
       <h2>Oynanış</h2>
-      <p>Önce ihale yapılır: herkes kaç el alacağını söyler, en yüksek söyleyen ihaleyi alır ve kozu seçer. İlk kartı ihaleyi alan atar. Yerdeki renk varsa aynı renkten atmak, mümkünse eli yükseltmek zorunludur; o renk yoksa koz atılır. En büyük kartı atan eli alır.</p>
+      <ol class="steps"><li>Önce ihale yapılır: Herkes kaç el alacağını söyler.</li><li>En yüksek söyleyen ihaleyi alır ve kozu seçer.</li><li>İlk kartı ihaleyi alan atar.</li><li>Elinde yerdeki renk varsa o renkten atmak, mümkünse eli yükseltmek zorunludur.</li><li>O renk yoksa koz atılır.</li><li>En büyük kartı atan eli alır.</li></ol>
       <h2>Puanlama</h2>
-      <p>İhaleyi alan söylediği kadar ya da daha fazla el alırsa aldığı eller kadar puan yazar; alamazsa ihale kadar eksi yazar (“batar”). Diğer oyuncular aldıkları el kadar puan yazar. Yandan batma kuralıyla oynanıyorsa, ihaleyi almayan ve hiç el alamayan oyuncu da ihale kadar eksi yazar.</p>
+      <ul class="points"><li>İhaleyi alan söylediği kadar ya da daha fazla el alırsa aldığı eller kadar puan yazar.</li><li>Alamazsa ihale kadar eksi yazar (“batar”).</li><li>Diğer oyuncular aldıkları el kadar puan yazar.</li><li>Yandan batma kuralında, ihaleyi almayan ve hiç el alamayan oyuncu da ihale kadar eksi yazar.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Hedef puana (ör. 51) ilk ulaşan kazanır. Eşli oyunda karşılıklı oturanlar eştir ve elleri toplanır.</p>
+      <ul class="points"><li>Hedef puana (ör. 51) ilk ulaşan kazanır.</li><li>Eşli oyunda karşılıklı oturanlar eştir ve aldıkları eller toplanır.</li></ul>
     </article>
 
     <section class="card app" id="app">
       <h2>Batak skorunu Yazboz Guru tutsun</h2>
       <p>Kağıt kaleme gerek yok: oyunu seç, masandaki kuralları ayarla ve her elin sonunda olanları gir. Puanları kurallara göre uygulama hesaplar.</p>
-      <p>İhaleyi alan söylediği kadar el alırsa aldığı eller kadar puan yazar, alamazsa ihale kadar eksi yazar. Diğerleri aldıkları el kadar puan alır.</p>
+      <p>İhaleyi alan en az söylediği kadar el alırsa aldığı eller kadar puan yazar, alamazsa ihale kadar eksi yazar. Diğerleri aldıkları el kadar puan alır.</p>
       <div class="shots">
         <figure><img src="/yazboz/img/rules/batak-tr-sheet.jpg" alt="Yazboz Guru’da Batak skor tablosu" width="600" height="1304" loading="lazy"><figcaption>Skor tablosu</figcaption></figure>
         <figure><img src="/yazboz/img/rules/batak-tr-entry.jpg" alt="Yazboz Guru’da bir Batak elinin girişi" width="600" height="1213" loading="lazy"><figcaption>El girişi</figcaption></figure>

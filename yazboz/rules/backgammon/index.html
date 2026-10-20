@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>How to play Backgammon: rules and scoring | Yazboz Guru</title>
-  <meta name="description" content="Move all your checkers around the board into your home and bear them off before your opponent. The winner of a game scores 1 point, or 2 for a gammon…">
+  <meta name="description" content="Move all your checkers around the board into your home board and bear them off before your opponent does. The winner of a hand scores 1 point, or 2 for a…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/rules/backgammon/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/backgammon/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/tavla/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/rules/backgammon/">
   <meta property="og:title" content="How to play Backgammon: rules and scoring">
-  <meta property="og:description" content="Move all your checkers around the board into your home and bear them off before your opponent. The winner of a game scores 1 point, or 2 for a gammon…">
+  <meta property="og:description" content="Move all your checkers around the board into your home board and bear them off before your opponent does. The winner of a hand scores 1 point, or 2 for a…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-en.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,23 +69,24 @@
   <main>
     <article class="card">
       <h1>How to play Backgammon: rules and scoring</h1>
-      <p class="lead"><strong>Goal:</strong> Move all your checkers around the board into your home and bear them off before your opponent.</p>
+      <ul class="glance"><li>2 players</li><li>15 checkers each</li><li>24-point board</li></ul>
+      <p class="lead"><strong>Goal:</strong> Move all your checkers around the board into your home board and bear them off before your opponent does.</p>
       <h2>Setup</h2>
-      <p>Two players, each with 15 checkers and two dice. The board has 24 points; checkers start in the standard layout.</p>
+      <ul class="points"><li>Each player has two dice.</li><li>Checkers start in the standard layout.</li></ul>
       <h2>How to play</h2>
-      <p>Players take turns rolling two dice and moving checkers by the numbers rolled; doubles give four moves. You can’t land on a point held by two or more opposing checkers. Landing on a single opposing checker hits it, and a hit checker must re-enter before its owner can move anything else.</p>
+      <ol class="steps"><li>Take turns rolling two dice and moving checkers by the numbers rolled.</li><li>Doubles give four moves.</li><li>You can’t land on a point held by two or more opposing checkers.</li><li>Landing on a single opposing checker hits it.</li><li>A hit checker must re-enter before its owner can move anything else.</li></ol>
       <h2>Scoring</h2>
-      <p>The winner of a game scores 1 point, or 2 for a gammon (the opponent hasn’t borne off any checkers). With the doubling cube, points are multiplied by the cube value.</p>
+      <ul class="points"><li>The winner of a hand scores 1 point.</li><li>A gammon (the opponent hasn’t borne off any checkers) scores 2.</li><li>If the doubling cube was used, the hand’s points are doubled.</li></ul>
       <h2>Winning</h2>
-      <p>The first to reach the target (e.g. 5) wins the match.</p>
+      <ul class="points"><li>The first to reach the chosen score (e.g. 5) wins; a gammon counts 2.</li><li>You can also pick a number of hands when setting up: play that many and whoever has the most points wins.</li><li>When playing a set number of hands, a tie means one more hand.</li></ul>
       <h2>Note</h2>
-      <p>In Mahbusa and Gülbahar there is no hitting: in Mahbusa a checker landing on a single opposing checker pins it, and in Gülbahar both players move in the same direction.</p>
+      <ul class="points"><li>In Mahbusa and Gülbahar there is no hitting.</li><li>In Mahbusa a checker landing on a single opposing checker pins it.</li><li>In Gülbahar both players move in the same direction.</li></ul>
     </article>
 
     <section class="card app" id="app">
       <h2>Let Yazboz Guru keep the Backgammon score</h2>
       <p>No pen and paper: pick the game, set your table’s rules and enter what happened at the end of each round. The app does the math by the rules.</p>
-      <p>The winner scores 1, or 2 for a gammon; the doubling cube multiplies it. First to the target wins the match.</p>
+      <p>The winner of a hand scores 1, or 2 for a gammon; the doubling cube multiplies it. The first to the chosen points wins; you can also play a set number of hands.</p>
       <div class="shots">
         <figure><img src="/yazboz/img/rules/tavla-en-sheet.jpg" alt="Backgammon score sheet in Yazboz Guru" width="600" height="1304" loading="lazy"><figcaption>Score sheet</figcaption></figure>
         <figure><img src="/yazboz/img/rules/tavla-en-entry.jpg" alt="Entering a Backgammon round in Yazboz Guru" width="600" height="1213" loading="lazy"><figcaption>Entering a round</figcaption></figure>

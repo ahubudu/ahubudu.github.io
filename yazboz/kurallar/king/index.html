@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,13 +69,14 @@
   <main>
     <article class="card">
       <h1>King nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>4 oyuncu</li><li>52’lik deste</li><li>20 el</li></ul>
       <p class="lead"><strong>Amaç:</strong> 20 elin sonunda en yüksek puanı toplamak.</p>
       <h2>Hazırlık</h2>
-      <p>Dört oyuncu ve 52’lik deste; herkese 13 kart dağıtılır.</p>
+      <ul class="points"><li>Herkese 13 kart dağıtılır.</li></ul>
       <h2>Oynanış</h2>
-      <p>Her elde sırası gelen oyuncu oynanacak oyunu seçer: koz (seçtiği renk koz olur, el almak iyidir) ya da cezalardan biri: el almaz, kupa almaz, erkek almaz (papaz ve vale), kız almaz, rıfkı (kupa papazı) ve son iki. Her oyuncu toplam 2 koz ve 3 ceza seçer; her ceza en fazla 2 kez oynanır. Yerdeki renk varsa takip etmek zorunludur.</p>
+      <ol class="steps"><li>Her elde sırası gelen oyuncu oynanacak oyunu seçer: koz ya da bir ceza.</li><li>Kozda, seçen oyuncunun söylediği renk koz olur; el almak iyidir.</li><li>Cezalar: el almaz, kupa almaz, erkek almaz (papaz ve vale), kız almaz, rıfkı (kupa papazı) ve son iki.</li><li>Her oyuncu toplam 2 koz ve 3 ceza seçer; her ceza en fazla 2 kez oynanır.</li><li>Elinde yerdeki renk varsa o renkten atmak zorunludur.</li></ol>
       <h2>Puanlama</h2>
-      <p>Kozda alınan her el +50. Cezalarda: her el −50, her kupa −30, her erkek −60, her kız −100, rıfkı −320, son iki elin her biri −180.</p>
+      <table class="points"><tr><td>Koz · alınan her el</td><td class="value pos">+50</td></tr><tr><td>El almaz · her el</td><td class="value neg">−50</td></tr><tr><td>Kupa almaz · her kupa</td><td class="value neg">−30</td></tr><tr><td>Erkek almaz · her papaz ve vale</td><td class="value neg">−60</td></tr><tr><td>Kız almaz · her kız</td><td class="value neg">−100</td></tr><tr><td>Rıfkı · kupa papazı</td><td class="value neg">−320</td></tr><tr><td>Son iki · her el</td><td class="value neg">−180</td></tr></table>
       <h2>Oyunun sonu</h2>
       <p>20 el oynanır; toplamı en yüksek olan kazanır.</p>
     </article>
@@ -73,7 +84,7 @@
     <section class="card app" id="app">
       <h2>King skorunu Yazboz Guru tutsun</h2>
       <p>Kağıt kaleme gerek yok: oyunu seç, masandaki kuralları ayarla ve her elin sonunda olanları gir. Puanları kurallara göre uygulama hesaplar.</p>
-      <p>Her oyuncu sırayla 2 koz ve 3 ceza oyunu seçer; her ceza en fazla 2 kez oynanır. Kozda alınan her el +50; cezalarda el −50, kupa −30, erkek −60, kız −100, rıfkı −320, son iki el −180.</p>
+      <p>Her oyuncu sırayla 2 koz ve 3 ceza oyunu seçer; her ceza en fazla 2 kez oynanır. Kozda alınan her el +50; cezalarda el −50, kupa −30, erkek −60, kız −100, rıfkı −320, son iki elin her biri −180.</p>
       <div class="shots">
         <figure><img src="/yazboz/img/rules/king-tr-sheet.jpg" alt="Yazboz Guru’da King skor tablosu" width="600" height="1304" loading="lazy"><figcaption>Skor tablosu</figcaption></figure>
         <figure><img src="/yazboz/img/rules/king-tr-entry.jpg" alt="Yazboz Guru’da bir King elinin girişi" width="600" height="1213" loading="lazy"><figcaption>El girişi</figcaption></figure>

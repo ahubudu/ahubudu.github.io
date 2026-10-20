@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -61,29 +71,31 @@
       <h1>Dart nasıl oynanır? Kurallar ve puan hesaplama</h1>
       <p class="lead">501, 301 ya da 701’den sıfıra inen ya da Cricket’ta 15–20 ve bull’u kapatan kazanır: çeşidi kurallardan seç. 501’de son dart çift olmalı, aşan tur sayılmaz; maç leg’lerle oynanabilir.</p>
       <h2>501 / 301 / 701</h2>
+      <ul class="glance"><li>501’den 0’a</li><li>Turda 3 dart</li></ul>
       <p><strong>Amaç:</strong> Puanını herkesten önce tam sıfıra indirmek.</p>
       <h3>Hazırlık</h3>
-      <p>Standart dart tahtası yerden 173 cm yükseğe (bull’un ortası), atış çizgisi tahtadan 237 cm uzağa konur. Herkes 501’den başlar; kısa oyunlar için 301, uzunlar için 701 seçilebilir. Bull’a en yakın atan başlar.</p>
+      <ul class="points"><li>Standart dart tahtası, bull’un ortası yerden 173 cm yükseğe gelecek şekilde asılır.</li><li>Atış çizgisi tahtadan 237 cm uzağa çizilir.</li><li>Herkes 501’den başlar; kısa oyunlar için 301, uzunlar için 701 seçilebilir.</li><li>Bull’a en yakın atan başlar.</li></ul>
       <h3>Oynanış</h3>
-      <p>Sıranda üç dart atarsın. Tahtada 1’den 20’ye dilimler vardır; dış ince halka o sayının iki katı (çift), içteki ince halka üç katıdır (üçlü). Bull’un dışı 25, ortası 50 ve çift sayılır. Üç dartın toplamı puanından düşülür. Bir turda en fazla 180 (üç kez üçlü 20) yapılabilir.</p>
+      <ol class="steps"><li>Sıranda üç dart atarsın.</li><li>Tahtada 1’den 20’ye dilimler vardır; dış ince halka o sayının iki katı (çift), içteki ince halka üç katıdır (üçlü).</li><li>Bull’un dışı 25, ortası 50 ve çift sayılır.</li><li>Üç dartın toplamı puanından düşülür.</li><li>Bir turda en fazla 180 (üç kez üçlü 20) yapılabilir.</li></ol>
       <h3>Puanlama</h3>
-      <p>Puanı 0’ın altına düşüren, 1’e indiren ya da çiftle bitirme kuralında 0’a çift olmadan indiren tur “taşar” (bust): o tur hiç sayılmaz, puan tur başındaki gibi kalır. 0’a son dartı çiftle indiren oyunu bitirir (checkout). Tek turda bitirilebilecek en büyük puan 170’tir (T20, T20, bull).</p>
+      <ul class="points"><li>Puanı 0’ın altına düşüren tur “taşar” (bust).</li><li>Çiftle bitirme kuralında 1’e ya da çift olmadan 0’a indiren tur da taşar.</li><li>Taşan tur hiç sayılmaz; puan tur başındaki gibi kalır.</li><li>Puanını son dartı çifte atarak 0’a indiren oyunu bitirir (checkout).</li><li>Tek turda bitirilebilecek en büyük puan 170’tir (T20, T20, bull).</li></ul>
       <h3>Oyunun sonu</h3>
-      <p>İlk tam 0’a inen leg’i kazanır. Maçlar leg’lerle oynanır: kurulumda kaç leg’i alanın kazanacağını seçersin (ör. 3). Her leg 501’den yeniden başlar ve ilk atışı her leg’de sıradaki oyuncu yapar. Büyük turnuvalarda leg’ler ayrıca set’lere bölünür.</p>
+      <ul class="points"><li>Tam 0’a ilk inen leg’i kazanır.</li><li>Maçlar leg’lerle oynanır: Kurulumda kaç leg alanın kazanacağını seçersin (ör. 3).</li><li>Her leg 501’den yeniden başlar ve ilk atışı her leg’de sıradaki oyuncu yapar.</li><li>Büyük turnuvalarda leg’ler ayrıca setlere bölünür.</li></ul>
       <h3>Not</h3>
-      <p>Çeşitler: Çiftle başla (double in) açıksa puan ilk çifte kadar düşmez, 301’de yaygındır. Çiftle bitirme kapalıysa 0’a nasıl inilirse bitirilir; yeni başlayanlar için kolaydır. Cricket (15–20 ve bull’u kapatma oyunu) ile saat gibi 1’den 20’ye sırayla vurulan “Around the Clock” da sevilen çeşitlerdir. Eşli oyunda takım arkadaşları sırayla atar, puanı ortaktır.</p>
+      <ul class="points"><li>Çiftle başla (double in) açıksa puan ilk çifte kadar düşmez; 301’de yaygındır.</li><li>Çiftle bitirme kapalıysa 0’a nasıl inilirse inilsin bitirilir; yeni başlayanlar için kolaydır.</li><li>Cricket (15–20 ve bull’u kapatma oyunu) da sevilen bir çeşittir.</li><li>Saat gibi 1’den 20’ye sırayla vurulan “Around the Clock” da sevilir.</li><li>Eşli oyunda takım arkadaşları sırayla atar, puanları ortaktır.</li></ul>
       <h2>Cricket</h2>
+      <ul class="glance"><li>15–20 ve bull</li><li>Turda 3 dart</li></ul>
       <p><strong>Amaç:</strong> 15’ten 20’ye sayıları ve bull’u herkesten önce kapatmak ve puanda geride kalmamak.</p>
       <h3>Hazırlık</h3>
-      <p>501 ile aynı tahta ve atış mesafesi. Hedefler yalnızca 15, 16, 17, 18, 19, 20 ve bull’dur; diğer sayılar hiçbir şey saymaz. Skor tahtasına her oyuncu için bu yedi hedef yazılır.</p>
+      <ul class="points"><li>501 ile aynı tahta ve atış mesafesi kullanılır.</li><li>Hedefler yalnızca 15, 16, 17, 18, 19, 20 ve bull’dur; diğer sayılar puan getirmez.</li><li>Skor tahtasına her oyuncu için bu yedi hedef yazılır.</li></ul>
       <h3>Oynanış</h3>
-      <p>Sıranda üç dart atarsın. Bir hedefe tekli vuruş bir işaret, çift iki, üçlü üç işarettir; dış bull bir, bull’un ortası iki işarettir. Üç işaret o hedefi senin için kapatır (/, ✕, ⊗). Hedefler istediğin sırayla kapatılabilir.</p>
+      <ol class="steps"><li>Sıranda üç dart atarsın.</li><li>Bir hedefe tekli vuruş bir işaret, çift iki, üçlü üç işarettir.</li><li>Dış bull bir, bull’un ortası iki işarettir.</li><li>Üç işaret o hedefi senin için kapatır (/, ✕, ⊗).</li><li>Hedefler istediğin sırayla kapatılabilir.</li></ol>
       <h3>Puanlama</h3>
-      <p>Kapattığın bir hedefe vurmaya devam edersen, rakiplerinden en az biri onu henüz kapatmadıysa her fazla işaret o sayının değeri kadar puan yazar (bull 25). Herkesin kapattığı hedef “ölüdür”, artık puan yazmaz.</p>
+      <ul class="points"><li>Kapattığın hedefi rakiplerinden en az biri henüz kapatmadıysa, o hedefe vurduğun her fazla işaret puan getirir.</li><li>Her fazla işaret o sayının değeri kadardır (bull 25).</li><li>Herkesin kapattığı hedef “ölüdür”, artık puan getirmez.</li></ul>
       <h3>Oyunun sonu</h3>
-      <p>Bütün hedefleri kapatan ve puanı rakiplerinden düşük olmayan oyuncu kazanır. Hepsini kapattığın halde puanda gerideysen, öne geçene ya da rakip de kapatana kadar puan toplamaya devam edersin.</p>
+      <ul class="points"><li>Bütün hedefleri kapatan ve puanı rakiplerinden düşük olmayan oyuncu kazanır.</li><li>Hepsini kapattığın hâlde puanda gerideysen, öne geçene ya da rakip de kapatana kadar puan toplamaya devam edersin.</li></ul>
       <h3>Not</h3>
-      <p>Çeşitler: “Cut-throat” cricket’ta fazla işaretlerin puanı rakiplerine yazılır ve en az puanlı kazanır; uygulama şimdilik standart kuralları kullanır. Bazı masalarda 14, 13 ya da üçlü/çift halkalar da hedeftir. Eşli oyunda takım arkadaşları işaretleri ortak tutar.</p>
+      <ul class="points"><li>“Cut-throat” cricket’ta fazla işaretlerin puanı rakiplerine yazılır ve en az puanı olan kazanır.</li><li>Uygulama şimdilik standart kuralları kullanır.</li><li>Bazı masalarda 14, 13 ya da üçlü/çift halkalar da hedeftir.</li><li>Eşli oyunda takım arkadaşları işaretleri ortak tutar.</li></ul>
     </article>
 
     <section class="card app" id="app">

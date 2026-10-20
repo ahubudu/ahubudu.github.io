@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>101 Okey nasıl oynanır? Kurallar ve puan hesaplama | Yazboz Guru</title>
-  <meta name="description" content="Eli ilk bitirmek ya da mümkün olduğunca az ceza puanıyla kalmak. Bitiren −101 yazar. Açanlar elinde kalan taşların toplamını, hiç açamayanlar 202 yazar.…">
+  <meta name="description" content="Eli ilk bitirmek ya da mümkün olduğunca az ceza puanıyla kalmak. Bitiren −101 yazar. Açanlar ellerinde kalan taşların toplamını, hiç açamayanlar 202…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/kurallar/101-okey/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/101-okey/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/101-okey/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/kurallar/101-okey/">
   <meta property="og:title" content="101 Okey nasıl oynanır? Kurallar ve puan hesaplama">
-  <meta property="og:description" content="Eli ilk bitirmek ya da mümkün olduğunca az ceza puanıyla kalmak. Bitiren −101 yazar. Açanlar elinde kalan taşların toplamını, hiç açamayanlar 202 yazar.…">
+  <meta property="og:description" content="Eli ilk bitirmek ya da mümkün olduğunca az ceza puanıyla kalmak. Bitiren −101 yazar. Açanlar ellerinde kalan taşların toplamını, hiç açamayanlar 202…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-tr.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,13 +69,14 @@
   <main>
     <article class="card">
       <h1>101 Okey nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>106 taş</li><li>Açmak için en az 101</li></ul>
       <p class="lead"><strong>Amaç:</strong> Eli ilk bitirmek ya da mümkün olduğunca az ceza puanıyla kalmak.</p>
       <h2>Hazırlık</h2>
-      <p>Okeydeki gibi 106 taş ve gösterge kullanılır. Başlayan oyuncuya 22, diğerlerine 21 taş dağıtılır.</p>
+      <ul class="points"><li>Okeydeki gibi 106 taş ve gösterge kullanılır.</li><li>Başlayan oyuncuya 22, diğerlerine 21 taş dağıtılır.</li></ul>
       <h2>Oynanış</h2>
-      <p>Elini açmak için ortaya koyduğun perlerin toplamı en az 101 olmalı; ya da en az beş çiftle açabilirsin. Açtıktan sonra yerdeki perlere taş işleyebilirsin. Eli bitiren son taşını atar.</p>
+      <ol class="steps"><li>Elini açmak için ortaya koyduğun perlerin toplamı en az 101 olmalı.</li><li>Ya da en az beş çiftle açabilirsin.</li><li>Açtıktan sonra yerdeki perlere taş işleyebilirsin.</li><li>Eli bitiren son taşını atar.</li></ol>
       <h2>Puanlama</h2>
-      <p>Bitiren −101 yazar. Açanlar elinde kalan taşların toplamını, hiç açamayanlar 202 yazar. Çiftten açanların cezası ikiye katlanır; okey atarak ya da elden bitirilirse cezalar katlanır.</p>
+      <ul class="points"><li>Bitiren −101 yazar.</li><li>Açanlar ellerinde kalan taşların toplamını yazar.</li><li>Hiç açamayanlar 202 yazar.</li><li>Çiftten açanların cezası ikiye katlanır.</li><li>Okey atarak ya da elden bitirilirse cezalar katlanır.</li></ul>
       <h2>Oyunun sonu</h2>
       <p>Belirlenen el sayısı oynanır ya da masa oyunu bitirir; toplamı en düşük olan kazanır.</p>
     </article>

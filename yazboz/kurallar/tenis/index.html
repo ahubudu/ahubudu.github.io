@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>Tenis nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>Tekler ya da çiftler</li><li>3 ya da 5 set</li></ul>
       <p class="lead"><strong>Amaç:</strong> Sayı, oyun ve set kazanarak maçı almak.</p>
       <h2>Hazırlık</h2>
-      <p>Tekler iki, çiftler dört oyuncuyla oynanır; çiftlerde koridorlar da sahaya dahildir. Kura ya da raket çevirmeyle ilk servis ve saha seçilir.</p>
+      <ul class="points"><li>Tekler iki, çiftler dört oyuncuyla oynanır.</li><li>Çiftlerde koridorlar da sahaya dâhildir.</li><li>Kura ya da raket çevirmeyle ilk servis ve saha seçilir.</li></ul>
       <h2>Oynanış</h2>
-      <p>Servis, karşı servis karesine çapraz atılır; iki hakkın vardır, ikisi de kaçarsa çift hata olur ve sayıyı kaybedersin. Top bir kez sekebilir ya da sekmeden vurulabilir; ağdan geçirip rakip sahada bırakamayan sayıyı kaybeder. Servis her oyunda karşı tarafa geçer; tek sayılı oyunlardan sonra taraflar saha değiştirir.</p>
+      <ol class="steps"><li>Servis, karşı servis karesine çapraz atılır; iki hakkın vardır.</li><li>İkisi de kaçarsa çift hata olur ve sayıyı kaybedersin.</li><li>Top bir kez sekebilir ya da sekmeden vurulabilir.</li><li>Topu ağdan geçirip rakip sahaya düşüremeyen sayıyı kaybeder.</li><li>Servis her oyunda karşı tarafa geçer; tek sayılı oyunlardan sonra taraflar saha değiştirir.</li></ol>
       <h2>Puanlama</h2>
-      <p>Sayılar 0, 15, 30, 40 diye gider; dört sayı ve iki fark oyunu kazandırır. 40-40 (deuce) olunca avantajlı oyunda iki sayı üst üste almak gerekir; avantajsız (no-ad) oyunda tek belirleyici sayı oynanır. 6 oyunu iki farkla alan seti alır (6-4, 7-5); 6-6’da 7 sayılık tie-break oynanır, servis önce bir, sonra ikişer değişir.</p>
+      <ul class="points"><li>Sayılar 0, 15, 30, 40 diye gider; dört sayı ve iki fark oyunu kazandırır.</li><li>40-40 (deuce) olunca avantajlı oyunda iki sayı üst üste almak gerekir.</li><li>Avantajsız (no-ad) oyunda tek belirleyici sayı oynanır.</li><li>6 oyunu iki farkla alan seti alır (6-4, 7-5).</li><li>6-6’da 7 sayılık tie-break oynanır; servis önce bir, sonra ikişer değişir.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Maç 3 setin 2’sini ya da 5 setin 3’ünü alanındır. Son set tie-break’le, 10 sayılık süper tie-break’le ya da tie-break olmadan iki farkla oynanabilir; masanız başta karar verir.</p>
+      <ul class="points"><li>Maç 3 setin 2’sini ya da 5 setin 3’ünü alanındır.</li><li>Son set tie-break’le, 10 sayılık süper tie-break’le ya da tie-break’siz iki farkla oynanabilir; masanız baştan seçer.</li></ul>
       <h2>Not</h2>
-      <p>Çeşitler: Kulüp maçlarında kısa setler (4 oyuna, 4-4’te tie-break) ya da tek set oynanabilir. Çiftlerde eşler servisi sırayla atar. Uygulamada her sayıdan sonra kazanan tarafın düğmesine dokunursun; servis kimdeyse yanında top işareti görünür.</p>
+      <ul class="points"><li>Kulüp maçlarında kısa setler (4 oyuna, 4-4’te tie-break) ya da tek set oynanabilir.</li><li>Çiftlerde eşler servisi sırayla atar.</li><li>Uygulamada her sayıdan sonra kazanan tarafın düğmesine dokunursun; servis kimdeyse yanında top işareti görünür.</li></ul>
     </article>
 
     <section class="card app" id="app">

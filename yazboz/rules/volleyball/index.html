@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>How to play Volleyball: rules and scoring</h1>
+      <ul class="glance"><li>Indoor: 6 a side</li><li>Beach: 2 a side</li></ul>
       <p class="lead"><strong>Goal:</strong> Ground the ball on the other side and win the sets.</p>
       <h2>Setup</h2>
-      <p>Indoor teams have six players, beach teams two. A toss decides the serve or the side.</p>
+      <ul class="points"><li>A toss decides the serve or the side.</li></ul>
       <h2>How to play</h2>
-      <p>Serve from behind the end line. Each team has up to three touches to send the ball over (a block doesn’t count), and no player may touch it twice in a row. If the ball lands on the other side or they make a fault (touching the net, hitting out, four touches), the point is yours. Indoors, the team that wins the serve rotates clockwise.</p>
+      <ol class="steps"><li>Serve from behind the end line.</li><li>Each team has up to three touches to send the ball over (a block doesn’t count).</li><li>No player may touch it twice in a row.</li><li>The point is yours if the ball lands on their side or they make a fault (touching the net, hitting out, four touches).</li><li>Indoors, the team that wins the serve rotates clockwise.</li></ol>
       <h2>Scoring</h2>
-      <p>Every rally is a point (rally point scoring). Indoor sets are to 25 and beach sets to 21, two clear. The team that wins the point serves.</p>
+      <ul class="points"><li>Every rally is a point (rally point scoring).</li><li>Indoor sets are to 25 and beach sets to 21, two clear.</li><li>The team that wins the point serves.</li></ul>
       <h2>Winning</h2>
-      <p>Indoors the match goes to whoever wins 3 of 5 sets, on the beach 2 of 3. The deciding set is to 15.</p>
+      <ul class="points"><li>Indoor matches are best of 5 sets, beach matches best of 3.</li><li>The deciding set is to 15.</li></ul>
       <h2>Note</h2>
-      <p>Variants: casual games are often best of 3 or a single set, some to 15 or 21. In the app you tap the team that won the point.</p>
+      <ul class="points"><li>Casual games are often best of 3 or a single set, some to 15 or 21.</li><li>In the app you don’t pick players; you name the two teams.</li><li>You can change the points per set under house rules.</li><li>Tap the side of the team that won the point; on the point that ends a set the app asks “Set over?” first.</li></ul>
     </article>
 
     <section class="card app" id="app">
@@ -81,6 +92,16 @@
       <p class="small">Free · iPhone, iPad and Apple Watch</p>
     </section>
 
+    <section class="card">
+      <h2>House rules</h2>
+      <p>These are the rules tables argue about most. Agree on them before you start; you can turn them on or off when you set up the game.</p>
+      <h3>Points per set</h3>
+      <p>The official rule is 25, won by two.</p>
+      <h3>Points per set</h3>
+      <p>The official rule is 21, won by two.</p>
+      <h3>Points in the deciding set</h3>
+      <p>The official rule is 15.</p>
+    </section>
     <nav class="card">
       <h2>More games</h2>
       <ul class="games"><li><a href="../okey/">Okey</a></li><li><a href="../101-okey/">101 Okey</a></li><li><a href="../rummy/">Rummy</a></li><li><a href="../backgammon/">Backgammon</a></li><li><a href="../batak/">Batak</a></li><li><a href="../king/">King</a></li><li><a href="../pishti/">Pishti</a></li><li><a href="../crazy-eights/">Crazy Eights</a></li><li><a href="../bluff/">Bluff</a></li><li><a href="../uno/">Uno</a></li><li><a href="../yahtzee/">Yahtzee</a></li><li><a href="../darts/">Darts</a></li><li><a href="../mini-golf/">Mini golf</a></li><li><a href="../billiards/">Billiards</a></li><li><a href="../tennis/">Tennis</a></li><li><a href="../padel/">Padel</a></li><li><a href="../table-tennis/">Table tennis</a></li></ul>

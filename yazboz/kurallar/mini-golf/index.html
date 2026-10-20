@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>Mini golf nasıl oynanır? Kurallar ve puan hesaplama | Yazboz Guru</title>
-  <meta name="description" content="Bütün delikleri olabildiğince az vuruşla bitirmek. Her delik için vuruş sayın yazılır. Tek vuruşta sokmak (hole in one) 1 yazar. En fazla vuruşa gelip…">
+  <meta name="description" content="Bütün delikleri olabildiğince az vuruşla bitirmek. Her delik için vuruş sayın yazılır. Tek vuruşta sokan (hole in one) 1 yazar. Vuruş sınırına gelip hâlâ…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/kurallar/mini-golf/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/mini-golf/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/mini-golf/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/kurallar/mini-golf/">
   <meta property="og:title" content="Mini golf nasıl oynanır? Kurallar ve puan hesaplama">
-  <meta property="og:description" content="Bütün delikleri olabildiğince az vuruşla bitirmek. Her delik için vuruş sayın yazılır. Tek vuruşta sokmak (hole in one) 1 yazar. En fazla vuruşa gelip…">
+  <meta property="og:description" content="Bütün delikleri olabildiğince az vuruşla bitirmek. Her delik için vuruş sayın yazılır. Tek vuruşta sokan (hole in one) 1 yazar. Vuruş sınırına gelip hâlâ…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-tr.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>Mini golf nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>9 ya da 18 delik</li><li>Çoğu yerde en fazla 6 vuruş</li></ul>
       <p class="lead"><strong>Amaç:</strong> Bütün delikleri olabildiğince az vuruşla bitirmek.</p>
       <h2>Hazırlık</h2>
-      <p>Herkesin bir sopası ve kendi renginde bir topu olur. Parkurlar genelde 9 ya da 18 deliklidir. Başlamadan önce delik başına en fazla vuruşu kararlaştırın (çoğu yerde 6).</p>
+      <ul class="points"><li>Herkesin bir sopası ve kendi renginde bir topu olur.</li><li>Başlamadan önce delik başına en fazla vuruş sayısını kararlaştırın (çoğu yerde 6).</li></ul>
       <h2>Oynanış</h2>
-      <p>Her delikte herkes topunu başlangıç noktasından vurur. Sıra, deliğe en uzak topu olan oyuncudadır ya da masa sırayla oynar. Topu deliğe sokana kadar vurmaya devam edersin. Top parkurun dışına çıkarsa çıktığı yere konur ve bir ceza vuruşu eklenir. Engellere (köprü, tünel, rampa) dokunmak serbesttir.</p>
+      <ol class="steps"><li>Her delikte herkes topunu başlangıç noktasından vurur.</li><li>Sıra, deliğe en uzak topu olan oyuncudadır ya da masa sırayla oynar.</li><li>Topu deliğe sokana kadar vurmaya devam edersin.</li><li>Top parkurun dışına çıkarsa çıktığı yere konur ve bir ceza vuruşu eklenir.</li><li>Engellere (köprü, tünel, rampa) dokunmak serbesttir.</li></ol>
       <h2>Puanlama</h2>
-      <p>Her delik için vuruş sayın yazılır. Tek vuruşta sokmak (hole in one) 1 yazar. En fazla vuruşa gelip hâlâ sokamayan topu alır ve bir fazlasını yazar (6 sınırında 7). Par, o deliğin beklenen vuruş sayısıdır; parın altında bitirmek iyi sonuçtur.</p>
+      <ul class="points"><li>Her delik için vuruş sayın yazılır.</li><li>Tek vuruşta sokan (hole in one) 1 yazar.</li><li>Vuruş sınırına gelip hâlâ sokamayan topu alır ve sınırın bir fazlasını yazar (6 sınırında 7).</li><li>Par, o deliğin beklenen vuruş sayısıdır; parın altında bitirmek iyi sonuçtur.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Son delikten sonra toplam vuruşu en az olan kazanır. Eşitlikte son deliğe ya da en çok tek vuruşa bakılabilir.</p>
+      <ul class="points"><li>Son delikten sonra toplam vuruşu en az olan kazanır.</li><li>Eşitlikte son deliğe ya da kimin daha çok tek vuruşu olduğuna bakılabilir.</li></ul>
       <h2>Not</h2>
-      <p>Çeşitler: Bazı parkurlarda sınır 5 ya da 7’dir; uygulamada kurulumda değiştirebilirsin. Çocuklarla oynarken sınırı düşük tutmak oyunu hızlandırır. Takım halinde “en iyi top” oynamak isteyen masalar her delikte takımın en iyi skorunu yazabilir.</p>
+      <ul class="points"><li>Bazı parkurlarda sınır 5 ya da 7’dir; uygulamada kurulumda değiştirebilirsin.</li><li>Çocuklarla oynarken sınırı düşük tutmak oyunu hızlandırır.</li><li>Takım hâlinde “en iyi top” oynamak isteyen masalar her delikte takımın en iyi skorunu yazabilir.</li></ul>
     </article>
 
     <section class="card app" id="app">

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>How to play Bluff: rules and scoring | Yazboz Guru</title>
-  <meta name="description" content="Be the first to get rid of all your cards. The first to empty their hand wins the hand and scores 1 point. Or, write the number of cards everyone else…">
+  <meta name="description" content="Be the first to get rid of all your cards. The first to empty their hand wins the hand and scores 1 point. Alternatively, everyone else writes down the…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/rules/bluff/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/bluff/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/blof/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/rules/bluff/">
   <meta property="og:title" content="How to play Bluff: rules and scoring">
-  <meta property="og:description" content="Be the first to get rid of all your cards. The first to empty their hand wins the hand and scores 1 point. Or, write the number of cards everyone else…">
+  <meta property="og:description" content="Be the first to get rid of all your cards. The first to empty their hand wins the hand and scores 1 point. Alternatively, everyone else writes down the…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-en.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,15 +69,16 @@
   <main>
     <article class="card">
       <h1>How to play Bluff: rules and scoring</h1>
+      <ul class="glance"><li>52-card deck</li><li>Dealt evenly</li></ul>
       <p class="lead"><strong>Goal:</strong> Be the first to get rid of all your cards.</p>
       <h2>Setup</h2>
-      <p>A 52-card deck dealt evenly to everyone. The player with the ace of spades, or whoever the table picks, starts.</p>
+      <ul class="points"><li>The player with the ace of spades, or whoever the table picks, starts.</li></ul>
       <h2>How to play</h2>
-      <p>On your turn, play one or more cards face down and say what they are (e.g. “two sevens”); the ranks go up in order: aces, twos, threes… You don’t have to tell the truth. If anyone calls “Bluff!”, the cards are turned over: a liar picks up the whole pile, and so does the challenger if the claim was true.</p>
+      <ol class="steps"><li>On your turn, play one or more cards face down and say what they are (e.g. “two sevens”).</li><li>The ranks go up in order: aces, twos, threes…</li><li>You don’t have to tell the truth.</li><li>If anyone calls “Bluff!”, the cards are turned over.</li><li>A liar picks up the whole pile, and so does the challenger if the claim was true.</li></ol>
       <h2>Scoring</h2>
-      <p>The first to empty their hand wins the hand and scores 1 point. Or, write the number of cards everyone else still holds as a penalty.</p>
+      <ul class="points"><li>The first to empty their hand wins the hand and scores 1 point.</li><li>Alternatively, everyone else writes down the number of cards they still hold as a penalty.</li></ul>
       <h2>Winning</h2>
-      <p>The first to win the agreed number of hands (e.g. 5) wins, or the smallest penalty after the agreed number of hands.</p>
+      <p>The first to win the agreed number of hands (e.g. 5) wins; or, after the agreed number of hands, the lowest penalty wins.</p>
     </article>
 
     <section class="card app" id="app">

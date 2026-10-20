@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>Pişti nasıl oynanır? Kurallar ve puan hesaplama | Yazboz Guru</title>
-  <meta name="description" content="Yerdeki kartları toplayarak en çok puanı almak. Pişti 10, valeyle pişti 20 puan. Her as ve vale 1, sinek ikili 2, karo onlu 3 puan. En çok kartı alan 3…">
+  <meta name="description" content="Yerdeki kartları toplayarak en çok puanı almak. Pişti 10, vale piştisi 20 puan. Her as ve vale 1, sinek ikili 2, karo onlu 3 puan. En çok kartı alan 3…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/kurallar/pisti/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/pisti/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/pishti/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/kurallar/pisti/">
   <meta property="og:title" content="Pişti nasıl oynanır? Kurallar ve puan hesaplama">
-  <meta property="og:description" content="Yerdeki kartları toplayarak en çok puanı almak. Pişti 10, valeyle pişti 20 puan. Her as ve vale 1, sinek ikili 2, karo onlu 3 puan. En çok kartı alan 3…">
+  <meta property="og:description" content="Yerdeki kartları toplayarak en çok puanı almak. Pişti 10, vale piştisi 20 puan. Her as ve vale 1, sinek ikili 2, karo onlu 3 puan. En çok kartı alan 3…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-tr.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,13 +69,14 @@
   <main>
     <article class="card">
       <h1>Pişti nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>52’lik deste</li><li>Dörder kart</li></ul>
       <p class="lead"><strong>Amaç:</strong> Yerdeki kartları toplayarak en çok puanı almak.</p>
       <h2>Hazırlık</h2>
-      <p>52’lik deste kullanılır. Yere dört kart konur, en üstteki açıktır; her oyuncuya dört kart dağıtılır. Eller bitince yeniden dörder kart dağıtılır.</p>
+      <ul class="points"><li>Yere dört kart konur, en üstteki açıktır.</li><li>Her oyuncuya dört kart dağıtılır.</li><li>Eldeki kartlar bitince yeniden dörder kart dağıtılır.</li></ul>
       <h2>Oynanış</h2>
-      <p>Sırayla birer kart atılır. Attığın kart yerdeki en üst kartla aynı değerdeyse ya da vale atarsan yerdeki bütün kartları alırsın. Yerde tek kart varken onu aynı değerdeki kartla alırsan pişti yaparsın.</p>
+      <ol class="steps"><li>Sırayla birer kart atılır.</li><li>Attığın kart yerdeki en üst kartla aynı değerdeyse yerdeki bütün kartları alırsın.</li><li>Vale atarsan da yerdeki bütün kartları alırsın.</li><li>Yerde tek kart varken onu aynı değerdeki kartla alırsan pişti yaparsın.</li></ol>
       <h2>Puanlama</h2>
-      <p>Pişti 10, valeyle pişti 20 puan. Her as ve vale 1, sinek ikili 2, karo onlu 3 puan. En çok kartı alan 3 puan daha alır.</p>
+      <table class="points"><tr><td>Pişti</td><td class="value pos">+10</td></tr><tr><td>Vale piştisi</td><td class="value pos">+20</td></tr><tr><td>Her as ve vale</td><td class="value pos">+1</td></tr><tr><td>Sinek ikili</td><td class="value pos">+2</td></tr><tr><td>Karo onlu</td><td class="value pos">+3</td></tr><tr><td>En çok kartı alan</td><td class="value pos">+3</td></tr></table>
       <h2>Oyunun sonu</h2>
       <p>Hedef puana (ör. 151) ilk ulaşan kazanır.</p>
     </article>

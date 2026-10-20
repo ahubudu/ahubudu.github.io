@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>How to play Tennis: rules and scoring</h1>
+      <ul class="glance"><li>Singles or doubles</li><li>Best of 3 or 5 sets</li></ul>
       <p class="lead"><strong>Goal:</strong> Win points, games and sets to take the match.</p>
       <h2>Setup</h2>
-      <p>Singles is played by two, doubles by four; the doubles alleys are in for doubles. A toss or a racket spin decides the first serve and the ends.</p>
+      <ul class="points"><li>Singles is played by two, doubles by four.</li><li>The tramlines are in for doubles.</li><li>A toss or a racket spin decides the first serve and the ends.</li></ul>
       <h2>How to play</h2>
-      <p>You serve diagonally into the opposite service box, with two tries; missing both is a double fault and loses the point. The ball may bounce once or be volleyed; whoever fails to get it over the net and into the court loses the point. The serve changes every game, and players change ends after the odd games.</p>
+      <ol class="steps"><li>You serve diagonally into the opposite service box, with two attempts.</li><li>Missing both is a double fault and loses the point.</li><li>The ball may bounce once or be volleyed.</li><li>Whoever fails to get it over the net and into the court loses the point.</li><li>The serve changes every game, and players change ends after odd-numbered games.</li></ol>
       <h2>Scoring</h2>
-      <p>Points go 0, 15, 30, 40; four points and two clear win a game. At 40-all (deuce), with advantage you need two points in a row; with no-ad a single deciding point is played. Six games and two clear win a set (6-4, 7-5); at 6-all a tie-break to 7 is played, with one serve then two each.</p>
+      <ul class="points"><li>Points go 0, 15, 30, 40; four points and two clear win a game.</li><li>At 40-all (deuce), with advantage you need two points in a row.</li><li>With no-ad a single deciding point is played.</li><li>Six games and two clear win a set (6-4, 7-5).</li><li>At 6-all a tie-break to 7 is played, with one serve then two each.</li></ul>
       <h2>Winning</h2>
-      <p>The match goes to whoever wins 2 of 3 or 3 of 5 sets. The final set can have a tie-break, a 10-point super tie-break or no tie-break at all; agree on it at the start.</p>
+      <ul class="points"><li>The match goes to whoever wins 2 of 3 or 3 of 5 sets.</li><li>The final set can have a tie-break, a 10-point super tie-break or no tie-break at all; agree on it at the start.</li></ul>
       <h2>Note</h2>
-      <p>Variants: club matches often use short sets (to 4, tie-break at 4-all) or a single set. In doubles partners take turns to serve. In the app you tap the winning side after each point; a ball shows who is serving.</p>
+      <ul class="points"><li>Club matches often use short sets (to 4, tie-break at 4-all) or a single set.</li><li>In doubles partners take turns to serve.</li><li>In the app you tap the winning side after each point; a ball shows who is serving.</li></ul>
     </article>
 
     <section class="card app" id="app">

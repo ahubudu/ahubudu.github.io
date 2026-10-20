@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>Bilardo nasıl oynanır? Kurallar ve puan hesaplama | Yazboz Guru</title>
-  <meta name="description" content="Amerikan bilardosu (8, 9 ya da 10 top), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan’da masa (frame) sayısıyla, 3 bantta hedef sayıyla,…">
+  <meta name="description" content="Amerikan bilardosu (8, 9 ya da 10 top), düz bilardo (14.1), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan bilardosunda masa (frame) sayısıyla,…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/kurallar/bilardo/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/bilardo/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/billiards/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/kurallar/bilardo/">
   <meta property="og:title" content="Bilardo nasıl oynanır? Kurallar ve puan hesaplama">
-  <meta property="og:description" content="Amerikan bilardosu (8, 9 ya da 10 top), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan’da masa (frame) sayısıyla, 3 bantta hedef sayıyla,…">
+  <meta property="og:description" content="Amerikan bilardosu (8, 9 ya da 10 top), düz bilardo (14.1), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan bilardosunda masa (frame) sayısıyla,…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-tr.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,54 +69,76 @@
   <main>
     <article class="card">
       <h1>Bilardo nasıl oynanır? Kurallar ve puan hesaplama</h1>
-      <p class="lead">Amerikan bilardosu (8, 9 ya da 10 top), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan’da masa (frame) sayısıyla, 3 bantta hedef sayıyla, snooker’da frame’lerle oynanır.</p>
+      <p class="lead">Amerikan bilardosu (8, 9 ya da 10 top), düz bilardo (14.1), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan bilardosunda masa (frame) sayısıyla, 14.1 ve 3 bantta hedef sayıyla, snooker’da frame’lerle oynanır.</p>
       <h2>8 top / 9 top / 10 top</h2>
+      <ul class="glance"><li>Altı cepli masa</li><li>8, 9 ve 10 top</li></ul>
       <p><strong>Amaç:</strong> Masadaki topları kurallara göre sokup her masayı (frame) kazanmak; belirlenen masa sayısına ilk ulaşmak.</p>
       <h3>Hazırlık</h3>
-      <p>Standart masada altı cep vardır. 8 topta 15 top üçgene dizilir, 8 numara ortaya; 9 topta 1’den 9’a dokuz top elmas şeklinde, 1 önde, 9 ortada; 10 topta on top üçgende, 10 ortada. Açışı (break) kimin yapacağına yazı turayla ya da bant atışıyla karar verilir.</p>
+      <ul class="points"><li>8 topta 15 top üçgene dizilir, 8 numara ortaya.</li><li>9 topta 1’den 9’a dokuz top elmas şeklinde dizilir; 1 önde, 9 ortada.</li><li>10 topta on top üçgende, 10 ortada.</li><li>Açışı (break) kimin yapacağına yazı turayla ya da bant atışıyla karar verilir.</li></ul>
       <h3>Oynanış</h3>
-      <p>8 topta açıştan sonra bir oyuncu düz renkli (1–7) ya da çizgili (9–15) bir top sokunca o grup onun olur. Kendi grubunu bitiren 8’i, hangi cebe atacağını söyleyerek sokar. 9 ve 10 topta istaka topu her atışta önce masadaki en küçük numaralı topa değmelidir; sonra hangi top girerse girsin sayılır. 10 topta atış söylenerek yapılır. Faulde (istaka topunu sokmak, yanlış topa önce değmek, hiçbir topun banda gitmemesi) rakip istaka topunu masada istediği yere koyar.</p>
+      <ol class="steps"><li>8 topta açıştan sonra bir oyuncu düz renkli (1–7) ya da çizgili (9–15) bir top sokunca o grup onun olur.</li><li>Kendi grubunu bitiren 8’i, hangi cebe atacağını söyleyerek sokar.</li><li>9 ve 10 topta istaka topu her atışta önce masadaki en küçük numaralı topa değmelidir.</li><li>Sonra hangi top girerse girsin sayılır.</li><li>10 topta atış söylenerek yapılır.</li><li>Faul: istaka topunu sokmak, yanlış topa önce değmek ya da hiçbir topun banda gitmemesi.</li><li>Faulde rakip istaka topunu masada istediği yere koyar.</li></ol>
       <h3>Puanlama</h3>
-      <p>8 topta grubunu bitirip 8’i söylediği cebe sokan masayı kazanır; 8’i erken ya da istaka topuyla birlikte sokan masayı kaybeder. 9 topta 9’u, 10 topta 10’u kurallara uygun sokan kazanır; 9 topta açışta 9’u sokmak da masayı kazandırır (“golden break”). Her masa bir sayıdır.</p>
+      <ul class="points"><li>8 topta grubunu bitirip 8’i söylediği cebe sokan masayı kazanır.</li><li>8’i erken ya da istaka topuyla birlikte sokan masayı kaybeder.</li><li>9 topta 9’u, 10 topta 10’u kurallara uygun sokan kazanır.</li><li>9 topta açışta 9’u sokmak da masayı kazandırır (“golden break”).</li><li>Her masa bir sayıdır.</li></ul>
       <h3>Oyunun sonu</h3>
-      <p>Maç “race” olarak oynanır: belirlenen sayıda masayı ilk kazanan (ör. 5 masaya) maçı alır. Açış sırası masadan masaya değişebilir ya da kazanan açar; masanızda baştan kararlaştırın.</p>
+      <ul class="points"><li>Maç “race” olarak oynanır: Belirlenen sayıda masayı ilk kazanan (ör. 5 masaya) maçı alır.</li><li>Açış sırası masadan masaya değişebilir ya da kazanan açar; masanızda baştan kararlaştırın.</li></ul>
       <h3>Not</h3>
-      <p>Çeşitler: Eşli oyunda takım arkadaşları sırayla atar. Bazı masalar 8 topta “cep söyleme”yi yalnızca 8 için, bazıları her top için ister. Barlarda kaybeden kalkar, kazanan masada kalır. Açıştan masayı tek başına bitirmeyi (break and run) uygulamada işaretleyebilirsin.</p>
+      <ul class="points"><li>Eşli oyunda takım arkadaşları sırayla atar.</li><li>Bazı masalar 8 topta “cep söyleme”yi yalnızca 8 için, bazıları her top için ister.</li><li>Barlarda kaybeden kalkar, kazanan masada kalır.</li><li>Açıştan masayı tek başına bitirmeyi (break and run) uygulamada işaretleyebilirsin.</li></ul>
+      <h2>Düz (14.1)</h2>
+      <ul class="glance"><li>15 top</li><li>Genellikle 100 sayıya</li></ul>
+      <p><strong>Amaç:</strong> Hedef sayıya (genellikle 100, resmî maçlarda 125–150) ilk ulaşmak. Masadaki her top, söylenen cebe sokulursa 1 sayıdır.</p>
+      <h3>Hazırlık</h3>
+      <ul class="points"><li>15 top üçgene dizilir.</li><li>Açışta oyuncu ya bir topu ve cebini söyleyip sokmak ya da iki topu ve beyaz topu banda göndermek zorundadır.</li><li>Yoksa faul olur.</li></ul>
+      <h3>Oynanış</h3>
+      <ol class="steps"><li>Her atıştan önce hangi topun hangi cebe gireceği söylenir.</li><li>Hangi top olduğu önemsizdir; renk ya da numara yoktur.</li><li>Söylenen top girdiği sürece oyuncu masada kalır.</li><li>On dört top girince on beşinci yerinde bırakılır, girenler yeniden üçgene dizilir.</li><li>Seri kesilmeden devam eder; “sürekli” (continuous) adı buradan gelir.</li></ol>
+      <h3>Puanlama</h3>
+      <ul class="points"><li>Sokulan her top 1 sayıdır.</li><li>Her faul 1 sayı düşürür: beyazın cebe girmesi, bant şartının yerine gelmemesi, masadan top çıkması.</li><li>Aynı oyuncu üst üste üç kez faul yaparsa ayrıca 15 sayı kaybeder ve sayacı sıfırlanır.</li><li>Uygulamada her seride giren top sayısını ve seri faulle bittiyse bunu girersin.</li><li>Üçüncü faulü uygulama kendisi sayar.</li></ul>
+      <h3>Oyunun sonu</h3>
+      <ul class="points"><li>Hedef sayıya ilk ulaşan kazanır.</li><li>Seri ne kadar uzun olursa olsun, hedefe ulaşıldığı an oyun biter.</li></ul>
+      <h3>Not</h3>
+      <ul class="points"><li>Gündelik oyunda 50 ya da 75 sayıya oynanır.</li><li>Bazı masalar üç faul cezasını uygulamaz.</li><li>Hedef sayıyı ve üç faul cezasını masa kurallarından değiştirebilirsin.</li><li>Tek seride 14 top (bütün bir masa) özel bir seri olarak altın renkle gösterilir.</li></ul>
       <h2>3 bant</h2>
+      <ul class="glance"><li>Cepsiz masa</li><li>3 top</li></ul>
       <p><strong>Amaç:</strong> Üç bant kuralına uygun sayılar yapıp hedef sayıya ilk ulaşmak.</p>
       <h3>Hazırlık</h3>
-      <p>Cepsiz masada üç top kullanılır: iki istaka topu (beyaz ve sarı, her oyuncunun kendi topu) ve bir kırmızı. Açış (ilk vuruş) yazı turayla ya da bant atışıyla belirlenir; topların açış yerleri masada işaretlidir.</p>
+      <ul class="points"><li>İki istaka topu (beyaz ve sarı, her oyuncunun kendi topu) ve bir kırmızı.</li><li>Açış (ilk vuruş) yazı turayla ya da bant atışıyla belirlenir.</li><li>Topların açış yerleri masada işaretlidir.</li></ul>
       <h3>Oynanış</h3>
-      <p>Kendi topuna vurursun. Topun diğer iki topa da değmeli ve ikinci topa değmeden önce en az üç kez banda çarpmalıdır; bant çarpmaları aynı ya da farklı bantlara olabilir. Sayı yaptıkça atmaya devam edersin; ilk başarısız atışta seri biter ve sıra rakibe geçer.</p>
+      <ol class="steps"><li>Kendi topuna vurursun.</li><li>Topun diğer iki topa da değmelidir.</li><li>İkinci topa değmeden önce en az üç kez banda çarpmalıdır; bantlar aynı ya da farklı olabilir.</li><li>Sayı yaptıkça atmaya devam edersin.</li><li>İlk başarısız atışta seri biter ve sıra rakibe geçer.</li></ol>
       <h3>Puanlama</h3>
-      <p>Her kurallı vuruş bir sayıdır. Seride kaç sayı yaptığın yazılır. Ortalama, toplam sayının seri (ıstaka) sayısına bölümüdür ve oyuncunun seviyesini gösterir; en yüksek seri de ayrıca not edilir.</p>
+      <ul class="points"><li>Her kurallı vuruş bir sayıdır.</li><li>Seride kaç sayı yaptığın yazılır.</li><li>Ortalama, toplam sayının seri (istaka) sayısına bölümüdür ve oyuncunun seviyesini gösterir.</li><li>En yüksek seri de ayrıca not edilir.</li></ul>
       <h3>Oyunun sonu</h3>
-      <p>Hedef sayıya (ör. 25, 30 ya da 40) ilk ulaşan kazanır. Eşit seri kuralında açan oyuncu hedefe ulaşırsa rakip son serisini atar; o da ulaşırsa oyun berabere biter ya da masa uzatmaya karar verir.</p>
+      <ul class="points"><li>Hedef sayıya (ör. 25, 30 ya da 40) ilk ulaşan kazanır.</li><li>Eşit seri kuralında açan oyuncu hedefe ulaşırsa rakip son serisini atar.</li><li>O da ulaşırsa oyun berabere biter ya da masa uzatmaya karar verir.</li></ul>
       <h3>Not</h3>
-      <p>Çeşitler: Serbest (top-top) oyunda bant şartı yoktur, bir bantta istaka topu ikinci topa değmeden önce en az bir kez banda çarpar. Türkiye’de turnuvalarda 3 bant çoğunlukla 30 ya da 40 sayıya ve süre sınırıyla oynanır.</p>
+      <ul class="points"><li>Serbest (top-top) oyunda bant şartı yoktur.</li><li>Tek bantta istaka topu ikinci topa değmeden önce en az bir kez banda çarpar.</li><li>Türkiye’de turnuvalarda 3 bant çoğunlukla 30 ya da 40 sayıya ve süre sınırıyla oynanır.</li></ul>
       <h2>Snooker</h2>
+      <ul class="glance"><li>15 kırmızı</li><li>6 renkli top</li></ul>
       <p><strong>Amaç:</strong> Topları doğru sırayla sokup frame’i rakipten fazla puanla bitirmek.</p>
       <h3>Hazırlık</h3>
-      <p>Büyük cepli masada 15 kırmızı üçgene, altı renkli top kendi noktalarına dizilir: sarı 2, yeşil 3, kahverengi 4, mavi 5, pembe 6, siyah 7 puandır. Beyaz istaka topudur.</p>
+      <ul class="points"><li>Büyük, cepli bir masada kırmızılar üçgene, renkli toplar kendi noktalarına dizilir.</li><li>Sarı 2, yeşil 3, kahverengi 4, mavi 5, pembe 6, siyah 7 puandır.</li><li>Beyaz istaka topudur.</li></ul>
       <h3>Oynanış</h3>
-      <p>Sıranda önce bir kırmızı sokmalısın, sonra istediğin bir renkli topu; ardından yine kırmızı, yine renkli. Sokulan renkli top, kırmızılar bitene kadar yerine geri konur. Kırmızılar bitince renkliler sırayla sokulur: sarıdan siyaha. Top sokamadığında sıra rakibe geçer. Bir ziyarette yapılan puan “seri”dir (break).</p>
+      <ol class="steps"><li>Sıranda önce bir kırmızı sokmalısın, sonra istediğin bir renkli topu; ardından yine kırmızı, yine renkli.</li><li>Sokulan renkli top, kırmızılar bitene kadar yerine geri konur.</li><li>Kırmızılar bitince renkliler sırayla sokulur: sarıdan siyaha.</li><li>Top sokamadığında sıra rakibe geçer.</li><li>Sıra sendeyken art arda yapılan puan “seri”dir (break).</li></ol>
       <h3>Puanlama</h3>
-      <p>Kırmızı 1, renkliler 2’den 7’ye puandır. Faul (yanlış topa önce değmek, beyazı sokmak, hiçbir topa değmemek) rakibe en az 4, değilen top daha değerliyse o kadar puan yazdırır. Tek seride yapılabilecek en yüksek puan 147’dir.</p>
+      <ul class="points"><li>Kırmızı 1, renkliler 2’den 7’ye puandır.</li><li>Faul: yanlış topa önce değmek, beyazı sokmak, hiçbir topa değmemek.</li><li>Faul rakibe en az 4, değilen top daha değerliyse o kadar puan yazdırır.</li><li>Tek seride yapılabilecek en yüksek puan 147’dir.</li></ul>
       <h3>Oyunun sonu</h3>
-      <p>Son siyah girince frame biter; puanı yüksek olan frame’i alır. Maç “best of” oynanır: 5 frame’lik maçta 3 frame alan kazanır. Puanlar eşitse siyah top yeniden konup oynanır.</p>
+      <ul class="points"><li>Son siyah girince frame biter; puanı daha yüksek olan frame’i alır.</li><li>Maç “best of” oynanır: 5 frame’lik maçta 3 frame alan kazanır.</li><li>Puanlar eşitse siyah top yeniden konup oynanır.</li></ul>
       <h3>Not</h3>
-      <p>Çeşitler: Kısa oyunlar için 6 ya da 10 kırmızıyla oynanabilir. Eşli oyunda takım arkadaşları sırayla atar. Uygulamada frame sonundaki puanları ve istersen en yüksek seriyi girersin.</p>
+      <ul class="points"><li>Kısa oyunlar için 6 ya da 10 kırmızıyla oynanabilir.</li><li>Eşli oyunda takım arkadaşları sırayla atar.</li><li>Uygulamada frame sonundaki puanları ve istersen en yüksek seriyi girersin.</li></ul>
     </article>
 
     <section class="card app" id="app">
       <h2>Bilardo skorunu Yazboz Guru tutsun</h2>
       <p>Kağıt kaleme gerek yok: oyunu seç, masandaki kuralları ayarla ve her elin sonunda olanları gir. Puanları kurallara göre uygulama hesaplar.</p>
-      <p>Amerikan bilardosu (8, 9 ya da 10 top), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan’da masa (frame) sayısıyla, 3 bantta hedef sayıyla, snooker’da frame’lerle oynanır.</p>
+      <p>Amerikan bilardosu (8, 9 ya da 10 top), düz bilardo (14.1), 3 bant ya da snooker: çeşidi kurallardan seç. Amerikan bilardosunda masa (frame) sayısıyla, 14.1 ve 3 bantta hedef sayıyla, snooker’da frame’lerle oynanır.</p>
       
       <a class="button" href="https://apps.apple.com/app/id6823951115">App Store’dan indir</a>
       <p class="small">Ücretsiz · iPhone, iPad ve Apple Watch</p>
     </section>
 
+    <section class="card">
+      <h2>Masa kuralları</h2>
+      <p>Masalarda en çok tartışılan kurallar. Başlamadan önce masayla anlaş; oyunu kurarken bunları açıp kapatabilirsin.</p>
+      <h3>Üç faul cezası (−15)</h3>
+      <p>Aynı oyuncu üst üste üç kez faul yaparsa faulün −1’ine ek olarak 15 sayı düşer.</p>
+    </section>
     <nav class="card">
       <h2>Diğer oyunlar</h2>
       <ul class="games"><li><a href="../okey/">Okey</a></li><li><a href="../101-okey/">101 Okey</a></li><li><a href="../rummy/">Rummy</a></li><li><a href="../tavla/">Tavla</a></li><li><a href="../batak/">Batak</a></li><li><a href="../king/">King</a></li><li><a href="../pisti/">Pişti</a></li><li><a href="../pis-yedili/">Pis Yedili</a></li><li><a href="../blof/">Blöf</a></li><li><a href="../uno/">Uno</a></li><li><a href="../yahtzee/">Yahtzee</a></li><li><a href="../dart/">Dart</a></li><li><a href="../mini-golf/">Mini golf</a></li><li><a href="../tenis/">Tenis</a></li><li><a href="../padel/">Padel</a></li><li><a href="../masa-tenisi/">Masa tenisi</a></li><li><a href="../voleybol/">Voleybol</a></li></ul>

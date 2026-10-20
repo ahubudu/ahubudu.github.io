@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>How to play Mini golf: rules and scoring</h1>
+      <ul class="glance"><li>9 or 18 holes</li><li>Usually 6 strokes max</li></ul>
       <p class="lead"><strong>Goal:</strong> Finish every hole in as few strokes as you can.</p>
       <h2>Setup</h2>
-      <p>Everyone has a putter and a ball in their own color. Courses usually have 9 or 18 holes. Before you start, agree on the most strokes per hole (6 at most places).</p>
+      <ul class="points"><li>Everyone has a putter and a ball in their own colour.</li><li>Before you start, agree on the maximum strokes per hole (6 on most courses).</li></ul>
       <h2>How to play</h2>
-      <p>On each hole everyone putts from the tee. The player farthest from the hole goes next, or the table plays in turn. You keep putting until the ball drops. A ball that leaves the course goes back where it left, with a one-stroke penalty. Touching the obstacles (bridges, tunnels, ramps) is fine.</p>
+      <ol class="steps"><li>On each hole everyone putts from the tee.</li><li>The player farthest from the hole goes next, or the table plays in turn.</li><li>You keep putting until the ball drops.</li><li>A ball that leaves the course goes back to where it left, with a one-stroke penalty.</li><li>Touching the obstacles (bridges, tunnels, ramps) is fine.</li></ol>
       <h2>Scoring</h2>
-      <p>Write down your strokes for every hole. A hole in one scores 1. Anyone who reaches the limit without holing out picks up and scores one more (7 with a limit of 6). Par is the expected number of strokes for a hole; finishing under par is a good result.</p>
+      <ul class="points"><li>Write down your strokes for every hole.</li><li>A hole in one scores 1.</li><li>Anyone who reaches the limit without holing out picks up and scores one more (7 with a limit of 6).</li><li>Par is the expected number of strokes for a hole; finishing under par is a good result.</li></ul>
       <h2>Winning</h2>
-      <p>After the last hole, fewest strokes in total wins. For a tie, look at the last hole or count the holes in one.</p>
+      <ul class="points"><li>After the last hole, the fewest strokes in total wins.</li><li>To break a tie, look at the last hole or count the holes in one.</li></ul>
       <h2>Note</h2>
-      <p>Variants: some courses use a limit of 5 or 7; change it on setup. With children a lower limit keeps the game moving. Teams playing “best ball” can write the team’s best score on each hole.</p>
+      <ul class="points"><li>Some courses use a limit of 5 or 7; change it when setting up.</li><li>With children a lower limit keeps the game moving.</li><li>Teams playing “best ball” can write the team’s best score on each hole.</li></ul>
     </article>
 
     <section class="card app" id="app">

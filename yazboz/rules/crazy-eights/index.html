@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>How to play Crazy Eights: rules and scoring | Yazboz Guru</title>
-  <meta name="description" content="Be the first to get rid of all your cards. When someone goes out, everyone else writes the points left in their hand. Going out on a jack doubles the…">
+  <meta name="description" content="Be the first to get rid of all your cards. When someone goes out, everyone else writes down the points left in their hand. Going out on a jack doubles…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/rules/crazy-eights/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/crazy-eights/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/pis-yedili/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/rules/crazy-eights/">
   <meta property="og:title" content="How to play Crazy Eights: rules and scoring">
-  <meta property="og:description" content="Be the first to get rid of all your cards. When someone goes out, everyone else writes the points left in their hand. Going out on a jack doubles the…">
+  <meta property="og:description" content="Be the first to get rid of all your cards. When someone goes out, everyone else writes down the points left in their hand. Going out on a jack doubles…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-en.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,15 +69,16 @@
   <main>
     <article class="card">
       <h1>How to play Crazy Eights: rules and scoring</h1>
+      <ul class="glance"><li>52-card deck</li><li>Often five cards each</li></ul>
       <p class="lead"><strong>Goal:</strong> Be the first to get rid of all your cards.</p>
       <h2>Setup</h2>
-      <p>A 52-card deck. Everyone gets the same number of cards (often five), one card is turned up, and the rest form the draw pile.</p>
+      <ul class="points"><li>Everyone gets the same number of cards.</li><li>One card is turned up and the rest form the draw pile.</li></ul>
       <h2>How to play</h2>
-      <p>Play a card of the same suit or rank as the top card; if you can’t, draw. Special cards speed things up: a 7 makes the next player draw, and a jack can go on anything and changes the suit. Other special cards depend on the table.</p>
+      <ol class="steps"><li>Play a card of the same suit or rank as the top card.</li><li>If you can’t, draw.</li><li>Special cards speed things up: a 7 makes the next player draw.</li><li>A jack can go on anything and changes the suit.</li><li>Other special cards depend on the table.</li></ol>
       <h2>Scoring</h2>
-      <p>When someone goes out, everyone else writes the points left in their hand. Going out on a jack doubles the penalties.</p>
+      <ul class="points"><li>When someone goes out, everyone else writes down the points left in their hand.</li><li>Going out on a jack doubles the penalties.</li></ul>
       <h2>Winning</h2>
-      <p>Anyone over the limit (e.g. 101) is out, or you play a set number of hands; the fewest penalty points win.</p>
+      <ul class="points"><li>Anyone over the limit (e.g. 101) is out, or you play a set number of hands.</li><li>Whoever has the fewest penalty points wins.</li></ul>
       <h2>Note</h2>
       <p>Card points and special card meanings vary by table — agree on them before you start.</p>
     </article>
@@ -75,7 +86,7 @@
     <section class="card app" id="app">
       <h2>Let Yazboz Guru keep the Crazy Eights score</h2>
       <p>No pen and paper: pick the game, set your table’s rules and enter what happened at the end of each round. The app does the math by the rules.</p>
-      <p>The Turkish take on Crazy Eights (Pis Yedili), with 7s and jacks as the special cards. When someone goes out, everyone else writes the points left in their hand; going out on a jack doubles them. The fewest points win.</p>
+      <p>The Turkish take on Crazy Eights (Pis Yedili), with 7s and jacks among the special cards. When someone goes out, everyone else writes the points left in their hand; going out on a jack doubles them. The fewest points win.</p>
       <div class="shots">
         <figure><img src="/yazboz/img/rules/pisyedili-en-sheet.jpg" alt="Crazy Eights score sheet in Yazboz Guru" width="600" height="1304" loading="lazy"><figcaption>Score sheet</figcaption></figure>
         <figure><img src="/yazboz/img/rules/pisyedili-en-entry.jpg" alt="Entering a Crazy Eights round in Yazboz Guru" width="600" height="1213" loading="lazy"><figcaption>Entering a round</figcaption></figure>

@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -61,29 +71,31 @@
       <h1>How to play Darts: rules and scoring</h1>
       <p class="lead">Get from 501, 301 or 701 down to exactly zero, or close 15–20 and the bull in Cricket: pick the variant in the rules. In 501 the last dart must be a double and a turn that goes too far doesn’t count; matches can be played in legs.</p>
       <h2>501 / 301 / 701</h2>
+      <ul class="glance"><li>501 down to 0</li><li>3 darts a turn</li></ul>
       <p><strong>Goal:</strong> Bring your score down to exactly zero before anyone else.</p>
       <h3>Setup</h3>
-      <p>A standard board hangs with the bull’s eye 173 cm (5 ft 8 in) high; the throw line is 237 cm (7 ft 9¼ in) away. Everyone starts on 501; 301 is a shorter game and 701 a longer one. Closest to the bull throws first.</p>
+      <ul class="points"><li>A standard board hangs with the bull’s eye 173 cm (5 ft 8 in) high.</li><li>The throw line is 237 cm (7 ft 9¼ in) away.</li><li>Everyone starts on 501; 301 is a shorter game and 701 a longer one.</li><li>Whoever throws closest to the bull goes first.</li></ul>
       <h3>How to play</h3>
-      <p>On your turn you throw three darts. The board has segments 1 to 20; the thin outer ring doubles the number, the thin inner ring triples it. The outer bull is 25, the bull’s eye 50 and counts as a double. What the three darts score comes off your total. The most in one turn is 180 (three triple 20s).</p>
+      <ol class="steps"><li>On your turn you throw three darts.</li><li>The board has segments 1 to 20; the thin outer ring doubles the number, the thin inner ring triples it.</li><li>The outer bull is 25, the bull’s eye 50 and counts as a double.</li><li>What the three darts score comes off your total.</li><li>The most in one turn is 180 (three triple 20s).</li></ol>
       <h3>Scoring</h3>
-      <p>A turn that would take you below 0, leave you on 1, or reach 0 without a double when playing double out is a bust: it doesn’t count at all and your score stays where it was. Reaching 0 with a double finishes the game (a checkout). The highest finish in one turn is 170 (T20, T20, bull).</p>
+      <ul class="points"><li>A turn that would take you below 0 is a bust.</li><li>When playing double-out, a turn that leaves you on 1 or reaches 0 without a double is a bust too.</li><li>A bust doesn’t count at all: your score stays where it was.</li><li>Reaching 0 with a double finishes the leg (a checkout).</li><li>The highest finish in one turn is 170 (T20, T20, bull).</li></ul>
       <h3>Winning</h3>
-      <p>First to exactly 0 wins the leg. Matches are played in legs: on setup you pick how many legs win the match (for example 3). Every leg starts again from 501, and the next player along throws first in each leg. Big tournaments group legs into sets as well.</p>
+      <ul class="points"><li>First to exactly 0 wins the leg.</li><li>Matches are played in legs: when setting up, you pick how many legs win the match (for example 3).</li><li>Every leg starts again from 501, and the next player along throws first in each leg.</li><li>Big tournaments group legs into sets as well.</li></ul>
       <h3>Note</h3>
-      <p>Variants: with double in, your score doesn’t come down until you hit a double, common in 301. With double out off, any dart that reaches 0 finishes, easier for beginners. Cricket (closing 15–20 and the bull) and Around the Clock (hitting 1 to 20 in order) are popular too. In partner play teammates throw in turn and share a score.</p>
+      <ul class="points"><li>With double-in, your score doesn’t come down until you hit a double; this is common in 301.</li><li>With double-out off, any dart that reaches 0 finishes, which is easier for beginners.</li><li>Cricket (closing 15–20 and the bull) is popular too.</li><li>So is Around the Clock (hitting 1 to 20 in order).</li><li>In partner play teammates throw in turn and share a score.</li></ul>
       <h2>Cricket</h2>
+      <ul class="glance"><li>15–20 and the bull</li><li>3 darts a turn</li></ul>
       <p><strong>Goal:</strong> Close 15 to 20 and the bull before anyone else, without being behind on points.</p>
       <h3>Setup</h3>
-      <p>Same board and distance as 501. The only targets are 15, 16, 17, 18, 19, 20 and the bull; other numbers count for nothing. Write the seven targets on the board for every player.</p>
+      <ul class="points"><li>Same board and distance as 501.</li><li>The only targets are 15, 16, 17, 18, 19, 20 and the bull; other numbers count for nothing.</li><li>Write the seven targets on the scoreboard for every player.</li></ul>
       <h3>How to play</h3>
-      <p>On your turn you throw three darts. A single on a target is one mark, a double two, a triple three; the outer bull is one mark and the bull’s eye two. Three marks close that target for you (/, ✕, ⊗). Close the targets in any order you like.</p>
+      <ol class="steps"><li>On your turn you throw three darts.</li><li>A single on a target is one mark, a double two, a triple three.</li><li>The outer bull is one mark and the bull’s eye two.</li><li>Three marks close that target for you (/, ✕, ⊗).</li><li>Close the targets in any order you like.</li></ol>
       <h3>Scoring</h3>
-      <p>If you keep hitting a target you’ve closed while at least one opponent still has it open, every extra mark scores the number’s value (the bull 25). A target everyone has closed is dead and scores nothing more.</p>
+      <ul class="points"><li>If you keep hitting a target you’ve closed while at least one opponent still has it open, every extra mark scores.</li><li>Each extra mark scores the number’s value (the bull 25).</li><li>A target everyone has closed is dead and scores nothing more.</li></ul>
       <h3>Winning</h3>
-      <p>The first player to close every target and have at least as many points as everyone else wins. If you’ve closed everything but are behind, you keep scoring until you’re ahead or your opponents close too.</p>
+      <ul class="points"><li>The first player to close every target and have at least as many points as everyone else wins.</li><li>If you’ve closed everything but are behind, you keep scoring until you’re ahead or your opponents close too.</li></ul>
       <h3>Note</h3>
-      <p>Variants: in cut-throat cricket extra marks score for your opponents and the lowest score wins; the app uses the standard rules for now. Some tables add 14, 13, or the treble and double rings as targets. In partner play teammates share their marks.</p>
+      <ul class="points"><li>In cut-throat cricket extra marks score for your opponents and the lowest score wins.</li><li>The app uses the standard rules for now.</li><li>Some tables add 14, 13, or the triple and double rings as targets.</li><li>In partner play teammates share their marks.</li></ul>
     </article>
 
     <section class="card app" id="app">
@@ -97,7 +109,7 @@
 
     <section class="card">
       <h2>House rules</h2>
-      <p>The rules tables argue about most. Agree on them before you start; you can switch them on or off when you set up the game.</p>
+      <p>These are the rules tables argue about most. Agree on them before you start; you can turn them on or off when you set up the game.</p>
       <h3>Double in</h3>
       <p>A player’s score only starts coming down once they hit a double. Often played in 301.</p>
     </section>

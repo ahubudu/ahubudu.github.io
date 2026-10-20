@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>Masa tenisi nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>Tekler ya da çiftler</li><li>Oyunlar 11 sayıya</li></ul>
       <p class="lead"><strong>Amaç:</strong> Oyunları 11 sayıyla kazanıp maçı almak.</p>
       <h2>Hazırlık</h2>
-      <p>Tekler ya da çiftler oynanır. Kura ile ilk servis seçilir; diğer taraf masa tarafını seçer.</p>
+      <ul class="points"><li>Kura ile ilk servis seçilir; diğer taraf masa tarafını seçer.</li></ul>
       <h2>Oynanış</h2>
-      <p>Servis açık avuçtan en az 16 cm havaya atılan topla, önce kendi masana sonra rakibin masasına sektirilerek atılır; çiftlerde sağ kareden çapraz atılır. Top her vuruşta rakibin masasında bir kez sekmelidir. Servisi alan topu ağdan geçirip masada bırakamazsa sayıyı kaybeder.</p>
+      <ol class="steps"><li>Servis açık avuçtan en az 16 cm havaya atılan topla atılır.</li><li>Top önce kendi masana, sonra rakibin masasına sektirilir.</li><li>Çiftlerde servis sağ kareden çapraz atılır.</li><li>Top her vuruşta rakibin masasında bir kez sekmelidir.</li><li>Topu ağdan geçirip rakibin masasına düşüremeyen sayıyı kaybeder.</li></ol>
       <h2>Puanlama</h2>
-      <p>Her top bir sayıdır. Oyun 11 sayıya ve iki farkla biter; 10-10’dan sonra iki fark açılana kadar devam edilir. Servis iki sayıda bir el değiştirir; 10-10’dan sonra her sayıda değişir.</p>
+      <ul class="points"><li>Her top bir sayıdır.</li><li>Oyun 11 sayıya ve iki farkla biter; 10-10’dan sonra iki fark açılana kadar devam edilir.</li><li>Servis iki sayıda bir el değiştirir; 10-10’dan sonra her sayıda değişir.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Maç 3, 5 ya da 7 oyunun çoğunluğunu alanındır. Her oyundan sonra taraflar masa değiştirir; son oyunda bir taraf 5 sayıya ulaşınca da değiştirilir.</p>
+      <ul class="points"><li>Maç 3, 5 ya da 7 oyunun çoğunluğunu alanındır.</li><li>Her oyundan sonra taraflar yer değiştirir; son oyunda bir taraf 5 sayıya ulaşınca da yer değiştirilir.</li></ul>
       <h2>Not</h2>
-      <p>Çeşitler: Eskiden oyunlar 21 sayıya oynanırdı; bazı masalar hâlâ öyle oynar. Uygulamada sayıyı alan tarafın düğmesine dokunursun, servis kimdeyse yanında işaret görünür.</p>
+      <ul class="points"><li>Eskiden oyunlar 21 sayıya oynanırdı; bazı masalar hâlâ öyle oynar.</li><li>Uygulamada sayıyı alan tarafın düğmesine dokunursun; servis kimdeyse yanında işaret görünür.</li></ul>
     </article>
 
     <section class="card app" id="app">

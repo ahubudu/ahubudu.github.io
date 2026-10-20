@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>How to play Yahtzee: rules and scoring | Yazboz Guru</title>
-  <meta name="description" content="Make combinations with five dice to fill the 13 boxes on your score card and finish with the highest total. Upper boxes add up the dice showing that…">
+  <meta name="description" content="Roll combinations with five dice to fill the 13 boxes on your score card and finish with the highest total. Upper boxes add up the dice showing that…">
   <link rel="canonical" href="https://ahubudu.github.io/yazboz/rules/yahtzee/">
   <link rel="alternate" hreflang="en" href="https://ahubudu.github.io/yazboz/rules/yahtzee/">
   <link rel="alternate" hreflang="tr" href="https://ahubudu.github.io/yazboz/kurallar/yahtzee/">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://ahubudu.github.io/yazboz/rules/yahtzee/">
   <meta property="og:title" content="How to play Yahtzee: rules and scoring">
-  <meta property="og:description" content="Make combinations with five dice to fill the 13 boxes on your score card and finish with the highest total. Upper boxes add up the dice showing that…">
+  <meta property="og:description" content="Roll combinations with five dice to fill the 13 boxes on your score card and finish with the highest total. Upper boxes add up the dice showing that…">
   <meta property="og:image" content="https://ahubudu.github.io/yazboz/og-rules-en.png">
   <meta name="twitter:card" content="summary_large_image">
   <style>
@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>How to play Yahtzee: rules and scoring</h1>
-      <p class="lead"><strong>Goal:</strong> Make combinations with five dice to fill the 13 boxes on your score card and finish with the highest total.</p>
+      <ul class="glance"><li>5 dice</li><li>13 boxes</li><li>13 turns</li></ul>
+      <p class="lead"><strong>Goal:</strong> Roll combinations with five dice to fill the 13 boxes on your score card and finish with the highest total.</p>
       <h2>Setup</h2>
-      <p>You need five dice and a score card for each player. The upper section has six boxes, Ones to Sixes; the lower section has 3 of a Kind, 4 of a Kind, Full House, Small Straight, Large Straight, Yahtzee and Chance.</p>
+      <ul class="points"><li>A score card for each player.</li><li>Upper section: six boxes, Ones to Sixes.</li><li>Lower section: 3 of a Kind, 4 of a Kind, Full House, Small Straight, Large Straight, Yahtzee and Chance.</li></ul>
       <h2>How to play</h2>
-      <p>On your turn, roll all five dice; keep the ones you like and reroll the rest up to two more times. Then pick an empty box on your card and score it. If nothing fits, scratch a box and write 0. Each box is used once.</p>
+      <ol class="steps"><li>On your turn, roll all five dice.</li><li>Keep the ones you like and reroll the rest up to two more times.</li><li>Then pick an empty box on your card and score it.</li><li>If nothing fits, scratch a box and write 0.</li><li>Each box can be used only once.</li></ol>
       <h2>Scoring</h2>
-      <p>Upper boxes add up the dice showing that number (three 4s = 12). 3 of a Kind, 4 of a Kind and Chance score the total of all five dice. Full House (3 + 2 alike) is 25, Small Straight (4 in a row) 30, Large Straight (5 in a row) 40, Yahtzee (5 alike) 50. An upper section of 63 or more adds a 35-point bonus.</p>
+      <ul class="points"><li>Upper boxes: add up the dice showing that number (three 4s = 12).</li><li>3 of a Kind, 4 of a Kind and Chance: the total of all five dice.</li><li>Full House (3 + 2 alike) is 25, Small Straight (4 in a row) 30.</li><li>Large Straight (5 in a row) is 40, Yahtzee (5 alike) 50.</li><li>An upper section of 63 or more adds a 35-point bonus.</li></ul>
       <h2>Winning</h2>
       <p>After 13 turns everyone’s card is full; the highest total wins.</p>
       <h2>Note</h2>
-      <p>In the app you enter each player’s turn on its own: pick the player, the box and the points. The next player is suggested for you.</p>
+      <ul class="points"><li>In the app you enter each player’s turn separately: pick the player, the box and the points.</li><li>The next player is suggested for you.</li></ul>
     </article>
 
     <section class="card app" id="app">
@@ -86,7 +97,7 @@
 
     <section class="card">
       <h2>House rules</h2>
-      <p>The rules tables argue about most. Agree on them before you start; you can switch them on or off when you set up the game.</p>
+      <p>These are the rules tables argue about most. Agree on them before you start; you can turn them on or off when you set up the game.</p>
       <h3>Extra Yahtzee bonus (+100)</h3>
       <p>Roll another Yahtzee while your Yahtzee box holds 50 and you get a 100-point bonus, whichever box you fill that turn.</p>
       <h3>Joker rule</h3>

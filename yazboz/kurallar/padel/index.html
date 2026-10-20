@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>Padel nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>4 oyuncu, çiftler hâlinde</li><li>20×10 m saha</li></ul>
       <p class="lead"><strong>Amaç:</strong> Tenis gibi sayı, oyun ve set kazanarak maçı almak.</p>
       <h2>Hazırlık</h2>
-      <p>Çiftler oynanır (dört oyuncu), duvarlarla çevrili 20×10 m’lik sahada. Kura ile servis ve saha seçilir.</p>
+      <ul class="points"><li>Saha duvarlarla çevrilidir.</li><li>Kura ile servis ve saha seçilir.</li></ul>
       <h2>Oynanış</h2>
-      <p>Servis alttan, bel hizasının altından ve topu yere sektirdikten sonra çapraz kareye atılır. Top rakip sahada bir kez sektikten sonra duvara çarpabilir ve oyunda kalır; kendi tarafında duvardan dönen topu oynayabilirsin. Topu doğrudan rakibin duvarına ya da tele vurmak sayıyı kaybettirir.</p>
+      <ol class="steps"><li>Servis alttan, bel hizasının altından ve topu yere sektirdikten sonra çapraz kareye atılır.</li><li>Top rakip sahada bir kez sektikten sonra duvara çarpabilir ve oyunda kalır.</li><li>Kendi tarafında duvardan dönen topu oynayabilirsin.</li><li>Topu doğrudan rakibin duvarına ya da tele vurmak sayıyı kaybettirir.</li></ol>
       <h2>Puanlama</h2>
-      <p>Sayılar tenis gibi 15, 30, 40’tır. 40-40’ta FIP’in üç seçeneğinden biri oynanır: altın sayı (tek belirleyici sayı), Star Point (iki avantaj denenir, üçüncü deuce’ta tek sayı belirler) ya da klasik avantaj. 6 oyunu iki farkla alan seti alır, 6-6’da tie-break oynanır.</p>
+      <ul class="points"><li>Sayılar tenis gibi 15, 30, 40’tır.</li><li>40-40’ta FIP’in üç seçeneğinden biri oynanır: altın sayı, Star Point ya da klasik avantaj.</li><li>Altın sayı: tek belirleyici sayı.</li><li>Star Point: İki avantaj denenir, üçüncü deuce’ta tek sayı belirler.</li><li>6 oyunu iki farkla alan seti alır, 6-6’da tie-break oynanır.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Maç üç setin ikisini alanındır. Kulüplerde üçüncü set yerine çoğu zaman 10 sayılık süper tie-break oynanır.</p>
+      <ul class="points"><li>Maç üç setin ikisini alanındır.</li><li>Kulüplerde üçüncü set yerine çoğu zaman 10 sayılık süper tie-break oynanır.</li></ul>
       <h2>Not</h2>
-      <p>Çeşitler: Amatör kortlarda en yaygını altın sayıdır; 2026’dan beri profesyonel turnuvalarda Star Point da kullanılıyor. Uygulamada her sayıdan sonra kazanan takımın düğmesine dokunman yeter.</p>
+      <ul class="points"><li>Amatör kortlarda en yaygını altın sayıdır.</li><li>2026’dan beri profesyonel turnuvalarda Star Point da kullanılıyor.</li><li>Uygulamada her sayıdan sonra kazanan takımın düğmesine dokunman yeter.</li></ul>
     </article>
 
     <section class="card app" id="app">

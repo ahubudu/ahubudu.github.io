@@ -49,6 +49,16 @@
     ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
     footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
     footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
   </style>
 </head>
 <body>
@@ -59,17 +69,18 @@
   <main>
     <article class="card">
       <h1>Voleybol nasıl oynanır? Kurallar ve puan hesaplama</h1>
+      <ul class="glance"><li>Salonda 6 kişi</li><li>Plajda 2 kişi</li></ul>
       <p class="lead"><strong>Amaç:</strong> Topu rakibin sahasına düşürüp setleri kazanmak.</p>
       <h2>Hazırlık</h2>
-      <p>Salonda takımlar altı, plajda iki kişidir. Kura ile servis ya da saha seçilir.</p>
+      <ul class="points"><li>Kura ile servis ya da saha seçilir.</li></ul>
       <h2>Oynanış</h2>
-      <p>Servis sahanın arka çizgisinin gerisinden atılır. Her takım topu en fazla üç dokunuşta karşıya geçirmelidir (blok sayılmaz); aynı oyuncu üst üste iki kez dokunamaz. Top rakip sahaya düşer ya da rakip hata yaparsa (fileye dokunmak, dışarı atmak, dört dokunuş) sayı senindir. Salonda servisi kazanan takım saat yönünde döner.</p>
+      <ol class="steps"><li>Servis sahanın arka çizgisinin gerisinden atılır.</li><li>Her takım topu en fazla üç dokunuşta karşıya geçirmelidir (blok sayılmaz).</li><li>Aynı oyuncu üst üste iki kez dokunamaz.</li><li>Top rakip sahaya düşerse ya da rakip hata yaparsa (fileye dokunmak, dışarı atmak, dört dokunuş) sayı senindir.</li><li>Salonda servisi kazanan takım saat yönünde döner.</li></ol>
       <h2>Puanlama</h2>
-      <p>Her top bir sayıdır (rally point). Salonda setler 25 sayıya, plajda 21’e ve iki farkla biter. Sayıyı kazanan takım servisi atar.</p>
+      <ul class="points"><li>Her top bir sayıdır (rally point).</li><li>Salonda setler 25 sayıya, plajda 21’e ve iki farkla biter.</li><li>Sayıyı kazanan takım servisi atar.</li></ul>
       <h2>Oyunun sonu</h2>
-      <p>Salonda maç 5 setin 3’ünü, plajda 3 setin 2’sini alanındır. Belirleyici set 15 sayıya oynanır.</p>
+      <ul class="points"><li>Salonda maç 5 setin 3’ünü, plajda 3 setin 2’sini alanındır.</li><li>Belirleyici set 15 sayıya oynanır.</li></ul>
       <h2>Not</h2>
-      <p>Çeşitler: Mahalle ve okul maçlarında 3 set ya da tek set oynanabilir; bazıları 15 ya da 21 sayıya oynar. Uygulamada sayıyı alan takımın düğmesine dokunursun.</p>
+      <ul class="points"><li>Mahalle ve okul maçlarında 3 set ya da tek set oynanabilir; bazıları 15 ya da 21 sayıya oynar.</li><li>Uygulamada oyuncu seçmezsin, iki takıma ad verirsin.</li><li>Set başına sayıyı masa kurallarından değiştirebilirsin.</li><li>Sayıyı alan takımın alanına dokunursun; seti bitiren sayıda uygulama “Set bitti mi?” diye sorar.</li></ul>
     </article>
 
     <section class="card app" id="app">
@@ -81,6 +92,16 @@
       <p class="small">Ücretsiz · iPhone, iPad ve Apple Watch</p>
     </section>
 
+    <section class="card">
+      <h2>Masa kuralları</h2>
+      <p>Masalarda en çok tartışılan kurallar. Başlamadan önce masayla anlaş; oyunu kurarken bunları açıp kapatabilirsin.</p>
+      <h3>Set kaç sayıya?</h3>
+      <p>Resmî kural 25; iki sayı farkla biter.</p>
+      <h3>Set kaç sayıya?</h3>
+      <p>Resmî kural 21; iki sayı farkla biter.</p>
+      <h3>Son set kaç sayıya?</h3>
+      <p>Resmî kural 15.</p>
+    </section>
     <nav class="card">
       <h2>Diğer oyunlar</h2>
       <ul class="games"><li><a href="../okey/">Okey</a></li><li><a href="../101-okey/">101 Okey</a></li><li><a href="../rummy/">Rummy</a></li><li><a href="../tavla/">Tavla</a></li><li><a href="../batak/">Batak</a></li><li><a href="../king/">King</a></li><li><a href="../pisti/">Pişti</a></li><li><a href="../pis-yedili/">Pis Yedili</a></li><li><a href="../blof/">Blöf</a></li><li><a href="../uno/">Uno</a></li><li><a href="../yahtzee/">Yahtzee</a></li><li><a href="../dart/">Dart</a></li><li><a href="../mini-golf/">Mini golf</a></li><li><a href="../bilardo/">Bilardo</a></li><li><a href="../tenis/">Tenis</a></li><li><a href="../padel/">Padel</a></li><li><a href="../masa-tenisi/">Masa tenisi</a></li></ul>
