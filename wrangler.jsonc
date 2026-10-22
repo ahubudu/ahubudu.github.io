@@ -1,0 +1,10 @@
+// Cloudflare Worker that serves this site on yazbozguru.com (GitHub Pages ignores this file).
+{
+  "name": "ahubudu-github-io",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    // Unknown addresses get 404.html, as on GitHub Pages.
+    "not_found_handling": "404-page"
+  }
+}
