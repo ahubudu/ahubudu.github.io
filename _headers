@@ -1,0 +1,3 @@
+# Cloudflare Pages (yazbozguru.com): Apple reads this file only as JSON. GitHub Pages ignores this file.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
