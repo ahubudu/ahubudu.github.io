@@ -2,9 +2,13 @@
 {
   "name": "ahubudu-github-io",
   "compatibility_date": "2026-10-01",
+  "main": "worker.js",
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
     // Unknown addresses get 404.html, as on GitHub Pages.
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // Pages of the score keeper (yazbozguru.com/skor) go through worker.js; its files don't.
+    "run_worker_first": ["/skor/*", "!/skor/_expo/*", "!/skor/assets/*"]
   }
 }
