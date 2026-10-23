@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6823951115">
+  <title>Dames : règles et calcul des points | Yazboz Guru</title>
+  <meta name="description" content="Note qui a gagné chaque partie ; le premier au nombre de victoires choisi remporte le match. Dama turque ou dames internationales.">
+  <link rel="canonical" href="https://yazbozguru.com/yazboz/fr/regles/draughts/">
+  <link rel="alternate" hreflang="tr" href="https://yazbozguru.com/yazboz/kurallar/dama/">
+  <link rel="alternate" hreflang="en" href="https://yazbozguru.com/yazboz/rules/draughts/">
+  <link rel="alternate" hreflang="es" href="https://yazbozguru.com/yazboz/es/reglas/draughts/">
+  <link rel="alternate" hreflang="fr" href="https://yazbozguru.com/yazboz/fr/regles/draughts/">
+  <link rel="alternate" hreflang="it" href="https://yazbozguru.com/yazboz/it/regole/draughts/">
+  <link rel="alternate" hreflang="pt" href="https://yazbozguru.com/yazboz/pt/regras/draughts/">
+  <link rel="alternate" hreflang="nl" href="https://yazbozguru.com/yazboz/nl/regels/draughts/">
+  <link rel="alternate" hreflang="de" href="https://yazbozguru.com/yazboz/de/regeln/draughts/">
+  <link rel="alternate" hreflang="el" href="https://yazbozguru.com/yazboz/el/kanones/draughts/">
+  <link rel="alternate" hreflang="x-default" href="https://yazbozguru.com/yazboz/rules/draughts/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Yazboz Guru">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://yazbozguru.com/yazboz/fr/regles/draughts/">
+  <meta property="og:title" content="Dames : règles et calcul des points">
+  <meta property="og:description" content="Note qui a gagné chaque partie ; le premier au nombre de victoires choisi remporte le match. Dama turque ou dames internationales.">
+  <meta property="og:image" content="https://yazbozguru.com/yazboz/og-rules-en.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { color-scheme: light dark; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#4F6F5E; --tint:#E3ECE6; --line:#E8E4DD; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#141416; --card:#1E1E22; --ink:#ECEAE6; --muted:#A7A39B; --accent:#8FB09F; --tint:#25302A; --line:#2E2E33; } }
+    * { box-sizing: border-box; }
+    body { margin:0; padding:24px 16px 40px; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
+    main { max-width:720px; margin:0 auto; }
+    .card { background:var(--card); border-radius:24px; padding:24px; margin-top:16px; }
+    header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
+    header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
+    header img { width:32px; height:32px; border-radius:8px; }
+    header .lang { margin-left:auto; font-size:14px; position:relative; }
+    header .lang summary { cursor:pointer; color:var(--accent); list-style:none; }
+    header .lang summary::-webkit-details-marker { display:none; }
+    header .lang summary::after { content:" ▾"; }
+    header .lang ul { position:absolute; right:0; top:26px; z-index:5; margin:0; padding:6px; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:150px; }
+    header .lang li { margin:0; }
+    header .lang a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink); }
+    header .lang a:hover { background:var(--bg); }
+    h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
+    h2 { font-size:20px; margin:24px 0 6px; }
+    h2:first-child { margin-top:0; }
+    h3 { font-size:16px; margin:16px 0 2px; }
+    p, li { color:var(--muted); margin:6px 0; }
+    .lead { font-size:18px; }
+    a { color:var(--accent); }
+    .app { background:var(--tint); }
+    .shots { display:flex; gap:16px; margin:18px 0 6px; }
+    figure { flex:1; margin:0; text-align:center; }
+    figure img { width:100%; max-width:300px; height:auto; border-radius:22px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
+    figcaption { font-size:13px; color:var(--muted); margin-top:8px; }
+    .button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:14px; background:var(--accent); color:#fff; font-weight:600; text-decoration:none; }
+    @media (prefers-color-scheme: dark) { .button { color:#141416; } }
+    .small { font-size:13px; }
+    ul.games { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
+    ul.games a { display:block; padding:10px 12px; border-radius:12px; background:var(--bg); color:var(--ink); text-decoration:none; font-weight:600; }
+    ul.games.big a { padding:14px 16px; }
+    ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
+    footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
+    footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="https://yazbozguru.com/yazboz/fr/regles/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32">Yazboz Guru</a>
+    <details class="lang"><summary>Français</summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/dama/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/rules/draughts/" hreflang="en" lang="en">English</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/draughts/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/draughts/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/draughts/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/nl/regels/draughts/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/yazboz/de/regeln/draughts/" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://yazbozguru.com/yazboz/el/kanones/draughts/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+  </header>
+  <main>
+    <article class="card">
+      <h1>Dames : règles et calcul des points</h1>
+      <p class="lead">Note qui a gagné chaque partie ; le premier au nombre de victoires choisi remporte le match. Dama turque ou dames internationales.</p>
+      <h2>Dama turque</h2>
+      <ul class="glance"><li>2 joueurs</li><li>16 pièces chacun</li><li>Score du match</li></ul>
+      <p><strong>But du jeu:</strong> Prendre toutes les pièces de l’adversaire, ou le laisser sans coup possible.</p>
+      <h3>Mise en place</h3>
+      <ul class="points"><li>Les pièces occupent les deuxième et troisième rangées.</li><li>Celui qui commence change à chaque partie.</li></ul>
+      <h3>Déroulement</h3>
+      <ol class="steps"><li>Une pièce avance d’une case vers l’avant ou sur le côté, jamais en arrière.</li><li>Saute par-dessus une pièce adverse pour la prendre ; la prise est obligatoire.</li><li>Un seul coup peut prendre plusieurs pièces à la suite.</li><li>Une pièce qui atteint la dernière rangée devient une dama et se déplace d’autant de cases qu’elle veut en ligne droite.</li></ol>
+      <h3>Décompte</h3>
+      <ul class="points"><li>Le gagnant obtient 1 victoire.</li><li>Une partie nulle ne compte pour personne.</li></ul>
+      <h3>Victoire</h3>
+      <ul class="points"><li>Le premier au nombre de victoires choisi remporte le match.</li></ul>
+      <h3>Remarque</h3>
+      <p>L’app ne tient que le score du match, elle marche donc de la même façon pour les dames internationales. Les règles ci-dessus sont celles de la dama turque.</p>
+      <h2>Dames internationales</h2>
+      <ul class="glance"><li>2 joueurs</li><li>Damier 10×10</li><li>20 pions chacun</li></ul>
+      <p><strong>But du jeu:</strong> Prendre toutes les pièces de l’adversaire, ou le laisser sans coup possible.</p>
+      <h3>Mise en place</h3>
+      <ul class="points"><li>Les pions occupent les cases foncées des quatre premières rangées.</li><li>Les Blancs commencent.</li></ul>
+      <h3>Déroulement</h3>
+      <ol class="steps"><li>Un pion avance d’une case en diagonale.</li><li>Saute en diagonale par-dessus une pièce adverse pour la prendre ; on peut prendre en arrière.</li><li>La prise est obligatoire ; choisis le chemin qui prend le plus.</li><li>Un pion qui atteint la dernière rangée devient dame et se déplace d’autant de cases qu’elle veut en diagonale.</li></ol>
+      <h3>Décompte</h3>
+      <ul class="points"><li>Le gagnant obtient 1 victoire.</li><li>Une partie nulle ne compte pour personne.</li></ul>
+      <h3>Victoire</h3>
+      <ul class="points"><li>Le premier au nombre de victoires choisi remporte le match.</li></ul>
+      <h3>Remarque</h3>
+      <p>Un pion qui ne fait que passer par la dernière rangée pendant une rafle et s’arrête ailleurs ne devient pas dame.</p>
+    </article>
+
+    <section class="card app" id="app">
+      <h2>Dames : Yazboz Guru compte les points</h2>
+      <p>Plus besoin de papier ni de crayon : choisis le jeu, indique les règles de ta table et saisis ce qui s’est passé à la fin de chaque manche. L’appli fait les calculs selon les règles.</p>
+      <p>Note qui a gagné chaque partie ; le premier au nombre de victoires choisi remporte le match. Dama turque ou dames internationales.</p>
+      
+      <a class="button" href="https://apps.apple.com/app/id6823951115">Télécharger dans l’App Store</a>
+      <p class="small">Gratuit · iPhone, iPad et Apple Watch · <a href="/skor/new/dama">Ou compte les points dans ton navigateur</a></p>
+    </section>
+
+    <nav class="card">
+      <h2>Autres jeux</h2>
+      <ul class="games"><li><a href="../okey/">Okey</a></li><li><a href="../101-okey/">101 Okey</a></li><li><a href="../rummy/">Rami</a></li><li><a href="../backgammon/">Backgammon</a></li><li><a href="../chess/">Échecs</a></li><li><a href="../batak/">Batak</a></li><li><a href="../king/">King</a></li><li><a href="../pishti/">Pishti</a></li><li><a href="../crazy-eights/">Huit américain</a></li><li><a href="../bluff/">Menteur</a></li><li><a href="../uno/">Uno</a></li><li><a href="../yahtzee/">Yahtzee</a></li><li><a href="../catan/">Catan</a></li><li><a href="../ticket-to-ride/">Les Aventuriers du Rail</a></li><li><a href="../carcassonne/">Carcassonne</a></li><li><a href="../7-wonders/">7 Wonders</a></li><li><a href="../hearts/">Dame de pique</a></li><li><a href="../spades/">Spades</a></li><li><a href="../gin-rummy/">Gin Rummy</a></li><li><a href="../cribbage/">Cribbage</a></li><li><a href="../euchre/">Euchre</a></li><li><a href="../skat/">Skat</a></li><li><a href="../doppelkopf/">Doppelkopf</a></li><li><a href="../schafkopf/">Schafkopf</a></li><li><a href="../klaverjassen/">Klaverjassen</a></li><li><a href="../toepen/">Toepen</a></li><li><a href="../belote/">Belote</a></li><li><a href="../tarot/">Tarot</a></li><li><a href="../mus/">Mus</a></li><li><a href="../chinchon/">Chinchón</a></li><li><a href="../truco/">Truco</a></li><li><a href="../burraco/">Burraco</a></li><li><a href="../scopa/">Scopa</a></li><li><a href="../briscola/">Briscola</a></li><li><a href="../sueca/">Sueca</a></li><li><a href="../darts/">Fléchettes</a></li><li><a href="../mini-golf/">Mini-golf</a></li><li><a href="../billiards/">Billard</a></li><li><a href="../tennis/">Tennis</a></li><li><a href="../padel/">Padel</a></li><li><a href="../table-tennis/">Tennis de table</a></li><li><a href="../volleyball/">Volley-ball</a></li></ul>
+    </nav>
+  </main>
+  <footer>
+    <p>Les règles varient d’une table à l’autre. Tu peux choisir les tiennes en préparant une partie.</p>
+    
+    <p><a href="/yazboz/privacy/">Assistance et confidentialité (en anglais)</a> · © 2026 Goal Guru</p>
+  </footer>
+</body>
+</html>

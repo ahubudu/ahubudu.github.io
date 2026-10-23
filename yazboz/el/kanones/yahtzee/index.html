@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6823951115">
+  <title>Yahtzee: κανόνες και μέτρηση πόντων | Yazboz Guru</title>
+  <meta name="description" content="Φέρε συνδυασμούς με πέντε ζάρια για να συμπληρώσεις τα 13 κουτιά της κάρτας σου και τελείωσε με το υψηλότερο σύνολο. Τα πάνω κουτιά αθροίζουν τα ζάρια…">
+  <link rel="canonical" href="https://yazbozguru.com/yazboz/el/kanones/yahtzee/">
+  <link rel="alternate" hreflang="tr" href="https://yazbozguru.com/yazboz/kurallar/yahtzee/">
+  <link rel="alternate" hreflang="en" href="https://yazbozguru.com/yazboz/rules/yahtzee/">
+  <link rel="alternate" hreflang="es" href="https://yazbozguru.com/yazboz/es/reglas/yahtzee/">
+  <link rel="alternate" hreflang="fr" href="https://yazbozguru.com/yazboz/fr/regles/yahtzee/">
+  <link rel="alternate" hreflang="it" href="https://yazbozguru.com/yazboz/it/regole/yahtzee/">
+  <link rel="alternate" hreflang="pt" href="https://yazbozguru.com/yazboz/pt/regras/yahtzee/">
+  <link rel="alternate" hreflang="nl" href="https://yazbozguru.com/yazboz/nl/regels/yahtzee/">
+  <link rel="alternate" hreflang="de" href="https://yazbozguru.com/yazboz/de/regeln/yahtzee/">
+  <link rel="alternate" hreflang="el" href="https://yazbozguru.com/yazboz/el/kanones/yahtzee/">
+  <link rel="alternate" hreflang="x-default" href="https://yazbozguru.com/yazboz/rules/yahtzee/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Yazboz Guru">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:url" content="https://yazbozguru.com/yazboz/el/kanones/yahtzee/">
+  <meta property="og:title" content="Yahtzee: κανόνες και μέτρηση πόντων">
+  <meta property="og:description" content="Φέρε συνδυασμούς με πέντε ζάρια για να συμπληρώσεις τα 13 κουτιά της κάρτας σου και τελείωσε με το υψηλότερο σύνολο. Τα πάνω κουτιά αθροίζουν τα ζάρια…">
+  <meta property="og:image" content="https://yazbozguru.com/yazboz/og-rules-en.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { color-scheme: light dark; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#4F6F5E; --tint:#E3ECE6; --line:#E8E4DD; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#141416; --card:#1E1E22; --ink:#ECEAE6; --muted:#A7A39B; --accent:#8FB09F; --tint:#25302A; --line:#2E2E33; } }
+    * { box-sizing: border-box; }
+    body { margin:0; padding:24px 16px 40px; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
+    main { max-width:720px; margin:0 auto; }
+    .card { background:var(--card); border-radius:24px; padding:24px; margin-top:16px; }
+    header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
+    header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
+    header img { width:32px; height:32px; border-radius:8px; }
+    header .lang { margin-left:auto; font-size:14px; position:relative; }
+    header .lang summary { cursor:pointer; color:var(--accent); list-style:none; }
+    header .lang summary::-webkit-details-marker { display:none; }
+    header .lang summary::after { content:" ▾"; }
+    header .lang ul { position:absolute; right:0; top:26px; z-index:5; margin:0; padding:6px; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:150px; }
+    header .lang li { margin:0; }
+    header .lang a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink); }
+    header .lang a:hover { background:var(--bg); }
+    h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
+    h2 { font-size:20px; margin:24px 0 6px; }
+    h2:first-child { margin-top:0; }
+    h3 { font-size:16px; margin:16px 0 2px; }
+    p, li { color:var(--muted); margin:6px 0; }
+    .lead { font-size:18px; }
+    a { color:var(--accent); }
+    .app { background:var(--tint); }
+    .shots { display:flex; gap:16px; margin:18px 0 6px; }
+    figure { flex:1; margin:0; text-align:center; }
+    figure img { width:100%; max-width:300px; height:auto; border-radius:22px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
+    figcaption { font-size:13px; color:var(--muted); margin-top:8px; }
+    .button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:14px; background:var(--accent); color:#fff; font-weight:600; text-decoration:none; }
+    @media (prefers-color-scheme: dark) { .button { color:#141416; } }
+    .small { font-size:13px; }
+    ul.games { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
+    ul.games a { display:block; padding:10px 12px; border-radius:12px; background:var(--bg); color:var(--ink); text-decoration:none; font-weight:600; }
+    ul.games.big a { padding:14px 16px; }
+    ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
+    footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
+    footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="https://yazbozguru.com/yazboz/el/kanones/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32">Yazboz Guru</a>
+    <details class="lang"><summary>Ελληνικά</summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/yahtzee/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/rules/yahtzee/" hreflang="en" lang="en">English</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/yahtzee/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/fr/regles/yahtzee/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/yahtzee/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/yahtzee/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/nl/regels/yahtzee/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/yazboz/de/regeln/yahtzee/" hreflang="de" lang="de">Deutsch</a></li></ul></details>
+  </header>
+  <main>
+    <article class="card">
+      <h1>Yahtzee: κανόνες και μέτρηση πόντων</h1>
+      <ul class="glance"><li>5 ζάρια</li><li>13 κουτιά</li><li>13 σειρές</li></ul>
+      <p class="lead"><strong>Στόχος:</strong> Φέρε συνδυασμούς με πέντε ζάρια για να συμπληρώσεις τα 13 κουτιά της κάρτας σου και τελείωσε με το υψηλότερο σύνολο.</p>
+      <h2>Προετοιμασία</h2>
+      <ul class="points"><li>Μια κάρτα σκορ για κάθε παίκτη.</li><li>Πάνω μέρος: έξι κουτιά, από Άσσους ως Εξάρια.</li><li>Κάτω μέρος: 3 ίδια, 4 ίδια, Full House, Μικρή κέντα, Μεγάλη κέντα, Yahtzee και Τύχη.</li></ul>
+      <h2>Πώς παίζεται</h2>
+      <ol class="steps"><li>Στη σειρά σου, ρίξε και τα πέντε ζάρια.</li><li>Κράτα όσα θέλεις και ξαναρίξε τα υπόλοιπα έως δύο φορές ακόμη.</li><li>Μετά διάλεξε ένα άδειο κουτί της κάρτας σου και γράψε τους πόντους.</li><li>Αν δεν ταιριάζει τίποτα, μηδένισε ένα κουτί γράφοντας 0.</li><li>Κάθε κουτί χρησιμοποιείται μόνο μία φορά.</li></ol>
+      <h2>Βαθμολογία</h2>
+      <ul class="points"><li>Πάνω κουτιά: άθροισε τα ζάρια που δείχνουν εκείνον τον αριθμό (τρία 4άρια = 12).</li><li>3 ίδια, 4 ίδια και Τύχη: το άθροισμα και των πέντε ζαριών.</li><li>Full House (3 + 2 ίδια) 25, Μικρή κέντα (4 στη σειρά) 30.</li><li>Μεγάλη κέντα (5 στη σειρά) 40, Yahtzee (5 ίδια) 50.</li><li>Αν το πάνω μέρος φτάσει 63 ή περισσότερο, προστίθεται μπόνους 35 πόντων.</li></ul>
+      <h2>Νίκη</h2>
+      <p>Μετά από 13 σειρές η κάρτα όλων είναι γεμάτη· κερδίζει το υψηλότερο σύνολο.</p>
+      <h2>Σημείωση</h2>
+      <ul class="points"><li>Στην εφαρμογή καταχωρίζεις τη σειρά κάθε παίκτη χωριστά: διάλεξε τον παίκτη, το κουτί και τους πόντους.</li><li>Ο επόμενος παίκτης προτείνεται αυτόματα.</li></ul>
+    </article>
+
+    <section class="card app" id="app">
+      <h2>Yahtzee: το σκορ το κρατά το Yazboz Guru</h2>
+      <p>Χωρίς χαρτί και μολύβι: διάλεξε το παιχνίδι, όρισε τους κανόνες του τραπεζιού σου και γράψε τι έγινε στο τέλος κάθε γύρου. Η εφαρμογή κάνει τους λογαριασμούς με βάση τους κανόνες.</p>
+      <p>Ρίξε πέντε ζάρια έως τρεις φορές· σε κάθε σειρά συμπλήρωσε ένα από τα 13 κουτιά της κάρτας σου ή μηδένισέ το. Αν το πάνω μέρος φτάσει 63 ή περισσότερο, παίρνεις μπόνους 35 πόντων. Κερδίζει το υψηλότερο σύνολο.</p>
+      
+      <a class="button" href="https://apps.apple.com/app/id6823951115">Λήψη από το App Store</a>
+      <p class="small">Δωρεάν · iPhone, iPad και Apple Watch · <a href="/skor/new/yahtzee">Ή κράτα το σκορ στον browser σου</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Κανόνες τραπεζιού</h2>
+      <p>Αυτοί είναι οι κανόνες για τους οποίους τσακώνονται πιο συχνά τα τραπέζια. Συμφωνήστε πριν ξεκινήσετε· μπορείς να τους ενεργοποιήσεις ή να τους απενεργοποιήσεις όταν στήνεις το παιχνίδι.</p>
+      <h3>Επιπλέον μπόνους Yahtzee (+100)</h3>
+      <p>Φέρε κι άλλο Yahtzee ενώ το κουτί Yahtzee έχει 50 και παίρνεις μπόνους 100 πόντων, όποιο κουτί κι αν συμπληρώσεις σε εκείνη τη σειρά.</p>
+      <h3>Κανόνας τζόκερ</h3>
+      <p>Αν το πάνω κουτί για εκείνον τον αριθμό είναι ήδη συμπληρωμένο, ένα επιπλέον Yahtzee μπορεί να μπει στο Full House, στη Μικρή κέντα ή στη Μεγάλη κέντα με όλους τους πόντους.</p>
+    </section>
+    <nav class="card">
+      <h2>Περισσότερα παιχνίδια</h2>
+      <ul class="games"><li><a href="../okey/">Okey</a></li><li><a href="../101-okey/">101 Okey</a></li><li><a href="../rummy/">Ράμι</a></li><li><a href="../backgammon/">Τάβλι</a></li><li><a href="../chess/">Σκάκι</a></li><li><a href="../draughts/">Ντάμα</a></li><li><a href="../batak/">Batak</a></li><li><a href="../king/">King</a></li><li><a href="../pishti/">Pishti</a></li><li><a href="../crazy-eights/">Αγωνία</a></li><li><a href="../bluff/">Μπλόφα</a></li><li><a href="../uno/">Uno</a></li><li><a href="../catan/">Catan</a></li><li><a href="../ticket-to-ride/">Ticket to Ride</a></li><li><a href="../carcassonne/">Carcassonne</a></li><li><a href="../7-wonders/">7 Wonders</a></li><li><a href="../hearts/">Κούπες</a></li><li><a href="../spades/">Spades</a></li><li><a href="../gin-rummy/">Gin Rummy</a></li><li><a href="../cribbage/">Cribbage</a></li><li><a href="../euchre/">Euchre</a></li><li><a href="../skat/">Skat</a></li><li><a href="../doppelkopf/">Doppelkopf</a></li><li><a href="../schafkopf/">Schafkopf</a></li><li><a href="../klaverjassen/">Klaverjassen</a></li><li><a href="../toepen/">Toepen</a></li><li><a href="../belote/">Belote</a></li><li><a href="../tarot/">Tarot</a></li><li><a href="../mus/">Mus</a></li><li><a href="../chinchon/">Chinchón</a></li><li><a href="../truco/">Truco</a></li><li><a href="../burraco/">Burraco</a></li><li><a href="../scopa/">Scopa</a></li><li><a href="../briscola/">Briscola</a></li><li><a href="../sueca/">Sueca</a></li><li><a href="../darts/">Βελάκια</a></li><li><a href="../mini-golf/">Μίνι γκολφ</a></li><li><a href="../billiards/">Μπιλιάρδο</a></li><li><a href="../tennis/">Τένις</a></li><li><a href="../padel/">Πάντελ</a></li><li><a href="../table-tennis/">Πινγκ πονγκ</a></li><li><a href="../volleyball/">Βόλεϊ</a></li></ul>
+    </nav>
+  </main>
+  <footer>
+    <p>Οι κανόνες αλλάζουν από τραπέζι σε τραπέζι. Μπορείς να διαλέξεις τους δικούς σου όταν στήνεις παιχνίδι.</p>
+    <p>Το Yahtzee είναι εμπορικό σήμα της Hasbro. Το Yazboz Guru είναι ανεξάρτητη εφαρμογή καταγραφής σκορ και δεν συνδέεται με αυτές τις εταιρείες ούτε υποστηρίζεται από αυτές.</p>
+    <p><a href="/yazboz/privacy/">Υποστήριξη και απόρρητο (στα αγγλικά)</a> · © 2026 Goal Guru</p>
+  </footer>
+</body>
+</html>

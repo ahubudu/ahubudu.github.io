@@ -7,8 +7,16 @@
   <title>Yazboz Guru: the score keeper for card games, board games and sports</title>
   <meta name="description" content="Keep score for Rummy, Hearts, backgammon, darts, tennis and 40+ games with your own house rules. Run tournaments and share games live. iPhone, iPad, Apple Watch and web.">
   <link rel="canonical" href="https://yazbozguru.com/en/">
-  <link rel="alternate" hreflang="en" href="https://yazbozguru.com/en/">
   <link rel="alternate" hreflang="tr" href="https://yazbozguru.com/">
+  <link rel="alternate" hreflang="en" href="https://yazbozguru.com/en/">
+  <link rel="alternate" hreflang="es" href="https://yazbozguru.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://yazbozguru.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://yazbozguru.com/it/">
+  <link rel="alternate" hreflang="pt" href="https://yazbozguru.com/pt/">
+  <link rel="alternate" hreflang="nl" href="https://yazbozguru.com/nl/">
+  <link rel="alternate" hreflang="de" href="https://yazbozguru.com/de/">
+  <link rel="alternate" hreflang="el" href="https://yazbozguru.com/el/">
+  <link rel="alternate" hreflang="x-default" href="https://yazbozguru.com/en/">
   <link rel="icon" href="/yazboz/img/app-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Yazboz Guru">
@@ -28,7 +36,14 @@
     header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
     header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
     header img { width:32px; height:32px; border-radius:8px; }
-    header .lang { margin-left:auto; font-size:14px; }
+    header .lang { margin-left:auto; font-size:14px; position:relative; }
+    header .lang summary { cursor:pointer; color:var(--accent); list-style:none; }
+    header .lang summary::-webkit-details-marker { display:none; }
+    header .lang summary::after { content:" ▾"; }
+    header .lang ul { position:absolute; right:0; top:26px; z-index:5; margin:0; padding:6px; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:150px; }
+    header .lang li { margin:0; }
+    header .lang a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink); }
+    header .lang a:hover { background:var(--bg); }
     h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
     h2 { font-size:20px; margin:24px 0 6px; }
     h2:first-child { margin-top:0; }
@@ -72,7 +87,7 @@
 </head>
 <body>
   <header>
-    <a class="lang" href="/" hreflang="tr">Türkçe</a>
+    <details class="lang"><summary>English</summary><ul><li><a href="https://yazbozguru.com/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/es/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/it/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/pt/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://yazbozguru.com/el/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
   </header>
   <main>
     <section class="card hero">
