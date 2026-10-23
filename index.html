@@ -1,4 +1,103 @@
 <!doctype html>
-<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yazboz Guru</title>
-<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F6F4F0;color:#2A2926;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:center;padding:24px}p{color:#6B675F}</style></head>
-<body><main><h1>Yazboz Guru</h1><p>Masadaki skorlar için. Okey, Batak, King, Tavla ve daha fazlası.</p></main></body></html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6823951115">
+  <title>Yazboz Guru: Kart, masa oyunları ve sporlarda skor defteri</title>
+  <meta name="description" content="Okey, King, tavla, dart, tenis ve 40’tan fazla oyunun skorunu kendi masa kurallarınla tut. Turnuva düzenle, oyunu canlı paylaş. iPhone, iPad, Apple Watch ve web.">
+  <link rel="canonical" href="https://yazbozguru.com/">
+  <link rel="alternate" hreflang="tr" href="https://yazbozguru.com/">
+  <link rel="alternate" hreflang="en" href="https://yazbozguru.com/en/">
+  <link rel="icon" href="/yazboz/img/app-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yazboz Guru">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:url" content="https://yazbozguru.com/">
+  <meta property="og:title" content="Yazboz Guru: Kart, masa oyunları ve sporlarda skor defteri">
+  <meta property="og:description" content="Okey, King, tavla, dart, tenis ve 40’tan fazla oyunun skorunu kendi masa kurallarınla tut. Turnuva düzenle, oyunu canlı paylaş. iPhone, iPad, Apple Watch ve web.">
+  <meta property="og:image" content="https://yazbozguru.com/yazboz/og-home-tr.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root { color-scheme: light dark; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#4F6F5E; --tint:#E3ECE6; --line:#E8E4DD; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#141416; --card:#1E1E22; --ink:#ECEAE6; --muted:#A7A39B; --accent:#8FB09F; --tint:#25302A; --line:#2E2E33; } }
+    * { box-sizing: border-box; }
+    body { margin:0; padding:24px 16px 40px; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
+    main { max-width:720px; margin:0 auto; }
+    .card { background:var(--card); border-radius:24px; padding:24px; margin-top:16px; }
+    header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
+    header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
+    header img { width:32px; height:32px; border-radius:8px; }
+    header .lang { margin-left:auto; font-size:14px; }
+    h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
+    h2 { font-size:20px; margin:24px 0 6px; }
+    h2:first-child { margin-top:0; }
+    h3 { font-size:16px; margin:16px 0 2px; }
+    p, li { color:var(--muted); margin:6px 0; }
+    .lead { font-size:18px; }
+    a { color:var(--accent); }
+    .app { background:var(--tint); }
+    .shots { display:flex; gap:16px; margin:18px 0 6px; }
+    figure { flex:1; margin:0; text-align:center; }
+    figure img { width:100%; max-width:300px; height:auto; border-radius:22px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
+    figcaption { font-size:13px; color:var(--muted); margin-top:8px; }
+    .button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:14px; background:var(--accent); color:#fff; font-weight:600; text-decoration:none; }
+    @media (prefers-color-scheme: dark) { .button { color:#141416; } }
+    .small { font-size:13px; }
+    ul.games { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
+    ul.games a { display:block; padding:10px 12px; border-radius:12px; background:var(--bg); color:var(--ink); text-decoration:none; font-weight:600; }
+    ul.games.big a { padding:14px 16px; }
+    ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
+    footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
+    footer p { font-size:13px; }
+    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
+    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
+    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
+    ol.steps li::marker { color:var(--accent); font-weight:700; }
+    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
+    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
+    table.points tr:first-child td { border-top:none; }
+    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
+    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
+    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
+    .hero { text-align:center; }
+    .hero img { width:96px; height:96px; border-radius:22px; }
+    .hero h1 { font-size:36px; margin:12px 0 8px; }
+    .buttons { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .button.ghost { background:var(--tint); color:var(--accent); }
+    .features { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; margin:0; padding:0; list-style:none; }
+    .features li { margin:0; }
+    .features strong { display:block; color:var(--ink); }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="lang" href="/en/" hreflang="en">English</a>
+  </header>
+  <main>
+    <section class="card hero">
+      <img src="/yazboz/img/app-icon.png" alt="" width="96" height="96">
+      <h1>Yazboz Guru</h1>
+      <p class="lead">Masada oynadığın oyunların skorunu tutar: okey, King, tavla, dart, tenis ve 40’tan fazla oyun. Oyunu seç, masandaki kuralları ayarla, her eli gir; toplamı ve kazananı uygulama hesaplar.</p>
+      <div class="buttons">
+        <a class="button" href="https://apps.apple.com/app/id6823951115">App Store’dan indir</a>
+        <a class="button ghost" href="/skor/">Tarayıcıda skor tut</a>
+      </div>
+      <p class="small">Ücretsiz · iPhone, iPad ve Apple Watch · Web sürümü ücretsiz ve kurulum istemez; oyunların o tarayıcıda saklanır.</p>
+    </section>
+    <section class="card">
+      <ul class="features"><li><strong>Senin kuralların</strong>Hedef puan, eşli ya da tekli oyun, cezalar: her masanın kendi kuralları kaydedilir.</li><li><strong>Her el kontrol edilir</strong>Kimin bitirdiğini, kimin ne aldığını seçersin; puanları uygulama kurallara göre hesaplar.</li><li><strong>Birlikte oyna</strong>Turnuva düzenle, oyunu canlı paylaş; masada olmayanlar skoru kendi telefonundan izler.</li><li><strong>Kilit ekranında ve bilekte</strong>Canlı skor kilit ekranında ve Dynamic Island’da; Apple Watch’tan skor gir.</li></ul>
+    </section>
+    <nav class="card">
+      <h2>Oyun kuralları</h2>
+      <p>Her oyunun kuralları, çeşitleri ve puanların nasıl hesaplandığı.</p>
+      <ul class="games"><li><a href="/yazboz/kurallar/okey/">Okey</a></li><li><a href="/yazboz/kurallar/101-okey/">101 Okey</a></li><li><a href="/yazboz/kurallar/batak/">Batak</a></li><li><a href="/yazboz/kurallar/king/">King</a></li><li><a href="/yazboz/kurallar/tavla/">Tavla</a></li><li><a href="/yazboz/kurallar/pisti/">Pişti</a></li><li><a href="/yazboz/kurallar/dart/">Dart</a></li><li><a href="/yazboz/kurallar/tenis/">Tenis</a></li></ul>
+      <p><a href="/yazboz/kurallar/">Bütün oyunların kuralları →</a></p>
+    </nav>
+  </main>
+  <footer>
+    <p>Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Felemenkçe ve Yunanca.</p>
+    <p><a href="/yazboz/gizlilik/">Destek ve gizlilik</a> · <a href="/yazboz/kosullar/">Kullanım koşulları</a> · © 2026 Goal Guru</p>
+  </footer>
+</body>
+</html>
