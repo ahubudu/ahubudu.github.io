@@ -1,5 +1,6 @@
 /* Yazboz Guru website. Layout: a sticky top bar, full-width bands with a 1120px column, and the
-   app's own palette and type (Manrope). Light and dark follow the device unless data-theme is set. */
+   app's own palette and type (Manrope). Light by default; dark with data-theme="dark", the device's
+   choice with data-theme="auto". */
 @font-face { font-family: Manrope; font-weight: 400; font-display: swap; src: url(/assets/fonts/manrope-400.ttf) format("truetype"); }
 @font-face { font-family: Manrope; font-weight: 600; font-display: swap; src: url(/assets/fonts/manrope-600.ttf) format("truetype"); }
 @font-face { font-family: Manrope; font-weight: 700; font-display: swap; src: url(/assets/fonts/manrope-700.ttf) format("truetype"); }
@@ -14,7 +15,7 @@
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root[data-theme="auto"] {
     --bg: #121214; --bg-2: #18181B; --surface: #1E1E22; --ink: #ECEAE6; --muted: #A19D96; --faint: #74706A; --line: #2F2F35;
     --accent: #8FB5A1; --accent-soft: #8FB09F; --on-accent: #102019; --tint: #23302A;
     --brick: #E58B78; --brick-tint: #3A2420; --pos: #8CC49E; --neg: #E09A9A;
@@ -46,7 +47,7 @@ p { margin: 0; }
 
 /* Theme-dependent images */
 .only-dark { display: none !important; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .only-light { display: none !important; } :root:not([data-theme="light"]) .only-dark { display: block !important; } }
+@media (prefers-color-scheme: dark) { :root[data-theme="auto"] .only-light { display: none !important; } :root[data-theme="auto"] .only-dark { display: block !important; } }
 :root[data-theme="dark"] .only-light { display: none !important; }
 :root[data-theme="dark"] .only-dark { display: block !important; }
 
@@ -63,7 +64,7 @@ p { margin: 0; }
 .icon-btn svg { width: 18px; height: 18px; }
 .icon-btn:hover { border-color: var(--faint); }
 .theme-btn .ic { display: none; }
-.theme-btn[data-state="auto"] .ic-auto, .theme-btn:not([data-state]) .ic-auto, .theme-btn[data-state="light"] .ic-light, .theme-btn[data-state="dark"] .ic-dark { display: inline-flex; }
+.theme-btn[data-state="auto"] .ic-auto, .theme-btn:not([data-state]) .ic-light, .theme-btn[data-state="light"] .ic-light, .theme-btn[data-state="dark"] .ic-dark { display: inline-flex; }
 .lang { position: relative; }
 .lang summary::-webkit-details-marker { display: none; }
 .lang ul { position: absolute; right: 0; top: 46px; margin: 0; padding: 6px; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px var(--shadow); min-width: 180px; z-index: 30; }
