@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>Spelregels en puntentelling | Yazboz Guru</title>
   <meta name="description" content="De regels, varianten en puntentelling van populaire kaart-, stenen- en bordspellen en tafelsporten, van klaverjassen en toepen tot hartenjagen, darts en…">
@@ -25,123 +25,69 @@
   <meta property="og:description" content="De regels, varianten en puntentelling van populaire kaart-, stenen- en bordspellen en tafelsporten, van klaverjassen en toepen tot hartenjagen, darts en…">
   <meta property="og:image" content="https://yazbozguru.com/yazboz/og-rules-en.png">
   <meta name="twitter:card" content="summary_large_image">
-  <style>
-    :root { color-scheme: light dark; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#4F6F5E; --tint:#E3ECE6; --line:#E8E4DD; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#141416; --card:#1E1E22; --ink:#ECEAE6; --muted:#A7A39B; --accent:#8FB09F; --tint:#25302A; --line:#2E2E33; } }
-    * { box-sizing: border-box; }
-    body { margin:0; padding:24px 16px 40px; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
-    main { max-width:720px; margin:0 auto; }
-    .card { background:var(--card); border-radius:24px; padding:24px; margin-top:16px; }
-    header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
-    header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
-    header img { width:32px; height:32px; border-radius:8px; }
-    header .lang { margin-left:auto; font-size:14px; position:relative; }
-    header .lang summary { cursor:pointer; color:var(--accent); list-style:none; }
-    header .lang summary::-webkit-details-marker { display:none; }
-    header .lang summary::after { content:" ▾"; }
-    header .lang ul { position:absolute; right:0; top:26px; z-index:5; margin:0; padding:6px; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:150px; }
-    header .lang li { margin:0; }
-    header .lang a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink); }
-    header .lang a:hover { background:var(--bg); }
-    h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
-    h2 { font-size:20px; margin:24px 0 6px; }
-    h2:first-child { margin-top:0; }
-    h3 { font-size:16px; margin:16px 0 2px; }
-    p, li { color:var(--muted); margin:6px 0; }
-    .lead { font-size:18px; }
-    a { color:var(--accent); }
-    .app { background:var(--tint); }
-    .shots { display:flex; gap:16px; margin:18px 0 6px; }
-    figure { flex:1; margin:0; text-align:center; }
-    figure img { width:100%; max-width:300px; height:auto; border-radius:22px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
-    figcaption { font-size:13px; color:var(--muted); margin-top:8px; }
-    .button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:14px; background:var(--accent); color:#fff; font-weight:600; text-decoration:none; }
-    @media (prefers-color-scheme: dark) { .button { color:#141416; } }
-    .small { font-size:13px; }
-    ul.games { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
-    ul.games a { display:block; padding:10px 12px; border-radius:12px; background:var(--bg); color:var(--ink); text-decoration:none; font-weight:600; }
-    ul.games.big a { padding:14px 16px; }
-    ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
-    footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
-    footer p { font-size:13px; }
-    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
-    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
-    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
-    ol.steps li::marker { color:var(--accent); font-weight:700; }
-    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
-    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
-    table.points tr:first-child td { border-top:none; }
-    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
-    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
-    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="preload" href="/assets/fonts/manrope-800.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="icon" href="/yazboz/img/app-icon.png">
+  <link rel="apple-touch-icon" href="/yazboz/img/app-icon-192.png">
+  <meta name="theme-color" content="#F6F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)">
+  <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="https://yazbozguru.com/yazboz/nl/regels/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32">Yazboz Guru</a>
-    <details class="lang"><summary>Nederlands</summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/rules/" hreflang="en" lang="en">English</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/fr/regles/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/de/regeln/" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://yazbozguru.com/yazboz/el/kanones/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+  <a class="skip" href="#main">Naar de inhoud</a>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a class="brand" href="/nl/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+      <nav class="links" aria-label="Spellen">
+        <a href="/nl/#features">Functies</a>
+        <a href="/nl/#games">Spellen</a>
+        <a href="/yazboz/nl/regels/">Regels</a>
+        <a href="/skor/">Probeer op het web</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn theme-btn" type="button" data-labels='{&quot;auto&quot;:&quot;Automatisch&quot;,&quot;light&quot;:&quot;Licht&quot;,&quot;dark&quot;:&quot;Donker&quot;,&quot;label&quot;:&quot;Weergave&quot;}' aria-label="Weergave: Automatisch" title="Weergave: Automatisch"><span class="ic ic-auto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></span><span class="ic ic-light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg></span><span class="ic ic-dark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z" fill="currentColor"/></svg></span></button>
+        <details class="lang"><summary class="icon-btn" aria-label="Nederlands"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.4 2.4 3.6 5.3 3.6 8.6s-1.2 6.2-3.6 8.6c-2.4-2.4-3.6-5.3-3.6-8.6S9.6 5.8 12 3.4z"/></g></svg><span>NL</span></summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/rules/" hreflang="en" lang="en">English</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/fr/regles/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/nl/regels/" hreflang="nl" lang="nl" aria-current="page">Nederlands</a></li><li><a href="https://yazbozguru.com/yazboz/de/regeln/" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://yazbozguru.com/yazboz/el/kanones/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+        <a class="btn primary small" href="https://apps.apple.com/app/id6823951115">Downloaden</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <section class="card">
-      <h1>Spelregels en puntentelling</h1>
-      <p class="lead">De regels, varianten en puntentelling van populaire kaart-, stenen- en bordspellen en tafelsporten, van klaverjassen en toepen tot hartenjagen, darts en biljart. Yazboz Guru houdt de score van allemaal voor je bij.</p>
-      <ul class="games big">
-        <li><a href="okey/">Okey<span>4 spelers · af van 20</span></a></li>
-        <li><a href="101-okey/">101 Okey<span>4 spelers · minste punten</span></a></li>
-        <li><a href="rummy/">Rummy<span>2–6 spelers · stenen</span></a></li>
-        <li><a href="backgammon/">Backgammon<span>2 spelers · tot 5 punten</span></a></li>
-        <li><a href="chess/">Schaken<span>2 spelers · 1/½/0</span></a></li>
-        <li><a href="draughts/">Dammen<span>2 spelers · wedstrijdstand</span></a></li>
-        <li><a href="batak/">Batak<span>3–4 spelers · tot 51</span></a></li>
-        <li><a href="king/">King<span>4 spelers · 20 spellen</span></a></li>
-        <li><a href="pishti/">Pishti<span>2–4 spelers · tot 151</span></a></li>
-        <li><a href="crazy-eights/">Pesten<span>2–8 spelers · limiet 101</span></a></li>
-        <li><a href="bluff/">Bluffen<span>3–8 spelers · eerst tot 5</span></a></li>
-        <li><a href="uno/">Uno<span>2–10 spelers · tot 500</span></a></li>
-        <li><a href="yahtzee/">Yahtzee<span>1–8 spelers · 13 beurten</span></a></li>
-        <li><a href="catan/">Catan<span>2–6 spelers · overwinningspunten</span></a></li>
-        <li><a href="ticket-to-ride/">Ticket to Ride<span>2–5 spelers · trajecten en bestemmingen</span></a></li>
-        <li><a href="carcassonne/">Carcassonne<span>2–6 spelers · elke telling</span></a></li>
-        <li><a href="7-wonders/">7 Wonders<span>2–7 spelers · eindtelling</span></a></li>
-        <li><a href="hearts/">Hartenjagen<span>3–6 spelers · laagste wint</span></a></li>
-        <li><a href="spades/">Spades<span>3–4 spelers · biedingen met maat</span></a></li>
-        <li><a href="gin-rummy/">Gin Rummy<span>2 spelers · tot 100</span></a></li>
-        <li><a href="cribbage/">Cribbage<span>2–4 spelers · tot 121</span></a></li>
-        <li><a href="euchre/">Euchre<span>4 spelers · koppels · tot 10</span></a></li>
-        <li><a href="skat/">Skat<span>3–4 spelers · spelwaarde</span></a></li>
-        <li><a href="doppelkopf/">Doppelkopf<span>4–5 spelers · Re en Kontra</span></a></li>
-        <li><a href="schafkopf/">Schafkopf<span>4 spelers · Beiers</span></a></li>
-        <li><a href="klaverjassen/">Klaverjassen<span>4 spelers · koppels · 162 + roem</span></a></li>
-        <li><a href="toepen/">Toepen<span>2–8 spelers · strafpunten</span></a></li>
-        <li><a href="belote/">Belote<span>4 spelers · koppels · tot 1000</span></a></li>
-        <li><a href="tarot/">Tarot<span>3–5 spelers · contracten</span></a></li>
-        <li><a href="mus/">Mus<span>4 spelers · koppels · tot 40</span></a></li>
-        <li><a href="chinchon/">Chinchón<span>2–8 spelers · af boven 100</span></a></li>
-        <li><a href="truco/">Truco<span>2 of 4 spelers · tot 30</span></a></li>
-        <li><a href="burraco/">Burraco<span>2 of 4 spelers · tot 2005</span></a></li>
-        <li><a href="scopa/">Scopa<span>2 of 4 spelers · tot 11</span></a></li>
-        <li><a href="briscola/">Briscola<span>2 of 4 spelers · 120 punten</span></a></li>
-        <li><a href="sueca/">Sueca<span>4 spelers · koppels · 120 punten</span></a></li>
-        <li><a href="darts/">Darts<span>1–8 spelers · 501 / 301, Cricket</span></a></li>
-        <li><a href="mini-golf/">Midgetgolf<span>1–8 spelers · 9 / 18 holes</span></a></li>
-        <li><a href="billiards/">Biljart<span>2 spelers of 2 teams · pool, 14.1, driebanden, snooker</span></a></li>
-        <li><a href="tennis/">Tennis<span>Enkel of dubbel · best of 3 / 5</span></a></li>
-        <li><a href="padel/">Padel<span>Dubbel · best of 3</span></a></li>
-        <li><a href="table-tennis/">Tafeltennis<span>Enkel of dubbel · tot 11</span></a></li>
-        <li><a href="volleyball/">Volleybal<span>Twee teams · zaal of beach</span></a></li>
-      </ul>
-    </section>
-    <section class="card app">
-      <h2>Yazboz Guru</h2>
-      <p>Geen pen en papier: kies het spel, stel jullie huisregels in en vul na elke ronde in wat er gebeurde. De app rekent volgens de regels.</p>
-      <a class="button" href="https://apps.apple.com/app/id6823951115">Download in de App Store</a>
-      <p class="small">Gratis · iPhone, iPad en Apple Watch</p>
-    </section>
+  <main id="main">
+    <div class="wrap page">
+      <nav class="crumbs" aria-label="Regels"><a href="/nl/">Yazboz Guru</a><span aria-hidden="true">›</span><span>Regels</span></nav>
+      <div class="page-head">
+        <h1>Spelregels en puntentelling</h1>
+        <p class="lead">De regels, varianten en puntentelling van populaire kaart-, stenen- en bordspellen en tafelsporten, van klaverjassen en toepen tot hartenjagen, darts en biljart. Yazboz Guru houdt de score van allemaal voor je bij.</p>
+      </div>
+      <div class="cat cat-block"><h2>Kaarten</h2><ul class="game-cards"><li><a class="game-card" href="batak/"><span class="dot" style="background:#A877A8">B</span><span><strong>Batak</strong><span class="meta">3–4 spelers · tot 51</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="king/"><span class="dot" style="background:#F0679B">K</span><span><strong>King</strong><span class="meta">4 spelers · 20 spellen</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="pishti/"><span class="dot" style="background:#EF6F3C">P</span><span><strong>Pishti</strong><span class="meta">2–4 spelers · tot 151</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="crazy-eights/"><span class="dot" style="background:#DDAE45">P</span><span><strong>Pesten</strong><span class="meta">2–8 spelers · limiet 101</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="bluff/"><span class="dot" style="background:#F0679B">B</span><span><strong>Bluffen</strong><span class="meta">3–8 spelers · eerst tot 5</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="uno/"><span class="dot" style="background:#52A5CE">U</span><span><strong>Uno</strong><span class="meta">2–10 spelers · tot 500</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="hearts/"><span class="dot" style="background:#EF6F3C">H</span><span><strong>Hartenjagen</strong><span class="meta">3–6 spelers · laagste wint</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="spades/"><span class="dot" style="background:#F0679B">S</span><span><strong>Spades</strong><span class="meta">3–4 spelers · biedingen met maat</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="gin-rummy/"><span class="dot" style="background:#7FAE6B">G</span><span><strong>Gin Rummy</strong><span class="meta">2 spelers · tot 100</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="cribbage/"><span class="dot" style="background:#52A5CE">C</span><span><strong>Cribbage</strong><span class="meta">2–4 spelers · tot 121</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="euchre/"><span class="dot" style="background:#DDAE45">E</span><span><strong>Euchre</strong><span class="meta">4 spelers · koppels · tot 10</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="skat/"><span class="dot" style="background:#52A5CE">S</span><span><strong>Skat</strong><span class="meta">3–4 spelers · spelwaarde</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="doppelkopf/"><span class="dot" style="background:#A877A8">D</span><span><strong>Doppelkopf</strong><span class="meta">4–5 spelers · Re en Kontra</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="schafkopf/"><span class="dot" style="background:#DDAE45">S</span><span><strong>Schafkopf</strong><span class="meta">4 spelers · Beiers</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="klaverjassen/"><span class="dot" style="background:#7FAE6B">K</span><span><strong>Klaverjassen</strong><span class="meta">4 spelers · koppels · 162 + roem</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="toepen/"><span class="dot" style="background:#F0679B">T</span><span><strong>Toepen</strong><span class="meta">2–8 spelers · strafpunten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="belote/"><span class="dot" style="background:#EF6F3C">B</span><span><strong>Belote</strong><span class="meta">4 spelers · koppels · tot 1000</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="tarot/"><span class="dot" style="background:#F0679B">T</span><span><strong>Tarot</strong><span class="meta">3–5 spelers · contracten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="mus/"><span class="dot" style="background:#DDAE45">M</span><span><strong>Mus</strong><span class="meta">4 spelers · koppels · tot 40</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="chinchon/"><span class="dot" style="background:#A877A8">C</span><span><strong>Chinchón</strong><span class="meta">2–8 spelers · af boven 100</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="truco/"><span class="dot" style="background:#EF6F3C">T</span><span><strong>Truco</strong><span class="meta">2 of 4 spelers · tot 30</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="burraco/"><span class="dot" style="background:#52A5CE">B</span><span><strong>Burraco</strong><span class="meta">2 of 4 spelers · tot 2005</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="scopa/"><span class="dot" style="background:#A877A8">S</span><span><strong>Scopa</strong><span class="meta">2 of 4 spelers · tot 11</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="briscola/"><span class="dot" style="background:#7FAE6B">B</span><span><strong>Briscola</strong><span class="meta">2 of 4 spelers · 120 punten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="sueca/"><span class="dot" style="background:#DDAE45">S</span><span><strong>Sueca</strong><span class="meta">4 spelers · koppels · 120 punten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul></div>
+      <div class="cat cat-block"><h2>Stenen</h2><ul class="game-cards"><li><a class="game-card" href="okey/"><span class="dot" style="background:#7FAE6B">O</span><span><strong>Okey</strong><span class="meta">4 spelers · af van 20</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="101-okey/"><span class="dot" style="background:#52A5CE">O</span><span><strong>101 Okey</strong><span class="meta">4 spelers · minste punten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="rummy/"><span class="dot" style="background:#7FAE6B">R</span><span><strong>Rummy</strong><span class="meta">2–6 spelers · stenen</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul></div>
+      <div class="cat cat-block"><h2>Dobbelen</h2><ul class="game-cards"><li><a class="game-card" href="backgammon/"><span class="dot" style="background:#DDAE45">B</span><span><strong>Backgammon</strong><span class="meta">2 spelers · tot 5 punten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="yahtzee/"><span class="dot" style="background:#7FAE6B">Y</span><span><strong>Yahtzee</strong><span class="meta">1–8 spelers · 13 beurten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul></div>
+      <div class="cat cat-block"><h2>Bordspellen</h2><ul class="game-cards"><li><a class="game-card" href="chess/"><span class="dot" style="background:#EF6F3C">S</span><span><strong>Schaken</strong><span class="meta">2 spelers · 1/½/0</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="draughts/"><span class="dot" style="background:#52A5CE">D</span><span><strong>Dammen</strong><span class="meta">2 spelers · wedstrijdstand</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="catan/"><span class="dot" style="background:#DDAE45">C</span><span><strong>Catan</strong><span class="meta">2–6 spelers · overwinningspunten</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="ticket-to-ride/"><span class="dot" style="background:#F0679B">T</span><span><strong>Ticket to Ride</strong><span class="meta">2–5 spelers · trajecten en bestemmingen</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="carcassonne/"><span class="dot" style="background:#A877A8">C</span><span><strong>Carcassonne</strong><span class="meta">2–6 spelers · elke telling</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="7-wonders/"><span class="dot" style="background:#7FAE6B">W</span><span><strong>7 Wonders</strong><span class="meta">2–7 spelers · eindtelling</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul></div>
+      <div class="cat cat-block"><h2>Sport</h2><ul class="game-cards"><li><a class="game-card" href="darts/"><span class="dot" style="background:#A877A8">D</span><span><strong>Darts</strong><span class="meta">1–8 spelers · 501 / 301, Cricket</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="mini-golf/"><span class="dot" style="background:#7FAE6B">M</span><span><strong>Midgetgolf</strong><span class="meta">1–8 spelers · 9 / 18 holes</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="billiards/"><span class="dot" style="background:#F0679B">B</span><span><strong>Biljart</strong><span class="meta">2 spelers of 2 teams · pool, 14.1, driebanden, snooker</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="tennis/"><span class="dot" style="background:#7FAE6B">T</span><span><strong>Tennis</strong><span class="meta">Enkel of dubbel · best of 3 / 5</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="padel/"><span class="dot" style="background:#DDAE45">P</span><span><strong>Padel</strong><span class="meta">Dubbel · best of 3</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="table-tennis/"><span class="dot" style="background:#F0679B">T</span><span><strong>Tafeltennis</strong><span class="meta">Enkel of dubbel · tot 11</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="volleyball/"><span class="dot" style="background:#52A5CE">V</span><span><strong>Volleybal</strong><span class="meta">Twee teams · zaal of beach</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul></div>
+      <div class="band" style="margin-top:56px">
+        <div><h2>Klaar voor de volgende spelavond?</h2><p>Geen pen en papier: kies het spel, stel jullie huisregels in en vul na elke ronde in wat er gebeurde. De app rekent volgens de regels.</p></div>
+        <div class="btn-row"><a class="btn primary" href="https://apps.apple.com/app/id6823951115">Download in de App Store</a><a class="btn ghost" href="/skor/">Score bijhouden in je browser</a></div>
+      </div>
+    </div>
   </main>
-  <footer>
-    <p>Regels verschillen per tafel. Je kunt je eigen regels kiezen bij het instellen van een spel.</p>
-    <p>Uno is een handelsmerk van Mattel. Yahtzee is een handelsmerk van Hasbro. Catan is een handelsmerk van Catan GmbH. Ticket to Ride is een handelsmerk van Days of Wonder. Carcassonne is een handelsmerk van Hans im Glück. 7 Wonders is een handelsmerk van Repos Production. Yazboz Guru is een onafhankelijke app om de score bij te houden en is niet verbonden aan of goedgekeurd door deze bedrijven.</p>
-    <p><a href="/yazboz/privacy/">Ondersteuning en privacy (Engels)</a> · © 2026 Goal Guru</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="/nl/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+          <p>Gratis · iPhone, iPad en Apple Watch</p>
+        </div>
+        <div><h2>App</h2><ul><li><a href="https://apps.apple.com/app/id6823951115">Download in de App Store</a></li><li><a href="/skor/">Score bijhouden in je browser</a></li><li><a href="/nl/#features">Functies</a></li></ul></div>
+        <div><h2>Regels</h2><ul><li><a href="/yazboz/nl/regels/">Regels</a></li><li><a href="/nl/#games">Spellen</a></li></ul></div>
+        <div><h2>Hulp</h2><ul><li><a href="/yazboz/privacy/">Ondersteuning en privacy (Engels)</a></li><li><a href="/yazboz/terms/">Gebruiksvoorwaarden (Engels)</a></li></ul></div>
+      </div>
+      <div class="foot-notes">
+        <p>Talen: Nederlands, Engels, Turks, Duits, Frans, Spaans, Italiaans, Portugees en Grieks.</p>
+        <p>Regels verschillen per tafel. Je kunt je eigen regels kiezen bij het instellen van een spel.</p>
+        <p>Uno is een handelsmerk van Mattel. Yahtzee is een handelsmerk van Hasbro. Catan is een handelsmerk van Catan GmbH. Ticket to Ride is een handelsmerk van Days of Wonder. Carcassonne is een handelsmerk van Hans im Glück. 7 Wonders is een handelsmerk van Repos Production. Yazboz Guru is een onafhankelijke app om de score bij te houden en is niet verbonden aan of goedgekeurd door deze bedrijven.</p>
+        <p>© 2026 Goal Guru</p>
+      </div>
+    </div>
   </footer>
+  <script>(function(){var b=document.querySelector('.theme-btn');if(!b)return;var L=JSON.parse(b.dataset.labels),order=['auto','light','dark'];function cur(){return document.documentElement.dataset.theme||'auto'}function show(){var c=cur();b.dataset.state=c;b.setAttribute('aria-label',L.label+': '+L[c]);b.title=L.label+': '+L[c]}b.addEventListener('click',function(){var n=order[(order.indexOf(cur())+1)%3];if(n==='auto'){delete document.documentElement.dataset.theme}else{document.documentElement.dataset.theme=n}try{n==='auto'?localStorage.removeItem('theme'):localStorage.setItem('theme',n)}catch(e){}show()});show()})();</script>
 </body>
 </html>

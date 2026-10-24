@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>How to play Toepen: rules and scoring | Yazboz Guru</title>
   <meta name="description" content="Dodge penalty points and be the last one left in. Every player who loses the round takes the stake as penalty points; whoever folded takes the stake of…">
@@ -25,65 +25,41 @@
   <meta property="og:description" content="Dodge penalty points and be the last one left in. Every player who loses the round takes the stake as penalty points; whoever folded takes the stake of…">
   <meta property="og:image" content="https://yazbozguru.com/yazboz/og-rules-en.png">
   <meta name="twitter:card" content="summary_large_image">
-  <style>
-    :root { color-scheme: light dark; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#4F6F5E; --tint:#E3ECE6; --line:#E8E4DD; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#141416; --card:#1E1E22; --ink:#ECEAE6; --muted:#A7A39B; --accent:#8FB09F; --tint:#25302A; --line:#2E2E33; } }
-    * { box-sizing: border-box; }
-    body { margin:0; padding:24px 16px 40px; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
-    main { max-width:720px; margin:0 auto; }
-    .card { background:var(--card); border-radius:24px; padding:24px; margin-top:16px; }
-    header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
-    header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
-    header img { width:32px; height:32px; border-radius:8px; }
-    header .lang { margin-left:auto; font-size:14px; position:relative; }
-    header .lang summary { cursor:pointer; color:var(--accent); list-style:none; }
-    header .lang summary::-webkit-details-marker { display:none; }
-    header .lang summary::after { content:" ▾"; }
-    header .lang ul { position:absolute; right:0; top:26px; z-index:5; margin:0; padding:6px; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:150px; }
-    header .lang li { margin:0; }
-    header .lang a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink); }
-    header .lang a:hover { background:var(--bg); }
-    h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
-    h2 { font-size:20px; margin:24px 0 6px; }
-    h2:first-child { margin-top:0; }
-    h3 { font-size:16px; margin:16px 0 2px; }
-    p, li { color:var(--muted); margin:6px 0; }
-    .lead { font-size:18px; }
-    a { color:var(--accent); }
-    .app { background:var(--tint); }
-    .shots { display:flex; gap:16px; margin:18px 0 6px; }
-    figure { flex:1; margin:0; text-align:center; }
-    figure img { width:100%; max-width:300px; height:auto; border-radius:22px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
-    figcaption { font-size:13px; color:var(--muted); margin-top:8px; }
-    .button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:14px; background:var(--accent); color:#fff; font-weight:600; text-decoration:none; }
-    @media (prefers-color-scheme: dark) { .button { color:#141416; } }
-    .small { font-size:13px; }
-    ul.games { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
-    ul.games a { display:block; padding:10px 12px; border-radius:12px; background:var(--bg); color:var(--ink); text-decoration:none; font-weight:600; }
-    ul.games.big a { padding:14px 16px; }
-    ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
-    footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
-    footer p { font-size:13px; }
-    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
-    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
-    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
-    ol.steps li::marker { color:var(--accent); font-weight:700; }
-    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
-    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
-    table.points tr:first-child td { border-top:none; }
-    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
-    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
-    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="preload" href="/assets/fonts/manrope-800.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="icon" href="/yazboz/img/app-icon.png">
+  <link rel="apple-touch-icon" href="/yazboz/img/app-icon-192.png">
+  <meta name="theme-color" content="#F6F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)">
+  <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="https://yazbozguru.com/yazboz/rules/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32">Yazboz Guru</a>
-    <details class="lang"><summary>English</summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/toepen/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/toepen/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/fr/regles/toepen/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/toepen/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/toepen/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/nl/regels/toepen/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/yazboz/de/regeln/toepen/" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://yazbozguru.com/yazboz/el/kanones/toepen/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a class="brand" href="/en/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+      <nav class="links" aria-label="Games">
+        <a href="/en/#features">Features</a>
+        <a href="/en/#games">Games</a>
+        <a href="/yazboz/rules/">Rules</a>
+        <a href="/skor/">Try on the web</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn theme-btn" type="button" data-labels='{&quot;auto&quot;:&quot;Automatic&quot;,&quot;light&quot;:&quot;Light&quot;,&quot;dark&quot;:&quot;Dark&quot;,&quot;label&quot;:&quot;Appearance&quot;}' aria-label="Appearance: Automatic" title="Appearance: Automatic"><span class="ic ic-auto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></span><span class="ic ic-light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg></span><span class="ic ic-dark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z" fill="currentColor"/></svg></span></button>
+        <details class="lang"><summary class="icon-btn" aria-label="English"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.4 2.4 3.6 5.3 3.6 8.6s-1.2 6.2-3.6 8.6c-2.4-2.4-3.6-5.3-3.6-8.6S9.6 5.8 12 3.4z"/></g></svg><span>EN</span></summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/toepen/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/rules/toepen/" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/toepen/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/fr/regles/toepen/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/toepen/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/toepen/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/nl/regels/toepen/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/yazboz/de/regeln/toepen/" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://yazbozguru.com/yazboz/el/kanones/toepen/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+        <a class="btn primary small" href="https://apps.apple.com/app/id6823951115">Download</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <article class="card">
-      <h1>How to play Toepen: rules and scoring</h1>
+  <main id="main">
+    <div class="wrap page">
+      <nav class="crumbs" aria-label="Rules"><a href="/en/">Yazboz Guru</a><span aria-hidden="true">›</span><a href="../">Rules</a><span aria-hidden="true">›</span><span>Toepen</span></nav>
+      <div class="page-head">
+        <h1>How to play Toepen: rules and scoring</h1>
+      </div>
+      <div class="rule-grid">
+        <article class="prose">
+        <section>
       <ul class="glance"><li>2–8 players</li><li>4 cards each</li><li>Out at 10</li></ul>
       <p class="lead"><strong>Goal:</strong> Dodge penalty points and be the last one left in.</p>
       <h2>Setup</h2>
@@ -94,26 +70,45 @@
       <ul class="points"><li>The losers take the stake as penalty points.</li><li>Whoever folds takes the stake of that moment.</li></ul>
       <h2>Winning</h2>
       <ul class="points"><li>Reaching the limit puts you out; the last one in wins.</li></ul>
-    </article>
-
-    <section class="card app" id="app">
-      <h2>Let Yazboz Guru keep the Toepen score</h2>
-      <p>No pen and paper: pick the game, set your table’s rules and enter what happened at the end of each round. The app does the math by the rules.</p>
-      <p>Each round, enter the penalty points of whoever lost or folded; reaching the limit (usually 10) puts you out, and the last one in wins.</p>
-      
-      <a class="button" href="https://apps.apple.com/app/id6823951115">Download on the App Store</a>
-      <p class="small">Free · iPhone, iPad and Apple Watch · <a href="/skor/new/toepen">Or keep score in your browser now</a></p>
-    </section>
-
-    <nav class="card">
-      <h2>More games</h2>
-      <ul class="games"><li><a href="../okey/">Okey</a></li><li><a href="../101-okey/">101 Okey</a></li><li><a href="../rummy/">Rummy</a></li><li><a href="../backgammon/">Backgammon</a></li><li><a href="../chess/">Chess</a></li><li><a href="../draughts/">Draughts</a></li><li><a href="../batak/">Batak</a></li><li><a href="../king/">King</a></li><li><a href="../pishti/">Pishti</a></li><li><a href="../crazy-eights/">Crazy Eights</a></li><li><a href="../bluff/">Bluff</a></li><li><a href="../uno/">Uno</a></li><li><a href="../yahtzee/">Yahtzee</a></li><li><a href="../catan/">Catan</a></li><li><a href="../ticket-to-ride/">Ticket to Ride</a></li><li><a href="../carcassonne/">Carcassonne</a></li><li><a href="../7-wonders/">7 Wonders</a></li><li><a href="../hearts/">Hearts</a></li><li><a href="../spades/">Spades</a></li><li><a href="../gin-rummy/">Gin Rummy</a></li><li><a href="../cribbage/">Cribbage</a></li><li><a href="../euchre/">Euchre</a></li><li><a href="../skat/">Skat</a></li><li><a href="../doppelkopf/">Doppelkopf</a></li><li><a href="../schafkopf/">Schafkopf</a></li><li><a href="../klaverjassen/">Klaverjassen</a></li><li><a href="../belote/">Belote</a></li><li><a href="../tarot/">Tarot</a></li><li><a href="../mus/">Mus</a></li><li><a href="../chinchon/">Chinchón</a></li><li><a href="../truco/">Truco</a></li><li><a href="../burraco/">Burraco</a></li><li><a href="../scopa/">Scopa</a></li><li><a href="../briscola/">Briscola</a></li><li><a href="../sueca/">Sueca</a></li><li><a href="../darts/">Darts</a></li><li><a href="../mini-golf/">Mini golf</a></li><li><a href="../billiards/">Billiards</a></li><li><a href="../tennis/">Tennis</a></li><li><a href="../padel/">Padel</a></li><li><a href="../table-tennis/">Table tennis</a></li><li><a href="../volleyball/">Volleyball</a></li></ul>
-    </nav>
+        </section>
+        </article>
+        <aside class="rule-aside" id="app">
+        <figure class="phone light-screen"><div class="screen"><img class="" src="/assets/shots/en/game-toepen.webp" alt="Entering a Toepen round in Yazboz Guru" width="390" height="844" loading="lazy" decoding="async"></div></figure>
+        <h2>Let Yazboz Guru keep the Toepen score</h2>
+        <p>No pen and paper: pick the game, set your table’s rules and enter what happened at the end of each round. The app does the math by the rules.</p>
+        <a class="btn primary" href="https://apps.apple.com/app/id6823951115">Download on the App Store</a>
+        <a class="btn ghost" href="/skor/new/toepen">Or keep score in your browser now</a>
+        <p class="fine">Free · iPhone, iPad and Apple Watch</p>
+      </aside>
+      </div>
+      <section class="more-games">
+        <h2>More games</h2>
+      <div class="cat cat-block"><h3>Cards</h3><ul class="chips"><li><a href="../batak/"><i style="background:#A877A8"></i>Batak</a></li><li><a href="../king/"><i style="background:#F0679B"></i>King</a></li><li><a href="../pishti/"><i style="background:#EF6F3C"></i>Pishti</a></li><li><a href="../crazy-eights/"><i style="background:#DDAE45"></i>Crazy Eights</a></li><li><a href="../bluff/"><i style="background:#F0679B"></i>Bluff</a></li><li><a href="../uno/"><i style="background:#52A5CE"></i>Uno</a></li><li><a href="../hearts/"><i style="background:#EF6F3C"></i>Hearts</a></li><li><a href="../spades/"><i style="background:#F0679B"></i>Spades</a></li><li><a href="../gin-rummy/"><i style="background:#7FAE6B"></i>Gin Rummy</a></li><li><a href="../cribbage/"><i style="background:#52A5CE"></i>Cribbage</a></li><li><a href="../euchre/"><i style="background:#DDAE45"></i>Euchre</a></li><li><a href="../skat/"><i style="background:#52A5CE"></i>Skat</a></li><li><a href="../doppelkopf/"><i style="background:#A877A8"></i>Doppelkopf</a></li><li><a href="../schafkopf/"><i style="background:#DDAE45"></i>Schafkopf</a></li><li><a href="../klaverjassen/"><i style="background:#7FAE6B"></i>Klaverjassen</a></li><li><a href="../belote/"><i style="background:#EF6F3C"></i>Belote</a></li><li><a href="../tarot/"><i style="background:#F0679B"></i>Tarot</a></li><li><a href="../mus/"><i style="background:#DDAE45"></i>Mus</a></li><li><a href="../chinchon/"><i style="background:#A877A8"></i>Chinchón</a></li><li><a href="../truco/"><i style="background:#EF6F3C"></i>Truco</a></li><li><a href="../burraco/"><i style="background:#52A5CE"></i>Burraco</a></li><li><a href="../scopa/"><i style="background:#A877A8"></i>Scopa</a></li><li><a href="../briscola/"><i style="background:#7FAE6B"></i>Briscola</a></li><li><a href="../sueca/"><i style="background:#DDAE45"></i>Sueca</a></li></ul></div>
+      <div class="cat cat-block"><h3>Tiles</h3><ul class="chips"><li><a href="../okey/"><i style="background:#7FAE6B"></i>Okey</a></li><li><a href="../101-okey/"><i style="background:#52A5CE"></i>101 Okey</a></li><li><a href="../rummy/"><i style="background:#7FAE6B"></i>Rummy</a></li></ul></div>
+      <div class="cat cat-block"><h3>Dice</h3><ul class="chips"><li><a href="../backgammon/"><i style="background:#DDAE45"></i>Backgammon</a></li><li><a href="../yahtzee/"><i style="background:#7FAE6B"></i>Yahtzee</a></li></ul></div>
+      <div class="cat cat-block"><h3>Board games</h3><ul class="chips"><li><a href="../chess/"><i style="background:#EF6F3C"></i>Chess</a></li><li><a href="../draughts/"><i style="background:#52A5CE"></i>Draughts</a></li><li><a href="../catan/"><i style="background:#DDAE45"></i>Catan</a></li><li><a href="../ticket-to-ride/"><i style="background:#F0679B"></i>Ticket to Ride</a></li><li><a href="../carcassonne/"><i style="background:#A877A8"></i>Carcassonne</a></li><li><a href="../7-wonders/"><i style="background:#7FAE6B"></i>7 Wonders</a></li></ul></div>
+      <div class="cat cat-block"><h3>Sports</h3><ul class="chips"><li><a href="../darts/"><i style="background:#A877A8"></i>Darts</a></li><li><a href="../mini-golf/"><i style="background:#7FAE6B"></i>Mini golf</a></li><li><a href="../billiards/"><i style="background:#F0679B"></i>Billiards</a></li><li><a href="../tennis/"><i style="background:#7FAE6B"></i>Tennis</a></li><li><a href="../padel/"><i style="background:#DDAE45"></i>Padel</a></li><li><a href="../table-tennis/"><i style="background:#F0679B"></i>Table tennis</a></li><li><a href="../volleyball/"><i style="background:#52A5CE"></i>Volleyball</a></li></ul></div>
+      </section>
+    </div>
   </main>
-  <footer>
-    <p>Rules vary from table to table. You can pick your own when setting up a game.</p>
-    
-    <p><a href="/yazboz/privacy/">Support and privacy</a> · © 2026 Goal Guru</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="/en/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+          <p>Free · iPhone, iPad and Apple Watch</p>
+        </div>
+        <div><h2>App</h2><ul><li><a href="https://apps.apple.com/app/id6823951115">Download on the App Store</a></li><li><a href="/skor/">Keep score in your browser</a></li><li><a href="/en/#features">Features</a></li></ul></div>
+        <div><h2>Rules</h2><ul><li><a href="/yazboz/rules/">Rules</a></li><li><a href="/en/#games">Games</a></li></ul></div>
+        <div><h2>Support</h2><ul><li><a href="/yazboz/privacy/">Support and privacy</a></li><li><a href="/yazboz/terms/">Terms of use</a></li></ul></div>
+      </div>
+      <div class="foot-notes">
+        <p>Languages: English, Turkish, German, French, Spanish, Italian, Portuguese, Dutch and Greek.</p>
+        <p>Rules vary from table to table. You can pick your own when setting up a game.</p>
+        <p>© 2026 Goal Guru</p>
+      </div>
+    </div>
   </footer>
+  <script>(function(){var b=document.querySelector('.theme-btn');if(!b)return;var L=JSON.parse(b.dataset.labels),order=['auto','light','dark'];function cur(){return document.documentElement.dataset.theme||'auto'}function show(){var c=cur();b.dataset.state=c;b.setAttribute('aria-label',L.label+': '+L[c]);b.title=L.label+': '+L[c]}b.addEventListener('click',function(){var n=order[(order.indexOf(cur())+1)%3];if(n==='auto'){delete document.documentElement.dataset.theme}else{document.documentElement.dataset.theme=n}try{n==='auto'?localStorage.removeItem('theme'):localStorage.setItem('theme',n)}catch(e){}show()});show()})();</script>
 </body>
 </html>

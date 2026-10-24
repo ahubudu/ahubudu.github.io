@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>Pishti: Regeln und Punktezählung | Yazboz Guru</title>
   <meta name="description" content="Nimm Karten vom Tisch und hol die meisten Punkte. Ein Pishti zählt 10, ein Buben-Pishti 20. Jedes Ass und jeder Bube zählt 1, die Kreuz-Zwei 2 und die…">
@@ -25,65 +25,41 @@
   <meta property="og:description" content="Nimm Karten vom Tisch und hol die meisten Punkte. Ein Pishti zählt 10, ein Buben-Pishti 20. Jedes Ass und jeder Bube zählt 1, die Kreuz-Zwei 2 und die…">
   <meta property="og:image" content="https://yazbozguru.com/yazboz/og-rules-en.png">
   <meta name="twitter:card" content="summary_large_image">
-  <style>
-    :root { color-scheme: light dark; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#4F6F5E; --tint:#E3ECE6; --line:#E8E4DD; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#141416; --card:#1E1E22; --ink:#ECEAE6; --muted:#A7A39B; --accent:#8FB09F; --tint:#25302A; --line:#2E2E33; } }
-    * { box-sizing: border-box; }
-    body { margin:0; padding:24px 16px 40px; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
-    main { max-width:720px; margin:0 auto; }
-    .card { background:var(--card); border-radius:24px; padding:24px; margin-top:16px; }
-    header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
-    header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
-    header img { width:32px; height:32px; border-radius:8px; }
-    header .lang { margin-left:auto; font-size:14px; position:relative; }
-    header .lang summary { cursor:pointer; color:var(--accent); list-style:none; }
-    header .lang summary::-webkit-details-marker { display:none; }
-    header .lang summary::after { content:" ▾"; }
-    header .lang ul { position:absolute; right:0; top:26px; z-index:5; margin:0; padding:6px; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:150px; }
-    header .lang li { margin:0; }
-    header .lang a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink); }
-    header .lang a:hover { background:var(--bg); }
-    h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
-    h2 { font-size:20px; margin:24px 0 6px; }
-    h2:first-child { margin-top:0; }
-    h3 { font-size:16px; margin:16px 0 2px; }
-    p, li { color:var(--muted); margin:6px 0; }
-    .lead { font-size:18px; }
-    a { color:var(--accent); }
-    .app { background:var(--tint); }
-    .shots { display:flex; gap:16px; margin:18px 0 6px; }
-    figure { flex:1; margin:0; text-align:center; }
-    figure img { width:100%; max-width:300px; height:auto; border-radius:22px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
-    figcaption { font-size:13px; color:var(--muted); margin-top:8px; }
-    .button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:14px; background:var(--accent); color:#fff; font-weight:600; text-decoration:none; }
-    @media (prefers-color-scheme: dark) { .button { color:#141416; } }
-    .small { font-size:13px; }
-    ul.games { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
-    ul.games a { display:block; padding:10px 12px; border-radius:12px; background:var(--bg); color:var(--ink); text-decoration:none; font-weight:600; }
-    ul.games.big a { padding:14px 16px; }
-    ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
-    footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
-    footer p { font-size:13px; }
-    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
-    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
-    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
-    ol.steps li::marker { color:var(--accent); font-weight:700; }
-    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
-    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
-    table.points tr:first-child td { border-top:none; }
-    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
-    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
-    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="preload" href="/assets/fonts/manrope-800.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="icon" href="/yazboz/img/app-icon.png">
+  <link rel="apple-touch-icon" href="/yazboz/img/app-icon-192.png">
+  <meta name="theme-color" content="#F6F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)">
+  <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <header>
-    <a class="brand" href="https://yazbozguru.com/yazboz/de/regeln/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32">Yazboz Guru</a>
-    <details class="lang"><summary>Deutsch</summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/pisti/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/rules/pishti/" hreflang="en" lang="en">English</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/pishti/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/fr/regles/pishti/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/pishti/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/pishti/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/nl/regels/pishti/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/yazboz/el/kanones/pishti/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+  <a class="skip" href="#main">Zum Inhalt</a>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a class="brand" href="/de/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+      <nav class="links" aria-label="Spiele">
+        <a href="/de/#features">Funktionen</a>
+        <a href="/de/#games">Spiele</a>
+        <a href="/yazboz/de/regeln/">Regeln</a>
+        <a href="/skor/">Im Browser testen</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn theme-btn" type="button" data-labels='{&quot;auto&quot;:&quot;Automatisch&quot;,&quot;light&quot;:&quot;Hell&quot;,&quot;dark&quot;:&quot;Dunkel&quot;,&quot;label&quot;:&quot;Darstellung&quot;}' aria-label="Darstellung: Automatisch" title="Darstellung: Automatisch"><span class="ic ic-auto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></span><span class="ic ic-light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg></span><span class="ic ic-dark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z" fill="currentColor"/></svg></span></button>
+        <details class="lang"><summary class="icon-btn" aria-label="Deutsch"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.4 2.4 3.6 5.3 3.6 8.6s-1.2 6.2-3.6 8.6c-2.4-2.4-3.6-5.3-3.6-8.6S9.6 5.8 12 3.4z"/></g></svg><span>DE</span></summary><ul><li><a href="https://yazbozguru.com/yazboz/kurallar/pisti/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="https://yazbozguru.com/yazboz/rules/pishti/" hreflang="en" lang="en">English</a></li><li><a href="https://yazbozguru.com/yazboz/es/reglas/pishti/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/yazboz/fr/regles/pishti/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/yazboz/it/regole/pishti/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/yazboz/pt/regras/pishti/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/yazboz/nl/regels/pishti/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/yazboz/de/regeln/pishti/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li><li><a href="https://yazbozguru.com/yazboz/el/kanones/pishti/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+        <a class="btn primary small" href="https://apps.apple.com/app/id6823951115">Laden</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <article class="card">
-      <h1>Pishti: Regeln und Punktezählung</h1>
+  <main id="main">
+    <div class="wrap page">
+      <nav class="crumbs" aria-label="Regeln"><a href="/de/">Yazboz Guru</a><span aria-hidden="true">›</span><a href="../">Regeln</a><span aria-hidden="true">›</span><span>Pishti</span></nav>
+      <div class="page-head">
+        <h1>Pishti: Regeln und Punktezählung</h1>
+      </div>
+      <div class="rule-grid">
+        <article class="prose">
+        <section>
       <ul class="glance"><li>Blatt mit 52 Karten</li><li>Je vier Karten</li></ul>
       <p class="lead"><strong>Ziel:</strong> Nimm Karten vom Tisch und hol die meisten Punkte.</p>
       <h2>Vorbereitung</h2>
@@ -94,26 +70,45 @@
       <table class="points"><tr><td>Pishti</td><td class="value pos">+10</td></tr><tr><td>Buben-Pishti</td><td class="value pos">+20</td></tr><tr><td>Jedes Ass und jeder Bube</td><td class="value pos">+1</td></tr><tr><td>Kreuz-Zwei</td><td class="value pos">+2</td></tr><tr><td>Karo-Zehn</td><td class="value pos">+3</td></tr><tr><td>Meiste Karten genommen</td><td class="value pos">+3</td></tr></table>
       <h2>Sieg</h2>
       <p>Wer zuerst das Ziel (z. B. 151) erreicht, gewinnt.</p>
-    </article>
-
-    <section class="card app" id="app">
-      <h2>Pishti: Yazboz Guru zählt die Punkte</h2>
-      <p>Kein Block, kein Stift: Spiel wählen, eure Hausregeln einstellen und nach jeder Runde eintragen, was passiert ist. Die App rechnet nach den Regeln.</p>
-      <p>Ein türkisches Kartenspiel zum Abräumen. Ein Pishti zählt 10, ein Buben-Pishti 20. Asse und Buben zählen 1, die Kreuz-Zwei 2, die Karo-Zehn 3; wer die meisten Karten hat, bekommt 3 dazu. Wer zuerst das Ziel erreicht, gewinnt.</p>
-      
-      <a class="button" href="https://apps.apple.com/app/id6823951115">Laden im App Store</a>
-      <p class="small">Kostenlos · iPhone, iPad und Apple Watch · <a href="/skor/new/pisti">Oder gleich im Browser mitzählen</a></p>
-    </section>
-
-    <nav class="card">
-      <h2>Weitere Spiele</h2>
-      <ul class="games"><li><a href="../okey/">Okey</a></li><li><a href="../101-okey/">101 Okey</a></li><li><a href="../rummy/">Rommé</a></li><li><a href="../backgammon/">Backgammon</a></li><li><a href="../chess/">Schach</a></li><li><a href="../draughts/">Dame</a></li><li><a href="../batak/">Batak</a></li><li><a href="../king/">King</a></li><li><a href="../crazy-eights/">Mau-Mau</a></li><li><a href="../bluff/">Bluff</a></li><li><a href="../uno/">Uno</a></li><li><a href="../yahtzee/">Yahtzee</a></li><li><a href="../catan/">Catan</a></li><li><a href="../ticket-to-ride/">Zug um Zug</a></li><li><a href="../carcassonne/">Carcassonne</a></li><li><a href="../7-wonders/">7 Wonders</a></li><li><a href="../hearts/">Hearts</a></li><li><a href="../spades/">Spades</a></li><li><a href="../gin-rummy/">Gin Rummy</a></li><li><a href="../cribbage/">Cribbage</a></li><li><a href="../euchre/">Euchre</a></li><li><a href="../skat/">Skat</a></li><li><a href="../doppelkopf/">Doppelkopf</a></li><li><a href="../schafkopf/">Schafkopf</a></li><li><a href="../klaverjassen/">Klaverjassen</a></li><li><a href="../toepen/">Toepen</a></li><li><a href="../belote/">Belote</a></li><li><a href="../tarot/">Tarot</a></li><li><a href="../mus/">Mus</a></li><li><a href="../chinchon/">Chinchón</a></li><li><a href="../truco/">Truco</a></li><li><a href="../burraco/">Burraco</a></li><li><a href="../scopa/">Scopa</a></li><li><a href="../briscola/">Briscola</a></li><li><a href="../sueca/">Sueca</a></li><li><a href="../darts/">Darts</a></li><li><a href="../mini-golf/">Minigolf</a></li><li><a href="../billiards/">Billard</a></li><li><a href="../tennis/">Tennis</a></li><li><a href="../padel/">Padel</a></li><li><a href="../table-tennis/">Tischtennis</a></li><li><a href="../volleyball/">Volleyball</a></li></ul>
-    </nav>
+        </section>
+        </article>
+        <aside class="rule-aside" id="app">
+        <figure class="phone light-screen"><div class="screen"><img class="" src="/assets/shots/de/game-pisti.webp" alt="Eine Runde Pishti in Yazboz Guru eintragen" width="390" height="844" loading="lazy" decoding="async"></div></figure>
+        <h2>Pishti: Yazboz Guru zählt die Punkte</h2>
+        <p>Kein Block, kein Stift: Spiel wählen, eure Hausregeln einstellen und nach jeder Runde eintragen, was passiert ist. Die App rechnet nach den Regeln.</p>
+        <a class="btn primary" href="https://apps.apple.com/app/id6823951115">Laden im App Store</a>
+        <a class="btn ghost" href="/skor/new/pisti">Oder gleich im Browser mitzählen</a>
+        <p class="fine">Kostenlos · iPhone, iPad und Apple Watch</p>
+      </aside>
+      </div>
+      <section class="more-games">
+        <h2>Weitere Spiele</h2>
+      <div class="cat cat-block"><h3>Karten</h3><ul class="chips"><li><a href="../batak/"><i style="background:#A877A8"></i>Batak</a></li><li><a href="../king/"><i style="background:#F0679B"></i>King</a></li><li><a href="../crazy-eights/"><i style="background:#DDAE45"></i>Mau-Mau</a></li><li><a href="../bluff/"><i style="background:#F0679B"></i>Bluff</a></li><li><a href="../uno/"><i style="background:#52A5CE"></i>Uno</a></li><li><a href="../hearts/"><i style="background:#EF6F3C"></i>Hearts</a></li><li><a href="../spades/"><i style="background:#F0679B"></i>Spades</a></li><li><a href="../gin-rummy/"><i style="background:#7FAE6B"></i>Gin Rummy</a></li><li><a href="../cribbage/"><i style="background:#52A5CE"></i>Cribbage</a></li><li><a href="../euchre/"><i style="background:#DDAE45"></i>Euchre</a></li><li><a href="../skat/"><i style="background:#52A5CE"></i>Skat</a></li><li><a href="../doppelkopf/"><i style="background:#A877A8"></i>Doppelkopf</a></li><li><a href="../schafkopf/"><i style="background:#DDAE45"></i>Schafkopf</a></li><li><a href="../klaverjassen/"><i style="background:#7FAE6B"></i>Klaverjassen</a></li><li><a href="../toepen/"><i style="background:#F0679B"></i>Toepen</a></li><li><a href="../belote/"><i style="background:#EF6F3C"></i>Belote</a></li><li><a href="../tarot/"><i style="background:#F0679B"></i>Tarot</a></li><li><a href="../mus/"><i style="background:#DDAE45"></i>Mus</a></li><li><a href="../chinchon/"><i style="background:#A877A8"></i>Chinchón</a></li><li><a href="../truco/"><i style="background:#EF6F3C"></i>Truco</a></li><li><a href="../burraco/"><i style="background:#52A5CE"></i>Burraco</a></li><li><a href="../scopa/"><i style="background:#A877A8"></i>Scopa</a></li><li><a href="../briscola/"><i style="background:#7FAE6B"></i>Briscola</a></li><li><a href="../sueca/"><i style="background:#DDAE45"></i>Sueca</a></li></ul></div>
+      <div class="cat cat-block"><h3>Steine</h3><ul class="chips"><li><a href="../okey/"><i style="background:#7FAE6B"></i>Okey</a></li><li><a href="../101-okey/"><i style="background:#52A5CE"></i>101 Okey</a></li><li><a href="../rummy/"><i style="background:#7FAE6B"></i>Rommé</a></li></ul></div>
+      <div class="cat cat-block"><h3>Würfel</h3><ul class="chips"><li><a href="../backgammon/"><i style="background:#DDAE45"></i>Backgammon</a></li><li><a href="../yahtzee/"><i style="background:#7FAE6B"></i>Yahtzee</a></li></ul></div>
+      <div class="cat cat-block"><h3>Brettspiele</h3><ul class="chips"><li><a href="../chess/"><i style="background:#EF6F3C"></i>Schach</a></li><li><a href="../draughts/"><i style="background:#52A5CE"></i>Dame</a></li><li><a href="../catan/"><i style="background:#DDAE45"></i>Catan</a></li><li><a href="../ticket-to-ride/"><i style="background:#F0679B"></i>Zug um Zug</a></li><li><a href="../carcassonne/"><i style="background:#A877A8"></i>Carcassonne</a></li><li><a href="../7-wonders/"><i style="background:#7FAE6B"></i>7 Wonders</a></li></ul></div>
+      <div class="cat cat-block"><h3>Sport</h3><ul class="chips"><li><a href="../darts/"><i style="background:#A877A8"></i>Darts</a></li><li><a href="../mini-golf/"><i style="background:#7FAE6B"></i>Minigolf</a></li><li><a href="../billiards/"><i style="background:#F0679B"></i>Billard</a></li><li><a href="../tennis/"><i style="background:#7FAE6B"></i>Tennis</a></li><li><a href="../padel/"><i style="background:#DDAE45"></i>Padel</a></li><li><a href="../table-tennis/"><i style="background:#F0679B"></i>Tischtennis</a></li><li><a href="../volleyball/"><i style="background:#52A5CE"></i>Volleyball</a></li></ul></div>
+      </section>
+    </div>
   </main>
-  <footer>
-    <p>Die Regeln sind an jedem Tisch etwas anders. Deine eigenen wählst du beim Einrichten des Spiels.</p>
-    
-    <p><a href="/yazboz/privacy/">Support und Datenschutz (Englisch)</a> · © 2026 Goal Guru</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="/de/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+          <p>Kostenlos · iPhone, iPad und Apple Watch</p>
+        </div>
+        <div><h2>App</h2><ul><li><a href="https://apps.apple.com/app/id6823951115">Laden im App Store</a></li><li><a href="/skor/">Im Browser mitzählen</a></li><li><a href="/de/#features">Funktionen</a></li></ul></div>
+        <div><h2>Regeln</h2><ul><li><a href="/yazboz/de/regeln/">Regeln</a></li><li><a href="/de/#games">Spiele</a></li></ul></div>
+        <div><h2>Hilfe</h2><ul><li><a href="/yazboz/privacy/">Support und Datenschutz (Englisch)</a></li><li><a href="/yazboz/terms/">Nutzungsbedingungen (Englisch)</a></li></ul></div>
+      </div>
+      <div class="foot-notes">
+        <p>Sprachen: Deutsch, Englisch, Türkisch, Französisch, Spanisch, Italienisch, Portugiesisch, Niederländisch und Griechisch.</p>
+        <p>Die Regeln sind an jedem Tisch etwas anders. Deine eigenen wählst du beim Einrichten des Spiels.</p>
+        <p>© 2026 Goal Guru</p>
+      </div>
+    </div>
   </footer>
+  <script>(function(){var b=document.querySelector('.theme-btn');if(!b)return;var L=JSON.parse(b.dataset.labels),order=['auto','light','dark'];function cur(){return document.documentElement.dataset.theme||'auto'}function show(){var c=cur();b.dataset.state=c;b.setAttribute('aria-label',L.label+': '+L[c]);b.title=L.label+': '+L[c]}b.addEventListener('click',function(){var n=order[(order.indexOf(cur())+1)%3];if(n==='auto'){delete document.documentElement.dataset.theme}else{document.documentElement.dataset.theme=n}try{n==='auto'?localStorage.removeItem('theme'):localStorage.setItem('theme',n)}catch(e){}show()});show()})();</script>
 </body>
 </html>

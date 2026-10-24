@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-itunes-app" content="app-id=6823951115">
   <title>Yazboz Guru: Kart, masa oyunları ve sporlarda skor defteri</title>
   <meta name="description" content="Okey, King, tavla, dart, tenis ve 40’tan fazla oyunun skorunu kendi masa kurallarınla tut. Turnuva düzenle, oyunu canlı paylaş. iPhone, iPad, Apple Watch ve web.">
@@ -17,7 +17,6 @@
   <link rel="alternate" hreflang="de" href="https://yazbozguru.com/de/">
   <link rel="alternate" hreflang="el" href="https://yazbozguru.com/el/">
   <link rel="alternate" hreflang="x-default" href="https://yazbozguru.com/en/">
-  <link rel="icon" href="/yazboz/img/app-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Yazboz Guru">
   <meta property="og:locale" content="tr_TR">
@@ -26,93 +25,126 @@
   <meta property="og:description" content="Okey, King, tavla, dart, tenis ve 40’tan fazla oyunun skorunu kendi masa kurallarınla tut. Turnuva düzenle, oyunu canlı paylaş. iPhone, iPad, Apple Watch ve web.">
   <meta property="og:image" content="https://yazbozguru.com/yazboz/og-home-tr.png">
   <meta name="twitter:card" content="summary_large_image">
-  <style>
-    :root { color-scheme: light dark; --bg:#F6F4F0; --card:#fff; --ink:#2A2926; --muted:#6B675F; --accent:#4F6F5E; --tint:#E3ECE6; --line:#E8E4DD; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#141416; --card:#1E1E22; --ink:#ECEAE6; --muted:#A7A39B; --accent:#8FB09F; --tint:#25302A; --line:#2E2E33; } }
-    * { box-sizing: border-box; }
-    body { margin:0; padding:24px 16px 40px; background:var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
-    main { max-width:720px; margin:0 auto; }
-    .card { background:var(--card); border-radius:24px; padding:24px; margin-top:16px; }
-    header { display:flex; align-items:center; gap:10px; max-width:720px; margin:0 auto; }
-    header a.brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; }
-    header img { width:32px; height:32px; border-radius:8px; }
-    header .lang { margin-left:auto; font-size:14px; position:relative; }
-    header .lang summary { cursor:pointer; color:var(--accent); list-style:none; }
-    header .lang summary::-webkit-details-marker { display:none; }
-    header .lang summary::after { content:" ▾"; }
-    header .lang ul { position:absolute; right:0; top:26px; z-index:5; margin:0; padding:6px; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:150px; }
-    header .lang li { margin:0; }
-    header .lang a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; color:var(--ink); }
-    header .lang a:hover { background:var(--bg); }
-    h1 { font-size:30px; line-height:1.2; margin:0 0 10px; }
-    h2 { font-size:20px; margin:24px 0 6px; }
-    h2:first-child { margin-top:0; }
-    h3 { font-size:16px; margin:16px 0 2px; }
-    p, li { color:var(--muted); margin:6px 0; }
-    .lead { font-size:18px; }
-    a { color:var(--accent); }
-    .app { background:var(--tint); }
-    .shots { display:flex; gap:16px; margin:18px 0 6px; }
-    figure { flex:1; margin:0; text-align:center; }
-    figure img { width:100%; max-width:300px; height:auto; border-radius:22px; box-shadow:0 8px 28px rgba(0,0,0,.12); }
-    figcaption { font-size:13px; color:var(--muted); margin-top:8px; }
-    .button { display:inline-block; margin-top:14px; padding:12px 20px; border-radius:14px; background:var(--accent); color:#fff; font-weight:600; text-decoration:none; }
-    @media (prefers-color-scheme: dark) { .button { color:#141416; } }
-    .small { font-size:13px; }
-    ul.games { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:8px; }
-    ul.games a { display:block; padding:10px 12px; border-radius:12px; background:var(--bg); color:var(--ink); text-decoration:none; font-weight:600; }
-    ul.games.big a { padding:14px 16px; }
-    ul.games span { display:block; font-weight:400; font-size:13px; color:var(--muted); }
-    footer { max-width:720px; margin:20px auto 0; padding:0 8px; }
-    footer p { font-size:13px; }
-    .glance { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; padding:0; list-style:none; }
-    .glance li { margin:0; padding:5px 12px; border-radius:999px; background:var(--tint); color:var(--ink); font-size:14px; font-weight:600; }
-    ol.steps, ul.points { padding-left:22px; margin:6px 0; }
-    ol.steps li::marker { color:var(--accent); font-weight:700; }
-    table.points { width:100%; border-collapse:collapse; margin:6px 0; }
-    table.points td { padding:8px 0; border-top:1px solid var(--line); color:var(--muted); }
-    table.points tr:first-child td { border-top:none; }
-    table.points td.value { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--ink); }
-    table.points td.pos { color:#3D7050; } table.points td.neg { color:#A8432F; }
-    @media (prefers-color-scheme: dark) { table.points td.pos { color:#8FC7A0; } table.points td.neg { color:#E58B78; } }
-    .hero { text-align:center; }
-    .hero img { width:96px; height:96px; border-radius:22px; }
-    .hero h1 { font-size:36px; margin:12px 0 8px; }
-    .buttons { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
-    .button.ghost { background:var(--tint); color:var(--accent); }
-    .features { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; margin:0; padding:0; list-style:none; }
-    .features li { margin:0; }
-    .features strong { display:block; color:var(--ink); }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="preload" href="/assets/fonts/manrope-800.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="icon" href="/yazboz/img/app-icon.png">
+  <link rel="apple-touch-icon" href="/yazboz/img/app-icon-192.png">
+  <meta name="theme-color" content="#F6F4F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)">
+  <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <header>
-    <details class="lang"><summary>Türkçe</summary><ul><li><a href="https://yazbozguru.com/en/" hreflang="en" lang="en">English</a></li><li><a href="https://yazbozguru.com/es/" hreflang="es" lang="es">Español</a></li><li><a href="https://yazbozguru.com/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="https://yazbozguru.com/it/" hreflang="it" lang="it">Italiano</a></li><li><a href="https://yazbozguru.com/pt/" hreflang="pt" lang="pt">Português</a></li><li><a href="https://yazbozguru.com/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="https://yazbozguru.com/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="https://yazbozguru.com/el/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
-  </header>
-  <main>
-    <section class="card hero">
-      <img src="/yazboz/img/app-icon.png" alt="" width="96" height="96">
-      <h1>Yazboz Guru</h1>
-      <p class="lead">Masada oynadığın oyunların skorunu tutar: okey, King, tavla, dart, tenis ve 40’tan fazla oyun. Oyunu seç, masandaki kuralları ayarla, her eli gir; toplamı ve kazananı uygulama hesaplar.</p>
-      <div class="buttons">
-        <a class="button" href="https://apps.apple.com/app/id6823951115">App Store’dan indir</a>
-        <a class="button ghost" href="/skor/">Tarayıcıda skor tut</a>
+  <a class="skip" href="#main">İçeriğe geç</a>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a class="brand" href="/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+      <nav class="links" aria-label="Oyunlar">
+        <a href="#features">Özellikler</a>
+        <a href="#games">Oyunlar</a>
+        <a href="/yazboz/kurallar/">Kurallar</a>
+        <a href="/skor/">Web’de dene</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn theme-btn" type="button" data-labels='{&quot;auto&quot;:&quot;Otomatik&quot;,&quot;light&quot;:&quot;Açık&quot;,&quot;dark&quot;:&quot;Koyu&quot;,&quot;label&quot;:&quot;Görünüm&quot;}' aria-label="Görünüm: Otomatik" title="Görünüm: Otomatik"><span class="ic ic-auto"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></span><span class="ic ic-light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg></span><span class="ic ic-dark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 14.6A8.5 8.5 0 0 1 9.4 3.8a8.5 8.5 0 1 0 10.8 10.8z" fill="currentColor"/></svg></span></button>
+        <details class="lang"><summary class="icon-btn" aria-label="Türkçe"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.4 2.4 3.6 5.3 3.6 8.6s-1.2 6.2-3.6 8.6c-2.4-2.4-3.6-5.3-3.6-8.6S9.6 5.8 12 3.4z"/></g></svg><span>TR</span></summary><ul><li><a href="/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></li><li><a href="/en/" hreflang="en" lang="en">English</a></li><li><a href="/es/" hreflang="es" lang="es">Español</a></li><li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="/it/" hreflang="it" lang="it">Italiano</a></li><li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li><li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/el/" hreflang="el" lang="el">Ελληνικά</a></li></ul></details>
+        <a class="btn primary small" href="https://apps.apple.com/app/id6823951115">İndir</a>
       </div>
-      <p class="small">Ücretsiz · iPhone, iPad ve Apple Watch · Web sürümü ücretsiz ve kurulum istemez; oyunların o tarayıcıda saklanır.</p>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Ücretsiz skor defteri</p>
+          <h1>Masadaki her oyunun skoru, tek uygulamada</h1>
+          <p class="lead">Masada oynadığın oyunların skorunu tutar: okey, King, tavla, dart, tenis ve 40’tan fazla oyun. Oyunu seç, masandaki kuralları ayarla, her eli gir; toplamı ve kazananı uygulama hesaplar.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="https://apps.apple.com/app/id6823951115">App Store’dan indir</a>
+            <a class="btn ghost" href="/skor/">Tarayıcıda skor tut</a>
+          </div>
+          <p class="fine">Ücretsiz · iPhone, iPad ve Apple Watch</p>
+        </div>
+        <div class="hero-art">
+          <figure class="phone back"><div class="screen"><img class="only-light" src="/assets/shots/tr/games-light.webp" alt="Oyunlar ekranı" width="390" height="844" loading="eager" decoding="async"><img class="only-dark" src="/assets/shots/tr/games-dark.webp" alt="Oyunlar ekranı" width="390" height="844" loading="eager" decoding="async"></div></figure>
+          <figure class="phone front"><div class="screen"><img class="only-light" src="/assets/shots/tr/sheet-light.webp" alt="Skor kağıdı" width="390" height="844" loading="eager" decoding="async"><img class="only-dark" src="/assets/shots/tr/sheet-dark.webp" alt="Skor kağıdı" width="390" height="844" loading="eager" decoding="async"></div></figure>
+        </div>
+      </div>
     </section>
-    <section class="card">
-      <ul class="features"><li><strong>Senin kuralların</strong>Hedef puan, eşli ya da tekli oyun, cezalar: her masanın kendi kuralları kaydedilir.</li><li><strong>Her el kontrol edilir</strong>Kimin bitirdiğini, kimin ne aldığını seçersin; puanları uygulama kurallara göre hesaplar.</li><li><strong>Birlikte oyna</strong>Turnuva düzenle, oyunu canlı paylaş; masada olmayanlar skoru kendi telefonundan izler.</li><li><strong>Kilit ekranında ve bilekte</strong>Canlı skor kilit ekranında ve Dynamic Island’da; Apple Watch’tan skor gir.</li></ul>
+    <section class="stats" aria-label="Ücretsiz skor defteri">
+      <div class="wrap"><ul><li>40’tan fazla oyun</li><li>9 dil</li><li>Turnuva ve canlı skor</li><li>iPhone, iPad, Apple Watch</li></ul></div>
     </section>
-    <nav class="card">
-      <h2>Oyun kuralları</h2>
-      <p>Her oyunun kuralları, çeşitleri ve puanların nasıl hesaplandığı.</p>
-      <ul class="games"><li><a href="/yazboz/kurallar/okey/">Okey</a></li><li><a href="/yazboz/kurallar/101-okey/">101 Okey</a></li><li><a href="/yazboz/kurallar/batak/">Batak</a></li><li><a href="/yazboz/kurallar/king/">King</a></li><li><a href="/yazboz/kurallar/tavla/">Tavla</a></li><li><a href="/yazboz/kurallar/pisti/">Pişti</a></li><li><a href="/yazboz/kurallar/dart/">Dart</a></li><li><a href="/yazboz/kurallar/tenis/">Tenis</a></li></ul>
-      <p><a href="/yazboz/kurallar/">Bütün oyunların kuralları →</a></p>
-    </nav>
+    <section class="section" id="features">
+      <div class="wrap">
+        <header class="section-head"><p class="eyebrow">Özellikler</p><h2>Kağıt kalem yok, hesap hatası yok</h2></header>
+        <article class="feature">
+          <div class="feature-copy"><span class="num">1</span><h3>Senin kuralların</h3><p>Hedef puan, eşli ya da tekli oyun, cezalar: her masanın kendi kuralları kaydedilir.</p></div>
+          <div class="feature-media"><figure class="phone"><div class="screen"><img class="only-light" src="/assets/shots/tr/setup-light.webp" alt="Oyun kurulumu" width="390" height="844" loading="lazy" decoding="async"><img class="only-dark" src="/assets/shots/tr/setup-dark.webp" alt="Oyun kurulumu" width="390" height="844" loading="lazy" decoding="async"></div></figure></div>
+        </article>
+        <article class="feature">
+          <div class="feature-copy"><span class="num">2</span><h3>Her el kontrol edilir</h3><p>Kimin bitirdiğini, kimin ne aldığını seçersin; puanları uygulama kurallara göre hesaplar.</p></div>
+          <div class="feature-media"><figure class="phone"><div class="screen"><img class="only-light" src="/assets/shots/tr/entry-light.webp" alt="El girişi" width="390" height="844" loading="lazy" decoding="async"><img class="only-dark" src="/assets/shots/tr/entry-dark.webp" alt="El girişi" width="390" height="844" loading="lazy" decoding="async"></div></figure></div>
+        </article>
+        <article class="feature">
+          <div class="feature-copy"><span class="num">3</span><h3>Birlikte oyna</h3><p>Turnuva düzenle, oyunu canlı paylaş; masada olmayanlar skoru kendi telefonundan izler.</p></div>
+          <div class="feature-media"><figure class="phone"><div class="screen"><img class="only-light" src="/assets/shots/tr/tournament-light.webp" alt="Turnuva" width="390" height="844" loading="lazy" decoding="async"><img class="only-dark" src="/assets/shots/tr/tournament-dark.webp" alt="Turnuva" width="390" height="844" loading="lazy" decoding="async"></div></figure></div>
+        </article>
+        <article class="feature">
+          <div class="feature-copy"><span class="num">4</span><h3>Kilit ekranında ve bilekte</h3><p>Canlı skor kilit ekranında ve Dynamic Island’da; Apple Watch’tan skor gir.</p></div>
+          <div class="feature-media"><figure class="watch"><div class="screen"><img src="/assets/watch-tr.png" alt="Apple Watch’ta skor" width="416" height="496" loading="lazy" decoding="async"></div></figure></div>
+        </article>
+      </div>
+    </section>
+    <section class="section games-section" id="games">
+      <div class="wrap">
+        <header class="section-head"><p class="eyebrow">En çok oynananlar</p><h2>Bu akşam ne oynuyorsunuz?</h2><p>Her oyunun kendi skor kağıdı, kuralları ve puan hesabı var.</p></header>
+        <ul class="game-cards"><li><a class="game-card" href="/yazboz/kurallar/okey/"><span class="dot" style="background:#7FAE6B">O</span><span><strong>Okey</strong><span class="meta">4 kişi · 20’den geri</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="/yazboz/kurallar/101-okey/"><span class="dot" style="background:#52A5CE">O</span><span><strong>101 Okey</strong><span class="meta">4 kişi · en az ceza</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="/yazboz/kurallar/batak/"><span class="dot" style="background:#A877A8">B</span><span><strong>Batak</strong><span class="meta">3–4 kişi · 51’e</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="/yazboz/kurallar/king/"><span class="dot" style="background:#F0679B">K</span><span><strong>King</strong><span class="meta">4 kişi · 20 el</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="/yazboz/kurallar/tavla/"><span class="dot" style="background:#DDAE45">T</span><span><strong>Tavla</strong><span class="meta">2 kişi · 5 puana</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="/yazboz/kurallar/pisti/"><span class="dot" style="background:#EF6F3C">P</span><span><strong>Pişti</strong><span class="meta">2–4 kişi · 151’e</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="/yazboz/kurallar/dart/"><span class="dot" style="background:#A877A8">D</span><span><strong>Dart</strong><span class="meta">1–8 kişi · 501 / 301, Cricket</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a class="game-card" href="/yazboz/kurallar/tenis/"><span class="dot" style="background:#7FAE6B">T</span><span><strong>Tenis</strong><span class="meta">Tekler ya da çiftler · 3 / 5 set</span></span><span class="go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul>
+        <div class="cats">
+      <div class="cat cat-block"><h3>Kart</h3><ul class="chips"><li><a href="/yazboz/kurallar/pis-yedili/"><i style="background:#DDAE45"></i>Pis Yedili</a></li><li><a href="/yazboz/kurallar/blof/"><i style="background:#F0679B"></i>Blöf</a></li><li><a href="/yazboz/kurallar/uno/"><i style="background:#52A5CE"></i>Uno</a></li><li><a href="/yazboz/kurallar/hearts/"><i style="background:#EF6F3C"></i>Hearts</a></li><li><a href="/yazboz/kurallar/spades/"><i style="background:#F0679B"></i>Spades</a></li><li><a href="/yazboz/kurallar/gin-rummy/"><i style="background:#7FAE6B"></i>Gin Rummy</a></li><li><a href="/yazboz/kurallar/cribbage/"><i style="background:#52A5CE"></i>Cribbage</a></li><li><a href="/yazboz/kurallar/euchre/"><i style="background:#DDAE45"></i>Euchre</a></li><li><a href="/yazboz/kurallar/skat/"><i style="background:#52A5CE"></i>Skat</a></li><li><a href="/yazboz/kurallar/doppelkopf/"><i style="background:#A877A8"></i>Doppelkopf</a></li><li><a href="/yazboz/kurallar/schafkopf/"><i style="background:#DDAE45"></i>Schafkopf</a></li><li><a href="/yazboz/kurallar/klaverjassen/"><i style="background:#7FAE6B"></i>Klaverjassen</a></li><li><a href="/yazboz/kurallar/toepen/"><i style="background:#F0679B"></i>Toepen</a></li><li><a href="/yazboz/kurallar/belote/"><i style="background:#EF6F3C"></i>Belote</a></li><li><a href="/yazboz/kurallar/tarot/"><i style="background:#F0679B"></i>Tarot</a></li><li><a href="/yazboz/kurallar/mus/"><i style="background:#DDAE45"></i>Mus</a></li><li><a href="/yazboz/kurallar/chinchon/"><i style="background:#A877A8"></i>Chinchón</a></li><li><a href="/yazboz/kurallar/truco/"><i style="background:#EF6F3C"></i>Truco</a></li><li><a href="/yazboz/kurallar/burraco/"><i style="background:#52A5CE"></i>Burraco</a></li><li><a href="/yazboz/kurallar/scopa/"><i style="background:#A877A8"></i>Scopa</a></li><li><a href="/yazboz/kurallar/briscola/"><i style="background:#7FAE6B"></i>Briscola</a></li><li><a href="/yazboz/kurallar/sueca/"><i style="background:#DDAE45"></i>Sueca</a></li></ul></div>
+      <div class="cat cat-block"><h3>Taş</h3><ul class="chips"><li><a href="/yazboz/kurallar/rummy/"><i style="background:#7FAE6B"></i>Rummy</a></li></ul></div>
+      <div class="cat cat-block"><h3>Zar</h3><ul class="chips"><li><a href="/yazboz/kurallar/yahtzee/"><i style="background:#7FAE6B"></i>Yahtzee</a></li></ul></div>
+      <div class="cat cat-block"><h3>Kutu oyunları</h3><ul class="chips"><li><a href="/yazboz/kurallar/satranc/"><i style="background:#EF6F3C"></i>Satranç</a></li><li><a href="/yazboz/kurallar/dama/"><i style="background:#52A5CE"></i>Dama</a></li><li><a href="/yazboz/kurallar/catan/"><i style="background:#DDAE45"></i>Catan</a></li><li><a href="/yazboz/kurallar/ticket-to-ride/"><i style="background:#F0679B"></i>Ticket to Ride</a></li><li><a href="/yazboz/kurallar/carcassonne/"><i style="background:#A877A8"></i>Carcassonne</a></li><li><a href="/yazboz/kurallar/7-wonders/"><i style="background:#7FAE6B"></i>7 Wonders</a></li></ul></div>
+      <div class="cat cat-block"><h3>Spor</h3><ul class="chips"><li><a href="/yazboz/kurallar/mini-golf/"><i style="background:#7FAE6B"></i>Mini golf</a></li><li><a href="/yazboz/kurallar/bilardo/"><i style="background:#F0679B"></i>Bilardo</a></li><li><a href="/yazboz/kurallar/padel/"><i style="background:#DDAE45"></i>Padel</a></li><li><a href="/yazboz/kurallar/masa-tenisi/"><i style="background:#F0679B"></i>Masa tenisi</a></li><li><a href="/yazboz/kurallar/voleybol/"><i style="background:#52A5CE"></i>Voleybol</a></li></ul></div>
+        </div>
+        <a class="more" href="/yazboz/kurallar/">Bütün oyunların kuralları <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="band">
+          <div><h2>Kurulum yok: tarayıcıda dene</h2><p>Web sürümü ücretsiz ve kurulum istemez; oyunların o tarayıcıda saklanır.</p></div>
+          <a class="btn primary" href="/skor/">Tarayıcıda skor tut</a>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta-card">
+          <img src="/yazboz/img/app-icon-192.png" alt="" width="84" height="84">
+          <h2>Bir sonraki oyun gecesine hazır mısınız?</h2>
+          <p>Ücretsiz · iPhone, iPad ve Apple Watch</p>
+          <div class="btn-row"><a class="btn primary" href="https://apps.apple.com/app/id6823951115">App Store’dan indir</a><a class="btn ghost" href="/skor/">Tarayıcıda skor tut</a></div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Felemenkçe ve Yunanca.</p>
-    <p><a href="/yazboz/gizlilik/">Destek ve gizlilik</a> · <a href="/yazboz/kosullar/">Kullanım koşulları</a> · © 2026 Goal Guru</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="/"><img src="/yazboz/img/app-icon.png" alt="" width="32" height="32"><span>Yazboz Guru</span></a>
+          <p>Ücretsiz · iPhone, iPad ve Apple Watch</p>
+        </div>
+        <div><h2>Uygulama</h2><ul><li><a href="https://apps.apple.com/app/id6823951115">App Store’dan indir</a></li><li><a href="/skor/">Tarayıcıda skor tut</a></li><li><a href="/#features">Özellikler</a></li></ul></div>
+        <div><h2>Kurallar</h2><ul><li><a href="/yazboz/kurallar/">Kurallar</a></li><li><a href="/#games">Oyunlar</a></li></ul></div>
+        <div><h2>Destek</h2><ul><li><a href="/yazboz/gizlilik/">Destek ve gizlilik</a></li><li><a href="/yazboz/kosullar/">Kullanım koşulları</a></li></ul></div>
+      </div>
+      <div class="foot-notes">
+        <p>Diller: Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Felemenkçe ve Yunanca.</p>
+        
+        <p>© 2026 Goal Guru</p>
+      </div>
+    </div>
   </footer>
+  <script>(function(){var b=document.querySelector('.theme-btn');if(!b)return;var L=JSON.parse(b.dataset.labels),order=['auto','light','dark'];function cur(){return document.documentElement.dataset.theme||'auto'}function show(){var c=cur();b.dataset.state=c;b.setAttribute('aria-label',L.label+': '+L[c]);b.title=L.label+': '+L[c]}b.addEventListener('click',function(){var n=order[(order.indexOf(cur())+1)%3];if(n==='auto'){delete document.documentElement.dataset.theme}else{document.documentElement.dataset.theme=n}try{n==='auto'?localStorage.removeItem('theme'):localStorage.setItem('theme',n)}catch(e){}show()});show()})();</script>
 </body>
 </html>
