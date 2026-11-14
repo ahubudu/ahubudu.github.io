@@ -275,6 +275,18 @@ table.points td.neg { color: var(--neg); }
 .foot-notes p { font-size: 13px; color: var(--faint); }
 @media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-brand { grid-column: 1 / -1; } }
 
+/* Rules to choose: each setting with its choices (the default in bold), the ones a choice brings up indented under it. */
+ul.opts { list-style: none; padding: 0; margin: 12px 0 0; }
+.prose h4 { font-size: 16px; font-weight: 800; margin: 16px 0 4px; }
+.prose li.opt { display: grid; gap: 3px; padding: 12px 0; border-top: 1px solid var(--line); }
+.prose li.opt:first-child { border-top: 0; padding-top: 4px; }
+.prose li.opt.sub { margin-left: 14px; padding-left: 16px; border-left: 2px solid var(--line); }
+.opt-label { font-weight: 700; color: var(--ink); }
+.opt-vals strong { color: var(--ink); }
+.def { font-size: 13px; color: var(--faint); }
+.opt-when { display: block; font-size: 12px; font-weight: 700; color: var(--accent); }
+.opt-hint { font-size: 14px; color: var(--faint); }
+
 /* Score sheet pages: the link to them, the blank sheet as a preview, and only the sheet when printed. */
 .sheet-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; color: var(--accent); text-decoration: none; }
 .sheet-link svg { width: 16px; height: 16px; }
