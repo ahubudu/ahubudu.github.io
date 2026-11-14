@@ -274,3 +274,44 @@ table.points td.neg { color: var(--neg); }
 .foot-notes { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); display: grid; gap: 6px; }
 .foot-notes p { font-size: 13px; color: var(--faint); }
 @media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-brand { grid-column: 1 / -1; } }
+
+/* Score sheet pages: the link to them, the blank sheet as a preview, and only the sheet when printed. */
+.sheet-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; color: var(--accent); text-decoration: none; }
+.sheet-link svg { width: 16px; height: 16px; }
+.print-sheet { margin-top: 16px; overflow-x: auto; }
+.sheet-head { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+.sheet-head strong { color: var(--ink); }
+table.sheet { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+table.sheet th, table.sheet td { border: 1px solid var(--line); height: 30px; padding: 4px 8px; text-align: center; }
+table.sheet thead th { font-size: 12px; font-weight: 700; color: var(--faint); vertical-align: top; height: 40px; }
+table.sheet thead th.pl { min-width: 72px; }
+table.sheet thead th.wide { min-width: 96px; }
+table.sheet tbody th, table.sheet tfoot th { width: 1%; white-space: nowrap; font-weight: 700; font-size: 13px; color: var(--muted); }
+table.sheet tr.start th, table.sheet tr.start td { border-bottom: 2px solid var(--faint); }
+table.sheet tfoot th, table.sheet tfoot td { border-top: 2px solid var(--ink); height: 36px; color: var(--ink); font-weight: 800; }
+.tally { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 24px; margin-top: 16px; }
+.prose .tally h3 { font-size: 13px; font-weight: 800; margin: 0 0 6px; color: var(--ink); }
+.tally table { border-collapse: collapse; font-size: 13px; }
+.tally th { text-align: left; font-weight: 600; color: var(--muted); padding: 3px 12px 3px 0; white-space: nowrap; }
+.tally .box { display: inline-block; width: 14px; height: 14px; margin-right: 6px; border: 1.5px solid var(--faint); border-radius: 3px; vertical-align: middle; }
+.prose .sheet-notes { margin: 12px 0 0; padding-left: 18px; font-size: 13px; display: grid; gap: 2px; }
+.sheet-foot { display: none; }
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  :root { color-scheme: light; }
+  html, body { background: #fff !important; }
+  .skip, .topbar, .site-footer, .crumbs, .page-head, .rule-aside, .more-games, .prose > section:not(.print-section), .print-section > :not(.print-sheet) { display: none !important; }
+  .wrap.page { padding: 0; margin: 0; max-width: none; }
+  .rule-grid { display: block; }
+  .prose > section { padding: 0; border: 0; background: none; }
+  .print-sheet { margin: 0; overflow: visible; }
+  .print-sheet, .print-sheet * { color: #000 !important; }
+  table.sheet { font-size: 11pt; }
+  table.sheet th, table.sheet td { height: 8mm; padding: 0 2mm; border-color: #000; }
+  table.sheet thead th { height: 10mm; }
+  table.sheet tfoot th, table.sheet tfoot td { height: 10mm; border-top: 2pt solid #000; }
+  .tally { gap: 2mm 8mm; margin-top: 4mm; }
+  .tally .box { border-color: #000; }
+  .prose .sheet-notes { font-size: 9pt; margin-top: 3mm; }
+  .sheet-foot { display: block; margin-top: 3mm; font-size: 9pt; }
+}
