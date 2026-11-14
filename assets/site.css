@@ -1,17 +1,24 @@
 /* Yazboz Guru website. Layout: a sticky top bar, full-width bands with a 1120px column, and the
    app's own palette and type (Manrope). Light by default; dark with data-theme="dark", the device's
    choice with data-theme="auto". */
-@font-face { font-family: Manrope; font-weight: 400; font-display: swap; src: url(/assets/fonts/manrope-400.ttf) format("truetype"); }
-@font-face { font-family: Manrope; font-weight: 600; font-display: swap; src: url(/assets/fonts/manrope-600.ttf) format("truetype"); }
-@font-face { font-family: Manrope; font-weight: 700; font-display: swap; src: url(/assets/fonts/manrope-700.ttf) format("truetype"); }
-@font-face { font-family: Manrope; font-weight: 800; font-display: swap; src: url(/assets/fonts/manrope-800.ttf) format("truetype"); }
+@font-face { font-family: Manrope; font-weight: 400; font-display: swap; src: url(/assets/fonts/manrope-400.woff2) format("woff2"); }
+@font-face { font-family: Manrope; font-weight: 600; font-display: swap; src: url(/assets/fonts/manrope-600.woff2) format("woff2"); }
+@font-face { font-family: Manrope; font-weight: 700; font-display: swap; src: url(/assets/fonts/manrope-700.woff2) format("woff2"); }
+@font-face { font-family: Manrope; font-weight: 800; font-display: swap; src: url(/assets/fonts/manrope-800.woff2) format("woff2"); }
+/* Until Manrope arrives, text is drawn in Arial stretched to Manrope's widths and line heights, so lines break
+   in the same places and the page doesn't jump when Manrope swaps in. Where there's no Arial (Android) the
+   next font in --font is used as before. */
+@font-face { font-family: "Manrope Fallback"; font-weight: 400; src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans"); size-adjust: 101.93%; ascent-override: 104.59%; descent-override: 29.43%; line-gap-override: 0%; }
+@font-face { font-family: "Manrope Fallback"; font-weight: 600; src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans"); size-adjust: 105.65%; ascent-override: 100.9%; descent-override: 28.4%; line-gap-override: 0%; }
+@font-face { font-family: "Manrope Fallback"; font-weight: 700; src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"), local("Liberation Sans Bold"); size-adjust: 100.28%; ascent-override: 106.3%; descent-override: 29.92%; line-gap-override: 0%; }
+@font-face { font-family: "Manrope Fallback"; font-weight: 800; src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"), local("Liberation Sans Bold"); size-adjust: 102.02%; ascent-override: 104.49%; descent-override: 29.41%; line-gap-override: 0%; }
 
 :root {
   --bg: #F6F4F0; --bg-2: #EFEBE5; --surface: #FFFFFF; --ink: #2A2926; --muted: #6B675F; --faint: #8F8A82; --line: #E6E1D9;
   --accent: #4F6E5E; --accent-soft: #6F8F7E; --on-accent: #FFFFFF; --tint: #E3EBE5;
   --brick: #9A3A2B; --brick-tint: #F6E1DB; --pos: #3D7050; --neg: #A8432F;
   --app-bg: #F6F4F0; --glass: rgba(246, 244, 240, .82); --shadow: rgba(42, 41, 38, .14);
-  --font: Manrope, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: Manrope, "Manrope Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
